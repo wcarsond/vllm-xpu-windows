@@ -18,6 +18,20 @@ depth on two cards holds 1.5-1.7x one card out to 32K context.
 Everything here was measured on one machine: a Core Ultra 5 250K, 32 GB of RAM, two Arc Pro B60s
 on PCIe Gen5 x8 each, Windows 11, Intel driver 32.0.101.9033.
 
+## Against llama.cpp on the same cards
+
+Same models through stock and patched llama.cpp Vulkan, SYCL, a two-card Vulkan exchange, and this port, one card
+and two, from short prompts to 32K tokens: [BACKEND-RACE.md](BACKEND-RACE.md). In short, on two cards:
+
+| model | best llama.cpp: decode short / 32K, first token for a 32K prompt | vLLM: same |
+|---|---|---|
+| Granite 4.2 30B, 4-bit both sides | 29.3 / 20.3 tok/s, 80.2 s | **31.9 / 25.3 tok/s, 27.8 s** |
+| Qwen2.5-Coder-7B (llama.cpp Q8_0, vLLM bf16) | **66.0 / 48.6 tok/s**, 30.2 s | 46.4 / 40.1 tok/s, **8.8 s** |
+| Qwen2.5-14B (llama.cpp Q4_K_M, vLLM bf16) | **50.2 / 31.5 tok/s**, 67.2 s | 25.2 / 20.9 tok/s, **17.7 s** |
+
+vLLM gets to the first token 3-4x sooner on long prompts. Decode is close where the weights match (Granite); on the
+other two vLLM reads two to four times the bytes per token and the comparison favours llama.cpp.
+
 ## Why this exists
 
 Intel's vLLM support is Linux-only, and the two-card path there depends on oneCCL, which has no

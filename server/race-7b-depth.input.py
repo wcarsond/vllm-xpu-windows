@@ -56,11 +56,15 @@ if __name__ == "__main__":
         extra["pipeline_parallel_size"] = PP
         extra["distributed_executor_backend"] = "mp"
     util = float(os.environ.get("SMOKE_GPU_UTIL", "0.9" if TP == 1 and PP == 1 else "0.85"))
-    llm = LLM(model=model, dtype=DTYPE, max_model_len=32768, gpu_memory_utilization=util,
+    # SMOKE_MAX_LEN (2026-10-12): a smaller window for a model whose KV cannot hold 32K on one card; deeper depths are skipped
+    MAXLEN = int(os.environ.get("SMOKE_MAX_LEN", "32768"))
+    llm = LLM(model=model, dtype=DTYPE, max_model_len=MAXLEN, gpu_memory_utilization=util,
               enforce_eager=True, enable_prefix_caching=False, max_num_batched_tokens=CHUNK, **extra)
-    log(f"engine up in {time.time()-t0:.1f} s ({os.path.basename(os.path.normpath(model))}, {DTYPE}, max_model_len 32768, "
+    log(f"engine up in {time.time()-t0:.1f} s ({os.path.basename(os.path.normpath(model))}, {DTYPE}, max_model_len {MAXLEN}, "
         f"{SHAPE}, chunk {CHUNK}, util {util})")
     for depth in DEPTHS:
+        if depth + 200 > MAXLEN:
+            log(f"depth {depth:>5}: skipped, window {MAXLEN}"); continue
         if depth == 0:
             prompt = task
         else:
