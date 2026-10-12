@@ -1,0 +1,16 @@
+run 2026-10-11 17:34:38  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+    [reader0] pass 1 shard 7/11 ok
+    [reader0] pass 1 shard 8/11 ok
+    [reader0] pass 1 shard 9/11 ok
+    [reader0] pass 1 shard 10/11 ok
+    [reader0] pass 1 shard 11/11 ok
+    [reader0] DONE in 40.5 s
+reader1: OK
+    [reader1] pass 1 shard 7/11 ok
+    [reader1] pass 1 shard 8/11 ok
+    [reader1] pass 1 shard 9/11 ok
+    [reader1] pass 1 shard 10/11 ok
+    [reader1] pass 1 shard 11/11 ok
+    [reader1] DONE in 40.4 s
+wall 40.9 s

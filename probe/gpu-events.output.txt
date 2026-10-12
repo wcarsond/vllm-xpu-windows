@@ -1,0 +1,4 @@
+﻿run 2026-10-11 11:39:03   events since 08:39:03
+no display/driver events in the window
+-- application log: Level Zero / oneAPI / python crashes
+none

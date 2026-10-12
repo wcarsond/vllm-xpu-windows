@@ -1,0 +1,17 @@
+﻿run 2026-10-11 03:11:26  model qwen2.5-coder-7b (router, Q4_K_M GGUF, Vulkan1+Vulkan2 layer split)  prompt 'Write a Python function that parses an INI file into a nested dict, with comments explaining each step.'
+warm-up (loads the model if idle): 2.1 s
+run 1 : 1 in, 256 out, 24.41 s -> 10.5 tok/s end to end; server says decode 10.5 tok/s, prompt 14.2 tok/s
+run 2 : 1 in, 256 out, 28.88 s -> 8.9 tok/s end to end; server says decode 8.9 tok/s, prompt 10.5 tok/s
+run 3 : 1 in, 256 out, 28.69 s -> 8.9 tok/s end to end; server says decode 8.9 tok/s, prompt 10.5 tok/s
+median 8.9 tok/s end to end; first 200 chars: ```python
+import re
+
+def parse_ini(file_path):
+    """
+    Parses an INI file into a nested dictionary.
+    
+    Args:
+    file_path (str): The path to the INI file.
+    
+    Returns:
+    dict: A nest

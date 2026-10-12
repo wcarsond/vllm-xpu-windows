@@ -1,0 +1,25 @@
+run 2026-10-01 20:19:42  python 3.10.7  torch 2.14.1+xpu
+cards PyTorch can use: 2
+  xpu:0  Intel(R) Arc(TM) Pro B60 Graphics  23.3 GB
+  xpu:1  Intel(R) Arc(TM) Pro B60 Graphics  23.3 GB
+matmul 4096x4096 float16 on xpu:0: 1.47 ms
+matmul 4096x4096 float16 on xpu:1: 1.47 ms
+relay 10 KB (1 token)      xpu:0 -> RAM -> xpu:1:    0.021 ms       468 MB/s  intact=True
+relay 10 KB (1 token)      xpu:1 -> RAM -> xpu:0:    0.021 ms       468 MB/s  intact=True
+relay 5 MB (512 tokens)    xpu:0 -> RAM -> xpu:1:    0.674 ms      7419 MB/s  intact=True
+relay 5 MB (512 tokens)    xpu:1 -> RAM -> xpu:0:    0.698 ms      7164 MB/s  intact=True
+relay 84 MB (8192 tokens)  xpu:0 -> RAM -> xpu:1:    9.945 ms      8447 MB/s  intact=True
+relay 84 MB (8192 tokens)  xpu:1 -> RAM -> xpu:0:   10.310 ms      8147 MB/s  intact=True
+run 2026-10-01 20:20:31  python 3.10.7  torch 2.14.1+xpu
+cards PyTorch can use: 2
+  xpu:0  Intel(R) Arc(TM) Pro B60 Graphics  23.3 GB
+  xpu:1  Intel(R) Arc(TM) Pro B60 Graphics  23.3 GB
+matmul 4096x4096 float16 on xpu:0: 1.49 ms
+matmul 4096x4096 float16 on xpu:1: 1.49 ms
+relay 10 KB (1 token)      xpu:0 -> RAM -> xpu:1:    0.032 ms       309 MB/s  intact=True
+relay 10 KB (1 token)      xpu:1 -> RAM -> xpu:0:    0.030 ms       325 MB/s  intact=True
+relay 5 MB (512 tokens)    xpu:0 -> RAM -> xpu:1:    0.688 ms      7267 MB/s  intact=True
+relay 5 MB (512 tokens)    xpu:1 -> RAM -> xpu:0:    0.723 ms      6915 MB/s  intact=True
+relay 84 MB (8192 tokens)  xpu:0 -> RAM -> xpu:1:   10.210 ms      8227 MB/s  intact=True
+relay 84 MB (8192 tokens)  xpu:1 -> RAM -> xpu:0:   11.204 ms      7498 MB/s  intact=True
+

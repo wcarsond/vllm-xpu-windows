@@ -1,0 +1,8 @@
+run 2026-10-11 13:36:22  model C:\Users\claude\models-hf\Qwen2.5-32B-Instruct-AWQ  two cards, tensor split, float16, attention FLASH_ATTN, prefix caching off, max_num_batched_tokens 2048
+engine up in 42.8 s (Qwen2.5-32B-Instruct-AWQ, float16, max_model_len 32768, two cards, tensor split, chunk 2048, util 0.85)
+depth     0: prompt_n    21, prefill    484.8 tok/s (0.04 s), decode   32.8 tok/s over 128 tokens, wall 3.91 s
+depth  4096: prompt_n  4080, prefill   1340.6 tok/s (3.04 s), decode   31.3 tok/s over 128 tokens, wall 7.10 s
+depth  8192: prompt_n  8176, prefill   1308.3 tok/s (6.25 s), decode   29.8 tok/s over 128 tokens, wall 10.51 s
+depth 16384: prompt_n 16368, prefill   1239.2 tok/s (13.21 s), decode   28.2 tok/s over 128 tokens, wall 17.71 s
+depth 32000: prompt_n 31983, prefill   1123.0 tok/s (28.48 s), decode   24.3 tok/s over 128 tokens, wall 33.71 s
+last answer starts: The INI file format is similar to the document provided, with sections and key-value pairs. The function should ignore t

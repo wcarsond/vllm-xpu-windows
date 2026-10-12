@@ -1,0 +1,5 @@
+run 2026-10-10 22:37:09  python 3.12.10  model C:\Users\claude\models-hf\Qwen2.5-0.5B-Instruct
+torch 2.14.1+xpu, xpu devices visible: 1, name: Intel(R) Arc(TM) Pro B60 Graphics
+engine up in 15.1 s (enforce_eager, max_model_len 2048, 50% of the card, attention TRITON_ATTN)
+generate: 13 prompt tokens, 96 generated in 10.71 s = 9.0 tok/s end to end
+text: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35

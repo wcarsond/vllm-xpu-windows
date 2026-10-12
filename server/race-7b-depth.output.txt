@@ -1,0 +1,8 @@
+run 2026-10-11 03:01:54  model C:\Users\claude\models-hf\Qwen2.5-Coder-7B-Instruct  one card, bf16, attention FLASH_ATTN, prefix caching off
+engine up in 25.9 s (max_model_len 32768)
+depth     0: prompt_n    21, prefill    538.2 tok/s (0.04 s), decode   30.0 tok/s over 128 tokens, wall 4.27 s
+depth  4096: prompt_n  4080, prefill   5762.1 tok/s (0.71 s), decode   29.3 tok/s over 128 tokens, wall 5.05 s
+depth  8192: prompt_n  8176, prefill   5247.2 tok/s (1.56 s), decode   28.8 tok/s over 128 tokens, wall 5.96 s
+depth 16384: prompt_n 16368, prefill   4671.4 tok/s (3.50 s), decode   27.9 tok/s over 128 tokens, wall 8.05 s
+depth 32000: prompt_n 31983, prefill   3761.5 tok/s (8.50 s), decode   26.2 tok/s over 128 tokens, wall 13.34 s
+last answer starts: Here is an example INI file:  ```ini [section1] key1 = value1 key2 = value2  [section2] key3 = value3 key4 = value4 ``` 

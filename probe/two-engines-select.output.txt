@@ -1,0 +1,7 @@
+run Sun 10/11/2026 22:31:02.32 select=oneapi x2 
+--- repeat 1 
+select=oneapi
+two 0.5B engines, SAME card (0 and 0)          OK   ["CHILD OK mask=None sel=level_zero:0 ndev=1 dev0=Intel(R) Arc(TM) Pro B60 Graphics ' What is the number of objects in the se'", "CHILD OK mask=None sel=level_zero:0 ndev=1 dev0=Intel(R) Arc(TM) Pro B60 Graphics ' What is the number of objects in the se'"]
+two 0.5B engines, one card each (0 and 1)      OK   ["CHILD OK mask=None sel=level_zero:0 ndev=1 dev0=Intel(R) Arc(TM) Pro B60 Graphics ' What is the number of objects in the se'", "CHILD OK mask=None sel=level_zero:1 ndev=1 dev0=Intel(R) Arc(TM) Pro B60 Graphics ' What is the number of objects in the se'"]
+--- repeat 2 
+select=oneapi

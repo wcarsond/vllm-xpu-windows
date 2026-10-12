@@ -1,0 +1,16 @@
+run Sun 10/11/2026 16:55:46.38  load lock OFF throughout 
+ 
+== 1 EXPOSURE: 0.5B tensor split, 120 ms sleep per tensor (~35 s load) 
+(Worker_TP1 pid=24228) INFO 10-11 16:56:49 [model_runner.py:422] Model loading took 0.46 GiB memory and 36.652440 seconds
+(Worker_TP0 pid=19656) INFO 10-11 16:56:49 [model_runner.py:422] Model loading took 0.46 GiB memory and 36.795817 seconds
+engine up on two cards (tensor split) in 58.2 s (Qwen2.5-0.5B-Instruct, bfloat16, max_model_len 2048, util 0.35, attention FLASH_ATTN, eager True)
+median 84.2 tok/s; first 200 chars: 'The function should handle nested dictionaries and lists, and should be able to parse a single INI file or a list of INI files. The function should return a nested dict with the parsed data. The funct'
+ 
+== 2 TRIM: 72B, EmptyWorkingSet after every shard 
+(Worker_TP1 pid=19612) INFO 10-11 16:58:01 [model_runner.py:422] Model loading took 19.39 GiB memory and 31.048457 seconds
+(Worker_TP0 pid=2168) INFO 10-11 16:58:01 [model_runner.py:422] Model loading took 19.39 GiB memory and 31.188803 seconds
+engine up on two cards (tensor split) in 157.3 s (Qwen2.5-72B-Instruct-AWQ, float16, max_model_len 2048, util 0.97, attention FLASH_ATTN, eager True)
+median 17.3 tok/s; first 200 chars: 'The function should handle sections, key-value pairs, and comments in the INI file. Additionally, the function should be able to handle and ignore any lines that are blank or contain only whitespace. '
+ 
+== 3 CACHE: 72B, torch.xpu.empty_cache after every shard 
+(EngineCore pid=2304) ERROR 10-11 17:01:14 [multiproc_executor.py:867] WorkerProc rank 0 died before signalling READY: exit code 3221225477 (0xC0000005). No traceback above means it was killed rather than raising.

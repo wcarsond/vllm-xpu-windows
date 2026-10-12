@@ -1,0 +1,7 @@
+run 2026-10-11 17:47:28  model C:\Users\claude\models-hf\Qwen2.5-72B-Instruct-AWQ  tensor_parallel_size=2  exchange gloo relay
+torch 2.14.1+xpu, cards: Intel(R) Arc(TM) Pro B60 Graphics, Intel(R) Arc(TM) Pro B60 Graphics
+engine up on two cards (tensor split) in 156.9 s (Qwen2.5-72B-Instruct-AWQ, float16, max_model_len 2048, util 0.97, attention FLASH_ATTN, eager True)
+run 1: 21 in, 256 out, 14.78 s -> 17.3 tok/s end to end
+run 2: 21 in, 256 out, 14.78 s -> 17.3 tok/s end to end
+run 3: 21 in, 256 out, 14.80 s -> 17.3 tok/s end to end
+median 17.3 tok/s; first 200 chars: 'The function should handle sections, key-value pairs, and comments in the INI file. Additionally, the function should be able to handle and ignore any lines that are blank or contain only whitespace. '

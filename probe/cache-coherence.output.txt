@@ -1,0 +1,78 @@
+run Sun 10/11/2026  9:45:04.65 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+build exit 0 
+1. host USM, CPU writes new values while the card holds the old ones in cache
+  host USM     CPU store                          plain load             -> fresh (0 of 4096 stale)
+  host USM     CPU store                          uncached hint          -> fresh (0 of 4096 stale)
+  host USM     CPU store                          device atomic load     -> fresh (0 of 4096 stale)
+  host USM     CPU store                          system atomic load     -> fresh (0 of 4096 stale)
+  host USM     CPU store                          sys fence + plain      -> fresh (0 of 4096 stale)
+  host USM     CPU store                          atomic fetch_or(0)     -> fresh (0 of 4096 stale)
+2. card memory, CPU->card copy on an idle queue (16 KB) while the card holds the old lines
+  card memory  copy, idle queue                   plain load             -> fresh (0 of 4096 stale)
+  card memory  copy, idle queue                   uncached hint          -> fresh (0 of 4096 stale)
+  card memory  copy, idle queue                   device atomic load     -> fresh (0 of 4096 stale)
+  card memory  copy, idle queue                   system atomic load     -> fresh (0 of 4096 stale)
+  card memory  copy, idle queue                   sys fence + plain      -> fresh (0 of 4096 stale)
+  card memory  copy, idle queue                   atomic fetch_or(0)     -> fresh (0 of 4096 stale)
+3. card memory, CPU->card copy enqueued behind a busy kernel (copy engine path?)
+  card memory  copy, behind a 30 ms kernel        plain load             -> fresh (0 of 4096 stale)
+  card memory  copy, behind a 30 ms kernel        uncached hint          -> fresh (0 of 4096 stale)
+  card memory  copy, behind a 30 ms kernel        device atomic load     -> fresh (0 of 4096 stale)
+  card memory  copy, behind a 30 ms kernel        system atomic load     -> fresh (0 of 4096 stale)
+  card memory  copy, behind a 30 ms kernel        sys fence + plain      -> fresh (0 of 4096 stale)
+  card memory  copy, behind a 30 ms kernel        atomic fetch_or(0)     -> fresh (0 of 4096 stale)
+4. card memory, small copy (8 B) on an idle queue: the flag case
+  card memory  8-byte copy, idle queue            plain load             -> fresh (word 0 read 39, want 39)
+  card memory  8-byte copy, idle queue            uncached hint          -> fresh (word 0 read 41, want 41)
+  card memory  8-byte copy, idle queue            device atomic load     -> fresh (word 0 read 43, want 43)
+  card memory  8-byte copy, idle queue            system atomic load     -> fresh (word 0 read 45, want 45)
+  card memory  8-byte copy, idle queue            sys fence + plain      -> fresh (word 0 read 47, want 47)
+  card memory  8-byte copy, idle queue            atomic fetch_or(0)     -> fresh (word 0 read 49, want 49)
+5. kernel already polling a card-memory flag; CPU writes host USM data, then the flag by copy
+  host USM     CPU store during the kernel        plain load             -> fresh (0 of 4096 stale)
+  host USM     CPU store during the kernel        uncached hint          -> fresh (0 of 4096 stale)
+  host USM     CPU store during the kernel        device atomic load     -> fresh (0 of 4096 stale)
+  host USM     CPU store during the kernel        system atomic load     -> fresh (0 of 4096 stale)
+  host USM     CPU store during the kernel        sys fence + plain      -> fresh (0 of 4096 stale)
+  host USM     CPU store during the kernel        atomic fetch_or(0)     -> fresh (0 of 4096 stale)
+6. kernel already polling; CPU->card data copy on a second queue, then the flag by copy
+  card memory  copy during the kernel (q2)        plain load             -> fresh (0 of 4096 stale)
+  card memory  copy during the kernel (q2)        uncached hint          -> fresh (0 of 4096 stale)
+  card memory  copy during the kernel (q2)        device atomic load     -> fresh (0 of 4096 stale)
+  card memory  copy during the kernel (q2)        system atomic load     -> fresh (0 of 4096 stale)
+  card memory  copy during the kernel (q2)        sys fence + plain      -> fresh (0 of 4096 stale)
+  card memory  copy during the kernel (q2)        atomic fetch_or(0)     -> fresh (0 of 4096 stale)
+7. kernel already polling; a second thread writes 512 B of host USM then copies the flag
+  host USM     thread store, 512 B                plain load             -> fresh (0 of 128 stale)
+  host USM     thread store, 512 B                uncached hint          -> fresh (0 of 128 stale)
+  host USM     thread store, 512 B                device atomic load     -> fresh (0 of 128 stale)
+  host USM     thread store, 512 B                system atomic load     -> fresh (0 of 128 stale)
+  host USM     thread store, 512 B                sys fence + plain      -> fresh (0 of 128 stale)
+  host USM     thread store, 512 B                atomic fetch_or(0)     -> fresh (0 of 128 stale)
+  host USM     thread store + clflush             plain load             -> fresh (0 of 128 stale)
+  host USM     thread store + clflush             uncached hint          -> fresh (0 of 128 stale)
+  host USM     thread store + clflush             device atomic load     -> fresh (0 of 128 stale)
+  host USM     thread store + clflush             system atomic load     -> fresh (0 of 128 stale)
+  host USM     thread store + clflush             sys fence + plain      -> fresh (0 of 128 stale)
+  host USM     thread store + clflush             atomic fetch_or(0)     -> fresh (0 of 128 stale)
+8. export: card stores words + flag into host USM, CPU polls the flag then reads the words
+  busy     no flush       128 words: 0 stale words in 0 of 300 iterations
+  busy     no flush      1792 words: 0 stale words in 0 of 300 iterations
+  busy     clflush        128 words: 0 stale words in 0 of 300 iterations
+  busy     clflush       1792 words: 0 stale words in 0 of 300 iterations
+  idle     no flush       128 words: 0 stale words in 0 of 300 iterations
+  idle     no flush      1792 words: 0 stale words in 0 of 300 iterations
+  idle     clflush        128 words: 0 stale words in 0 of 300 iterations
+  idle     clflush       1792 words: 0 stale words in 0 of 300 iterations
+9. card polls a host-memory flag; CPU writes it 20 ms into the kernel (20 tries each)
+  atomic fetch_or(0)               seen  4 of 20, after the write: mean 10 us, worst 14 us
+  atomic load + acquire fence      seen  4 of 20, after the write: mean 11 us, worst 15 us
+  uncached hint + acquire fence    seen 20 of 20, after the write: mean 12 us, worst 19 us
+  plain volatile-like load         seen  0 of 20, after the write: mean 0 us, worst 0 us
+run exit 0 

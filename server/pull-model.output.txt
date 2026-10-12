@@ -1,0 +1,6 @@
+2026-10-11 11:27:43 done: Qwen/Qwen2.5-14B-Instruct -> C:\Users\claude\models-hf\Qwen2.5-14B-Instruct, 38.1 GB in 7.1 min
+2026-10-11 12:30:27 done: Qwen/Qwen2.5-32B-Instruct-AWQ -> C:\Users\claude\models-hf\Qwen2.5-32B-Instruct-AWQ, 19.3 GB in 5.4 min
+2026-10-11 14:05:10 done: Qwen/Qwen2.5-72B-Instruct-AWQ -> C:\Users\claude\models-hf\Qwen2.5-72B-Instruct-AWQ, 41.6 GB in 11.4 min
+2026-10-11 14:10:38 done: derikn/Granite-4.2-30B-GPTQ-INT4 -> C:\Users\claude\models-hf\Granite-4.2-30B-GPTQ-INT4, 16.5 GB in 5.3 min
+2026-10-11 14:21:52 done: Qwen/Qwen3.5-27B-GPTQ-Int4 -> C:\Users\claude\models-hf\Qwen3.5-27B-GPTQ-Int4, 30.3 GB in 7.6 min
+2026-10-11 22:29:32 done: Qwen/Qwen3.5-4B -> C:\Users\claude\models-hf\Qwen3.5-4B, 9.3 GB in 2.4 min

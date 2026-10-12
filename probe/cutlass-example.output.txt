@@ -1,0 +1,517 @@
+run Sat 10/10/2026 22:51:06.26 
+-- compile C:\Users\claude\scripts\vllm-xpu-windows\probe\..\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:61:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(902,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  902 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(900,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  900 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:62:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(717,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  717 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(715,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  715 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:63:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(716,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  716 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(714,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  714 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:69:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(554,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  554 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(552,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  552 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:70:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(682,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  682 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(params.layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(680,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  680 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:71:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(810,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  810 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(808,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  808 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+6 warnings generated.
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:61:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(902,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  902 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(900,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  900 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:62:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(717,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  717 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(715,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  715 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:63:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(716,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  716 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(714,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  714 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:69:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(554,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  554 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(552,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  552 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:70:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(682,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  682 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(params.layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(680,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  680 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:71:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(810,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  810 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(808,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  808 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+6 warnings generated.
+   exit 0 22:51:36.98 
+-- link gemm-128 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Compilation from IR - skipping loading of FCL
+
+warning: in kernel 'typeinfo name for cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm::MainloopXeL1Staged<2, cutlass::gemm::KernelXe>, cute::tuple<cute::C<256>, cute::C<256>, cute::C<32> >, cutlass::bfloat16_t, cute::tuple<long long, cute::C<1>, long long>, cutlass::bfloat16_t, cute::tuple<cute::C<1>, long long, long long>, cute::TiledMMA<cute::MMA_Atom<cute::XE_DPAS_TT<8, float, cutlass::bfloat16_t, cutlass::bfloat16_t, float> >, cute::Layout<cute::tuple<cute::C<8>, cute::C<4>, cute::C<1> >, cute::tuple<cute::C<4>, cute::C<1>, cute::C<0> > >, cute::tuple<cute::Layout<cute::tuple<cute::C<8>, cute::C<8>, cute::C<4> >, cute::tuple<cute::C<1>, cute::C<32>, cute::C<8> > >, cute::Layout<cute::tuple<cute::C<16>, cute::C<4>, cute::C<4> >, cute::tuple<cute::C<1>, cute::C<64>, cute::C<16> > >, cute::Layout<cute::C<32>, cute::C<1> > > const>, void, void, void, cute::identity, void, void, void, cute::identity>, cutlass::epilogue::collective::CollectiveEpilogue<cutlass::epilogue::IntelXeGeneric, cute::tuple<cute::C<256>, cute::C<256>, cute::C<32> >, void, float, cute::tuple<long long, cute::C<1>, long long>, float, cute::tuple<long long, cute::C<1>, long long>, cutlass::epilogue::fusion::FusionCallbacks<cutlass::epilogue::IntelXeGeneric, cutlass::epilogue::fusion::LinearCombination<float, float, float, float, (cutlass::FloatRoundStyle)2>, cute::tuple<cute::C<256>, cute::C<256>, cute::C<32> >, cute::tuple<cute::C<256>, cute::C<256>, cute::C<32> > >, void, void>, void, void>': [RetryManager] Start recompilation of the kernel
+
+warning: in kernel 'typeinfo name for cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm::MainloopXeL1Staged<2, cutlass::gemm::KernelXe>, cute::tuple<cute::C<256>, cute::C<256>, cute::C<32> >, cutlass::bfloat16_t, cute::tuple<long long, cute::C<1>, long long>, cutlass::bfloat16_t, cute::tuple<cute::C<1>, long long, long long>, cute::TiledMMA<cute::MMA_Atom<cute::XE_DPAS_TT<8, float, cutlass::bfloat16_t, cutlass::bfloat16_t, float> >, cute::Layout<cute::tuple<cute::C<8>, cute::C<4>, cute::C<1> >, cute::tuple<cute::C<4>, cute::C<1>, cute::C<0> > >, cute::tuple<cute::Layout<cute::tuple<cute::C<8>, cute::C<8>, cute::C<4> >, cute::tuple<cute::C<1>, cute::C<32>, cute::C<8> > >, cute::Layout<cute::tuple<cute::C<16>, cute::C<4>, cute::C<4> >, cute::tuple<cute::C<1>, cute::C<64>, cute::C<16> > >, cute::Layout<cute::C<32>, cute::C<1> > > const>, void, void, void, cute::identity, void, void, void, cute::identity>, cutlass::epilogue::collective::CollectiveEpilogue<cutlass::epilogue::IntelXeGeneric, cute::tuple<cute::C<256>, cute::C<256>, cute::C<32> >, void, float, cute::tuple<long long, cute::C<1>, long long>, float, cute::tuple<long long, cute::C<1>, long long>, cutlass::epilogue::fusion::FusionCallbacks<cutlass::epilogue::IntelXeGeneric, cutlass::epilogue::fusion::LinearCombination<float, float, float, float, (cutlass::FloatRoundStyle)2>, cute::tuple<cute::C<256>, cute::C<256>, cute::C<32> >, cute::tuple<cute::C<256>, cute::C<256>, cute::C<32> > >, void, void>, void, void>': compiled SIMD16 allocated 128 regs and spilled around 133
+
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+
+warning: in kernel 'typeinfo name for cutlass::reference::device::GemmComplexKernelName<cutlass::bfloat16_t, cutlass::layout::RowMajor, cutlass::bfloat16_t, cutlass::layout::RowMajor, float, cutlass::layout::RowMajor, float, float, float, cutlass::layout::RowMajor, cutlass::NumericConverter<float, float, (cutlass::FloatRoundStyle)2>, cutlass::multiply_add<float, float, float> >': [RetryManager] Start recompilation of the kernel
+
+Build succeeded.
+   exit 0 22:51:38.65 
+-- link gemm-256 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+
+warning: in kernel 'typeinfo name for cutlass::reference::device::GemmComplexKernelName<cutlass::bfloat16_t, cutlass::layout::RowMajor, cutlass::bfloat16_t, cutlass::layout::RowMajor, float, cutlass::layout::RowMajor, float, float, float, cutlass::layout::RowMajor, cutlass::NumericConverter<float, float, (cutlass::FloatRoundStyle)2>, cutlass::multiply_add<float, float, float> >': [RetryManager] Start recompilation of the kernel
+
+Build succeeded.
+   exit 0 22:51:40.43 
+-- compile gemm-plain (probe flags) 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:61:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(902,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  902 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(900,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  900 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:62:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(717,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  717 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(715,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  715 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:63:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(716,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  716 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(714,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  714 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:69:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(554,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  554 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(552,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  552 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:70:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(682,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  682 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(params.layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(680,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  680 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:71:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(810,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  810 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(808,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  808 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+6 warnings generated.
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:61:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(902,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  902 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(900,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  900 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:62:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(717,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  717 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(715,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  715 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:63:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(716,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  716 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(714,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  714 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:69:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(554,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  554 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(552,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  552 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:70:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(682,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  682 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(params.layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(680,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  680 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:71:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(810,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  810 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(808,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  808 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+6 warnings generated.
+   exit 0 22:52:13.61 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+   link exit 0 22:52:14.56 
+-- compile gemm-legacy (legacy example, kernel-build flags) 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:61:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(902,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  902 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(900,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  900 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:62:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(717,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  717 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(715,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  715 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:63:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(716,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  716 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(714,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  714 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:69:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(554,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  554 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(552,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  552 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:70:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(682,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  682 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(params.layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(680,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  680 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:71:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(810,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  810 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(808,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  808 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+6 warnings generated.
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:61:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(902,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  902 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_sparse_mma_warpspecialized.hpp(900,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  900 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:62:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(717,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  717 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_warpspecialized.hpp(715,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  715 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:63:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(716,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  716 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_array_warpspecialized.hpp(714,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  714 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:69:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(554,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  554 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB_));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm100_blockscaled_mma_mixed_tma_cpasync_warpspecialized.hpp(552,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  552 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:70:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(682,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  682 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(params.layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_warpspecialized.hpp(680,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  680 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\examples\00_bmg_gemm\legacy\00_bmg_gemm.cpp:68:
+In file included from C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\collective_mma.hpp:71:
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(810,27): warning: implicit capture of 'this' with a capture default of '=' is deprecated [-Wdeprecated-this-capture]
+  810 |         Tensor mSFB_tmp = observed_tma_load_sfb_->get_tma_tensor(shape(layout_SFB));
+      |                           ^
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm-xpu-kernels\.deps\cutlass-sycl-src\include\cutlass\gemm\collective\sm103_blockscaled_mma_array_warpspecialized.hpp(808,22): note: add an explicit capture of 'this' to capture '*this' by reference
+  808 |     auto mSFB_nkl = [=](){
+      |                      ^
+      |                       , this
+6 warnings generated.
+   exit 0 22:52:35.68 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+
+warning: in kernel 'typeinfo name for cutlass::reference::device::GemmComplexKernelName<cutlass::bfloat16_t, cutlass::layout::RowMajor, cutlass::bfloat16_t, cutlass::layout::RowMajor, float, cutlass::layout::RowMajor, float, float, float, cutlass::layout::RowMajor, cutlass::NumericConverter<float, float, (cutlass::FloatRoundStyle)2>, cutlass::multiply_add<float, float, float> >': [RetryManager] Start recompilation of the kernel
+
+Build succeeded.
+   link exit 0 22:52:37.52 
+-- what each exe carries 
+== gemm-128.exe  (0.5 MB): 2 device images: zebin x2
+   16 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, indirect_stateless_count, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_memory_buffers, per_thread_payload_arguments, private_size, simd_size, size, slm_alignment, source_offset, spill_size, subgroup_independent_forward_progress, usage
+   access_type                              (absent):8  readwrite:8
+   addrmode                                 (absent):8  stateless:7  slm:1
+   addrspace                                (absent):8  global:7  local:1
+   arg_index                                1:9  0:3  6:2  5:1  3:1
+   barrier_count                            (absent):15  1:1
+   eu_thread_count                          8:16
+   grf_count                                128:16
+   has_4gb_buffers                          true:16
+   has_dpas                                 (absent):15  true:1
+   has_no_stateless_write                   true:16
+   indirect_stateless_count                 (absent):15  320:1
+   inline_data_payload_size                 32:16
+   is_ptr                                   true:9  (absent):7
+   offset                                   0:16
+   payload_arguments                        :16
+   per_thread_memory_buffers                (absent):14  :2
+   per_thread_payload_arguments             :16
+   private_size                             (absent):15  768:1
+   simd_size                                32:13  16:3
+   size                                     64:11  192:2  128:1  1024:1  16384:1
+   slm_alignment                            (absent):15  1:1
+   source_offset                            8:7  (absent):6  48:1  0:1  328:1
+   spill_size                               (absent):15  8512:1
+   subgroup_independent_forward_progress    true:16
+   usage                                    (absent):14  single_space:2
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail19__pf_kernel_wrapperIZZN6compat6detailL6memcpyENS0_5queueEPvPKvNS0_5
+     img.0 _ZTSZZN6compat6detailL6memcpyEN4sycl3_V15queueEPvPKvNS2_5rangeILi3EEES8_NS2_2idILi3EEESA_S
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillItEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillItEEvPvRKT_yEUlNS0_2idILi1EEEE_
+== gemm-256.exe  (0.6 MB): 2 device images: zebin x2
+   16 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, indirect_stateless_count, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_memory_buffers, per_thread_payload_arguments, private_size, simd_size, size, slm_alignment, source_offset, subgroup_independent_forward_progress, usage
+   access_type                              (absent):8  readwrite:8
+   addrmode                                 (absent):8  stateless:7  slm:1
+   addrspace                                (absent):8  global:7  local:1
+   arg_index                                1:9  0:3  6:2  5:1  3:1
+   barrier_count                            (absent):15  1:1
+   eu_thread_count                          4:16
+   grf_count                                256:16
+   has_4gb_buffers                          true:16
+   has_dpas                                 (absent):15  true:1
+   has_no_stateless_write                   true:16
+   indirect_stateless_count                 (absent):15  320:1
+   inline_data_payload_size                 32:16
+   is_ptr                                   true:9  (absent):7
+   offset                                   0:16
+   payload_arguments                        :16
+   per_thread_memory_buffers                (absent):15  :1
+   per_thread_payload_arguments             :16
+   private_size                             (absent):15  1536:1
+   simd_size                                32:15  16:1
+   size                                     64:12  192:2  128:1  2048:1
+   slm_alignment                            (absent):15  1:1
+   source_offset                            8:7  (absent):6  48:1  0:1  328:1
+   subgroup_independent_forward_progress    true:16
+   usage                                    (absent):15  single_space:1
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail19__pf_kernel_wrapperIZZN6compat6detailL6memcpyENS0_5queueEPvPKvNS0_5
+     img.0 _ZTSZZN6compat6detailL6memcpyEN4sycl3_V15queueEPvPKvNS2_5rangeILi3EEES8_NS2_2idILi3EEESA_S
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillItEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillItEEvPvRKT_yEUlNS0_2idILi1EEEE_
+== gemm-plain.exe  (0.4 MB): 2 device images: zebin x2
+   16 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_payload_arguments, simd_size, size, slm_alignment, source_offset, subgroup_independent_forward_progress
+   access_type                              (absent):8  readwrite:8
+   addrmode                                 (absent):8  stateless:7  slm:1
+   addrspace                                (absent):8  global:7  local:1
+   arg_index                                1:9  0:3  6:2  5:1  3:1
+   barrier_count                            (absent):15  1:1
+   eu_thread_count                          4:16
+   grf_count                                256:16
+   has_4gb_buffers                          true:16
+   has_dpas                                 (absent):15  true:1
+   has_no_stateless_write                   true:16
+   inline_data_payload_size                 32:16
+   is_ptr                                   true:9  (absent):7
+   offset                                   0:16
+   payload_arguments                        :16
+   per_thread_payload_arguments             :16
+   simd_size                                32:14  16:2
+   size                                     64:12  192:2  128:2
+   slm_alignment                            (absent):15  1:1
+   source_offset                            8:7  (absent):6  48:1  0:1  328:1
+   subgroup_independent_forward_progress    true:16
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail19__pf_kernel_wrapperIZZN6compat6detailL6memcpyENS0_5queueEPvPKvNS0_5
+     img.0 _ZTSZZN6compat6detailL6memcpyEN4sycl3_V15queueEPvPKvNS2_5rangeILi3EEES8_NS2_2idILi3EEESA_S
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillItEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillItEEvPvRKT_yEUlNS0_2idILi1EEEE_
+== gemm-legacy.exe  (0.6 MB): 2 device images: zebin x2
+   16 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, indirect_stateless_count, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_memory_buffers, per_thread_payload_arguments, private_size, simd_size, size, slm_alignment, source_offset, subgroup_independent_forward_progress, usage
+   access_type                              (absent):8  readwrite:8
+   addrmode                                 (absent):8  stateless:7  slm:1
+   addrspace                                (absent):8  global:7  local:1
+   arg_index                                1:9  0:3  6:2  5:1  3:1
+   barrier_count                            (absent):15  1:1
+   eu_thread_count                          4:16
+   grf_count                                256:16
+   has_4gb_buffers                          true:16
+   has_dpas                                 (absent):15  true:1
+   has_no_stateless_write                   true:16
+   indirect_stateless_count                 (absent):15  320:1
+   inline_data_payload_size                 32:16
+   is_ptr                                   true:9  (absent):7
+   offset                                   0:16
+   payload_arguments                        :16
+   per_thread_memory_buffers                (absent):15  :1
+   per_thread_payload_arguments             :16
+   private_size                             (absent):15  1536:1
+   simd_size                                32:15  16:1
+   size                                     64:12  192:2  128:1  2048:1
+   slm_alignment                            (absent):15  1:1
+   source_offset                            8:7  (absent):6  48:1  0:1  264:1
+   subgroup_independent_forward_progress    true:16
+   usage                                    (absent):15  single_space:1
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail19__pf_kernel_wrapperIZZN6compat6detailL6memcpyENS0_5queueEPvPKvNS0_5
+     img.0 _ZTSZZN6compat6detailL6memcpyEN4sycl3_V15queueEPvPKvNS2_5rangeILi3EEES8_NS2_2idILi3EEESA_S
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillItEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillItEEvPvRKT_yEUlNS0_2idILi1EEEE_
+done 22:52:38.25 

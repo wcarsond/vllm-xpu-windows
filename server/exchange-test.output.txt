@@ -1,0 +1,9 @@
+run 2026-10-11 12:04:32  rounds 1
+[rank 1] exchange up and warm-up checked in 0.5 s
+[rank 1] 53 all_reduces, 0 wrong; last stage times us (seq, bytes, wait_card, memcpy_in, wait_peer, memcpy_out, enqueue): [(52, 3584, 8, 0, 3, 1, 0), (53, 14680064, 3805, 0, 4, 1418, 0), (54, 3584, 8, 0, 118, 1, 0), (55, 512, 6, 0, 9, 0, 0), (56, 33554432, 7555, 0, 3, 2967, 0), (57, 256, 4, 0, 18, 0, 0), (58, 131072, 16, 0, 3, 16, 0), (59, 3584, 7, 0, 3, 1, 0)]
+[rank 1] 2000 x 7 KB back to back: 29.0 us per call on the main thread, 29.0 us per all_reduce wall
+[rank 1] PASS
+[rank 0] exchange up and warm-up checked in 0.5 s
+[rank 0] 53 all_reduces, 0 wrong; last stage times us (seq, bytes, wait_card, memcpy_in, wait_peer, memcpy_out, enqueue): [(52, 3584, 8, 0, 3, 1, 0), (53, 14680064, 3716, 0, 76, 1547, 0), (54, 3584, 8, 0, 2, 1, 0), (55, 512, 6, 0, 3, 0, 0), (56, 33554432, 7446, 0, 104, 2946, 0), (57, 256, 7, 0, 3, 0, 0), (58, 131072, 15, 0, 3, 18, 0), (59, 3584, 7, 0, 3, 1, 0)]
+[rank 0] 2000 x 7 KB back to back: 29.0 us per call on the main thread, 29.0 us per all_reduce wall
+[rank 0] PASS

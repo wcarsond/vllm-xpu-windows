@@ -1,0 +1,29 @@
+run Sun 10/11/2026 12:45:52.83 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+build exit 0 
+card0 Intel(R) Arc(TM) Pro B60 Graphics  card1 Intel(R) Arc(TM) Pro B60 Graphics  driver 1.17.39500+2
+peer access: card0->card1 no, card1->card0 no, atomics no
+-- 7 KB (decode)
+   card0->card1 direct copy:         not offered by the driver
+   card0->host->card1 (two copies):       9.7 us  (0.74 GB/s)
+   card0->host, card1 kernel reads:      14.2 us  (0.50 GB/s)
+   card0->host alone     4.6 us, host->card1 alone     5.0 us
+   data arrived intact: yes
+-- 1 MB
+   card0->card1 direct copy:         not offered by the driver
+   card0->host->card1 (two copies):      81.5 us  (12.87 GB/s)
+   card0->host, card1 kernel reads:      94.3 us  (11.12 GB/s)
+   card0->host alone    40.9 us, host->card1 alone    41.7 us
+   data arrived intact: yes
+-- 64 MB
+   card0->card1 direct copy:         not offered by the driver
+   card0->host->card1 (two copies):    4887.4 us  (13.73 GB/s)
+   card0->host, card1 kernel reads:    5359.0 us  (12.52 GB/s)
+   card0->host alone  2355.9 us, host->card1 alone  2448.8 us
+   data arrived intact: yes
+run exit 0 

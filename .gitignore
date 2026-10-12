@@ -1,0 +1,24 @@
+# the Python environments, the three source checkouts (their own repos on GitHub) and build products stay out
+.venv/
+.venv312/
+src/
+.deps/
+toolchain/
+*.build/
+__pycache__/
+*.obj
+*.exe
+*.pyd
+*.dll
+*.lib
+*.exp
+*.pdb
+# logs are large and regenerated; the .output.txt results and PORT-NOTES hold the conclusions
+*.log
+# wheels and the ninja/pip build trees are products of kernels\build.input.cmd; DLL dissections are scratch
+kernels/dist/
+kernels/build/
+kernels/*.build/
+kernels/*.work/
+kernels/wheel*/
+*.whl

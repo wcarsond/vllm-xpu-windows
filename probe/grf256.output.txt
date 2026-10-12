@@ -1,0 +1,107 @@
+run Sat 10/10/2026 22:35:14.89 
+-- compile (device code for spir64_gen, like the kernel build) 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+   exit 0 
+-- link aot-128 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+   exit 0 
+-- link aot-256 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+   exit 0 
+-- build jit (plain spir64) 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+   exit 0 
+-- what each exe carries 
+== aot-128.exe  (0.2 MB): 3 device images: zebin x3
+   11 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, disable_mid_thread_preemption, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_payload_arguments, simd_size, size, slm_alignment, source_offset, subgroup_independent_forward_progress
+   access_type                              readwrite:8  (absent):3
+   addrmode                                 stateless:8  (absent):3
+   addrspace                                global:8  (absent):3
+   arg_index                                1:7  2:3  3:1
+   barrier_count                            (absent):9  1:1  2:1
+   disable_mid_thread_preemption            (absent):6  true:5
+   eu_thread_count                          8:11
+   grf_count                                128:11
+   has_4gb_buffers                          true:11
+   has_dpas                                 (absent):9  true:2
+   has_no_stateless_write                   true:11
+   inline_data_payload_size                 32:11
+   is_ptr                                   (absent):8  true:3
+   offset                                   0:9  32:1  16:1
+   payload_arguments                        :11
+   per_thread_payload_arguments             :9  (absent):2
+   simd_size                                32:6  16:5
+   size                                     64:9  12:1  8:1
+   slm_alignment                            (absent):10  4:1
+   source_offset                            (absent):7  8:3  0:1
+   subgroup_independent_forward_progress    true:11
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillIfEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillIfEEvPvRKT_yEUlNS0_2idILi1EEEE_
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillINS0_3
+     img.0 _ZTSZN4sycl3_V17handler4fillINS0_3ext6oneapi8bfloat16EEEvPvRKT_yEUlNS0_2idILi1EEEE_
+== aot-256.exe  (0.2 MB): 3 device images: zebin x3
+   11 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, disable_mid_thread_preemption, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_payload_arguments, simd_size, size, slm_alignment, source_offset, subgroup_independent_forward_progress
+   access_type                              readwrite:8  (absent):3
+   addrmode                                 stateless:8  (absent):3
+   addrspace                                global:8  (absent):3
+   arg_index                                1:7  2:3  3:1
+   barrier_count                            (absent):9  1:1  2:1
+   disable_mid_thread_preemption            (absent):6  true:5
+   eu_thread_count                          4:11
+   grf_count                                256:11
+   has_4gb_buffers                          true:11
+   has_dpas                                 (absent):9  true:2
+   has_no_stateless_write                   true:11
+   inline_data_payload_size                 32:11
+   is_ptr                                   (absent):8  true:3
+   offset                                   0:9  32:1  16:1
+   payload_arguments                        :11
+   per_thread_payload_arguments             :9  (absent):2
+   simd_size                                32:6  16:5
+   size                                     64:9  12:1  8:1
+   slm_alignment                            (absent):10  4:1
+   source_offset                            (absent):7  8:3  0:1
+   subgroup_independent_forward_progress    true:11
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillIfEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillIfEEvPvRKT_yEUlNS0_2idILi1EEEE_
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillINS0_3
+     img.0 _ZTSZN4sycl3_V17handler4fillINS0_3ext6oneapi8bfloat16EEEvPvRKT_yEUlNS0_2idILi1EEEE_
+== jit.exe  (0.1 MB): 3 device images: SPIR-V x3
+-- run aot-128 on B60 
+[aot-128] FAIL no Level Zero GPU named *B60*
+   exit 3 
+-- run aot-256 on B60 
+[aot-256] FAIL no Level Zero GPU named *B60*
+   exit 3 
+-- run jit default GRF on B60 
+[jit-default] FAIL no Level Zero GPU named *B60*
+   exit 3 
+-- run jit with SYCL_PROGRAM_COMPILE_OPTIONS=-ze-opt-large-register-file on B60 
+[jit-largeGRF] FAIL no Level Zero GPU named *B60*
+   exit 3 
+done 22:35:23.20 

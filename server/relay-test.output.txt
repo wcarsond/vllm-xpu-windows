@@ -1,0 +1,12 @@
+run 2026-10-11 03:10:05  torch 2.14.1+xpu  relay C:\Users\claude\scripts\vllm-xpu-windows\src\vllm\vllm\distributed\device_communicators\xpu_ram_relay.py
+rank 0: Intel(R) Arc(TM) Pro B60 Graphics, gloo up
+rank 0: tensor dict there and back, bit-exact: True
+rank 0: all_reduce of 1s and 2s -> 3 (want 3), all equal: True
+rank 0: all_gather (256 x 76032) -> shape (2, 256, 76032), rows by rank correct: True
+rank 0: 1 token, 7B (hidden+residual): 0.01 MB, one hop card->RAM->other card 0.10 ms median (0.1 GB/s), round trip intact: True
+rank 0: 1000-token prefill: 14.34 MB, one hop card->RAM->other card 4.90 ms median (2.9 GB/s), round trip intact: True
+rank 0: 84 MB, rung-1 size: 86.02 MB, one hop card->RAM->other card 48.93 ms median (1.8 GB/s), round trip intact: True
+rank 1: Intel(R) Arc(TM) Pro B60 Graphics, gloo up
+rank 1: received keys ['hidden_states', 'residual', 'step', 'empty']; hidden on xpu:1
+rank 1: all_reduce of 1s and 2s -> 3 (want 3), all equal: True
+rank 1: all_gather (256 x 76032) -> shape (2, 256, 76032), rows by rank correct: True

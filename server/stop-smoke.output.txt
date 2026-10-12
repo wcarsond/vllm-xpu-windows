@@ -1,0 +1,7 @@
+﻿run 2026-10-11 09:08:15
+stopping pid 22288 (parent 23916, started 08:59:15, ws 0.0 GB): "C:\Users\claude\scripts\vllm-xpu-windows\server\..\.venv312\Scripts\python.exe"  -u "C:\Users\claude\scripts\vllm-xpu-w
+stopping pid 4236 (parent 22288, started 08:59:15, ws 1.1 GB): "C:\Users\wcars\AppData\Local\Programs\Python\Python312\python.exe" -u "C:\Users\claude\scripts\vllm-xpu-windows\server\
+stopping pid 21716 (parent 12508, started 08:59:30, ws 3.5 GB): "C:\Users\wcars\AppData\Local\Programs\Python\Python312\python.exe" "-c" "from multiprocessing.spawn import spawn_main; 
+stopping pid 3792 (parent 12508, started 08:59:30, ws 3.8 GB): "C:\Users\wcars\AppData\Local\Programs\Python\Python312\python.exe" "-c" "from multiprocessing.spawn import spawn_main; 
+stopping pid 12508 (parent 4236, started 08:59:23, ws 0.8 GB): "C:\Users\wcars\AppData\Local\Programs\Python\Python312\python.exe" "-c" "from multiprocessing.spawn import spawn_main; 
+all stopped

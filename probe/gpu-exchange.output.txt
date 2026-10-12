@@ -1,0 +1,26 @@
+run Sun 10/11/2026  9:08:11.46 iters 3000 layer_k 12000 words 256 
+-- rank 0 
+rank 0: start
+rank 0: card Intel(R) Arc(TM) Pro B60 Graphics
+rank 0: mapping at 0000028F2E780000, 4198400 bytes
+rank 0: 3000 iterations, 256 floats (1024 bytes) per all_reduce, layer_k 12000
+rank 0  A layer alone                                313.6 us/iter   wrong elements 0   GPU polls/iter 0   helper polls/iter 0   timeouts 0
+rank 0: export flag seen by the host after 3 us (ok); mine[0] = 6 (expect 6)
+rank 0: first helper exchange: 0 of 256 elements wrong (expected 21, got 21), timeouts 0
+rank 0  B layer + helper exchange                    321.9 us/iter   wrong elements 0   GPU polls/iter 50   helper polls/iter 78   timeouts 0
+rank 0  D layer + host-sync exchange (today)         326.9 us/iter   wrong elements 0   GPU polls/iter 0   helper polls/iter 0   timeouts 0
+rank 0  E helper exchange alone, back to back          8.5 us/iter   wrong elements 0   GPU polls/iter 40   helper polls/iter 20   timeouts 0
+rank 0 exit 0
+-- rank 1 
+rank 1: start
+rank 1: card Intel(R) Arc(TM) Pro B60 Graphics
+rank 1: mapping at 000001EAA7330000, 4198400 bytes
+rank 1: 3000 iterations, 256 floats (1024 bytes) per all_reduce, layer_k 12000
+rank 1  A layer alone                                313.4 us/iter   wrong elements 0   GPU polls/iter 0   helper polls/iter 0   timeouts 0
+rank 1: export flag seen by the host after 19 us (ok); mine[0] = 12 (expect 12)
+rank 1: first helper exchange: 0 of 256 elements wrong (expected 21, got 21), timeouts 0
+rank 1  B layer + helper exchange                    322.4 us/iter   wrong elements 0   GPU polls/iter 53   helper polls/iter 122   timeouts 0
+rank 1  D layer + host-sync exchange (today)         326.0 us/iter   wrong elements 0   GPU polls/iter 0   helper polls/iter 0   timeouts 0
+rank 1  E helper exchange alone, back to back          9.1 us/iter   wrong elements 0   GPU polls/iter 45   helper polls/iter 75   timeouts 0
+rank 1 exit 0
+rank 1 exit 0 

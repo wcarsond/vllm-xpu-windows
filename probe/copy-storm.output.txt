@@ -1,0 +1,16 @@
+run 2026-10-11 15:28:45  each child pushes 8.0 GiB per case, pageable host memory, blocking copies
+
+-- two processes, one card each (the failing shape), by per-copy size:
+   0.015 MB per copy, xpu:0 + xpu:1                  FAULT 0xC0000005 (ACCESS VIOLATION)
+   0.25 MB per copy, xpu:0 + xpu:1                   FAULT 0xC0000005 (ACCESS VIOLATION)
+   4 MB per copy, xpu:0 + xpu:1                      FAULT 0xC0000005 (ACCESS VIOLATION)
+   32 MB per copy, xpu:0 + xpu:1                     FAULT 0xC0000005 (ACCESS VIOLATION)
+   256 MB per copy, xpu:0 + xpu:1                    FAULT 0xC0000005 (ACCESS VIOLATION)
+   1024 MB per copy, xpu:0 + xpu:1                   FAULT 0xC0000005 (ACCESS VIOLATION)
+
+-- two processes, BOTH on card 0:
+   32 MB per copy, xpu:0 + xpu:0                     OK
+   1024 MB per copy, xpu:0 + xpu:0                   OK
+
+-- one process (control):
+   1024 MB per copy, xpu:0 alone                     OK

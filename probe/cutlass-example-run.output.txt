@@ -1,0 +1,29 @@
+run Sat 10/10/2026 22:53:19.95 
+-- which device is level_zero:0 (grf256 probe prints it) 
+[check] device: Intel(R) Arc(TM) Pro B60 Graphics  driver 1.17.39500+2  platform Intel(R) oneAPI Unified Runtime over Level-Zero V2
+[check] A plain:               c[0..3] = 168 168 168 168 -> OK
+[check] B slm+barrier+subgroup: d[0..3] = 768 768 768 768 -> OK
+[check] C dpas joint_matrix:   C[0..3] = 16 16 16 16 -> OK
+[check] D 2D block load:       o[0..3] = 112 112 112 112 -> OK
+[check] E cutlass step:        C = 16 16 16 16 .. 16 16 -> OK
+-- gemm-128 (default 5120x4096x4096, 100 iterations) 
+Disposition: Passed
+Problem Size: 1024x1024x1024x1
+Cutlass GEMM Performance:     [7.850]TFlop/s  (0.2736)ms
+   exit 0 
+-- gemm-256 
+Disposition: Passed
+Problem Size: 1024x1024x1024x1
+Cutlass GEMM Performance:     [58.040]TFlop/s  (0.0370)ms
+   exit 0 
+-- gemm-plain (probe flags, 256 GRF) 
+Disposition: Passed
+Problem Size: 1024x1024x1024x1
+Cutlass GEMM Performance:     [57.419]TFlop/s  (0.0374)ms
+   exit 0 
+-- gemm-legacy (old copy atoms, kernel-build flags, 256 GRF) 
+Disposition: Passed
+Problem Size: 1024x1024x1024x1
+Cutlass GEMM Performance:     [56.912]TFlop/s  (0.0377)ms
+   exit 0 
+done 22:53:21.79 

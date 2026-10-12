@@ -1,0 +1,495 @@
+run Sun 10/11/2026  3:47:00.98 pids 23416 35360 11124 25340 
+== pid 23416
+  exit code 0
+  232 modules
+  thread 34876
+   sample 0
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0xa24bbeecf8
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+   sample 1
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0xa24bbeecf8
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+   sample 2
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0xa24bbeecf8
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+== pid 35360
+  exit code 0
+  236 modules
+  thread 13852
+   sample 0
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0xaa931eee88
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+   sample 1
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0xaa931eee88
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+   sample 2
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0xaa931eee88
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+== pid 11124
+  exit code 0
+  236 modules
+  thread 16552
+   sample 0
+    rip KERNELBASE.dll!SwitchToThread+0x2   rsp 0xc57beed00
+     0  KERNELBASE.dll!SwitchToThread+0x2
+     1  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     2  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     3  igdrcl64.dll!GTPin_Init+0x4fe73
+     4  igdrcl64.dll!GTPin_Init+0x50b64
+     5  igdrcl64.dll!clGetPlatformInfo+0x261a
+     6  ur_adapter_opencl.dll!urContextRelease+0x67
+     7  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+     8  ur_loader.dll!urContextRelease+0x89
+     9  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    10  sycl9.dll!sycl::_V1::event::~event+0x1c
+    11  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    12  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    13  ucrtbase.dll!bsearch_s+0x255
+    14  ucrtbase.dll!execute_onexit_table+0x87
+    15  ucrtbase.dll!execute_onexit_table+0x3d
+    16  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    17  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    18  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    19  ntdll.dll!RtlRaiseException+0x1533
+    20  ntdll.dll!LdrShutdownProcess+0x17f
+    21  ntdll.dll!RtlExitUserProcess+0x9e
+    22  KERNEL32.DLL!FatalExit+0xb
+    23  ucrtbase.dll!logbf+0x2c3
+    24  python312.dll!Py_Exit+0x1d
+    25  python312.dll!PyErr_PrintEx+0x223
+    26  python312.dll!PyErr_PrintEx+0x60
+    27  python312.dll!PyRun_SimpleStringFlags+0x69
+    28  python312.dll!PyThread_tss_set+0x303
+    29  python312.dll!PyMem_GetAllocator+0x5c6
+    30  python312.dll!Py_RunMain+0x18
+    31  python312.dll!Py_Main+0x2b
+    32  python.exe+0x1230
+    33  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    34  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+   sample 1
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0xc57beeca8
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+   sample 2
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0xc57beeca8
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+== pid 25340
+  exit code 0
+  232 modules
+  thread 21964
+   sample 0
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0x6da69eea98
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+   sample 1
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0x6da69eea98
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]
+   sample 2
+    rip ntdll.dll!NtDelayExecution+0x14   rsp 0x6da69eea98
+     0  ntdll.dll!NtDelayExecution+0x14
+     1  ntdll.dll!RtlDelayExecution+0x34
+     2  KERNELBASE.dll!SwitchToThread+0x1b
+     3  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2f45
+     4  igdrcl64.dll!clReleaseGlSharedEventINTEL+0xf2c33
+     5  igdrcl64.dll!GTPin_Init+0x4fe73
+     6  igdrcl64.dll!GTPin_Init+0x50b64
+     7  igdrcl64.dll!clGetPlatformInfo+0x261a
+     8  ur_adapter_opencl.dll!urContextRelease+0x67
+     9  ur_loader.dll!ur_validation_layer::urGetDeviceExpProcAddrTable+0x147af
+    10  ur_loader.dll!urContextRelease+0x89
+    11  sycl9.dll!sycl::_V1::ext::oneapi::experimental::get_composite_devices+0x764f
+    12  sycl9.dll!sycl::_V1::event::~event+0x1c
+    13  attn_kernels_xe_2.dll!std::_Ref_count_obj2<compat::device_ext>::_Destroy+0x1ef
+    14  attn_kernels_xe_2.dll!cutlass::KernelHardwareInfo::query_device_multiprocessor_count+0x250
+    15  ucrtbase.dll!bsearch_s+0x255
+    16  ucrtbase.dll!execute_onexit_table+0x87
+    17  ucrtbase.dll!execute_onexit_table+0x3d
+    18  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb0f1
+    19  attn_kernels_xe_2.dll!vllm::xpu::xe2::dispatch_by_head_size<cute::C<16>,cute::C<16> >+0xb211
+    20  ntdll.dll!RtlIsCriticalSectionLocked+0x516a
+    21  ntdll.dll!RtlRaiseException+0x1533
+    22  ntdll.dll!LdrShutdownProcess+0x17f
+    23  ntdll.dll!RtlExitUserProcess+0x9e
+    24  KERNEL32.DLL!FatalExit+0xb
+    25  ucrtbase.dll!logbf+0x2c3
+    26  python312.dll!Py_Exit+0x1d
+    27  python312.dll!PyErr_PrintEx+0x223
+    28  python312.dll!PyErr_PrintEx+0x60
+    29  python312.dll!PyRun_SimpleStringFlags+0x69
+    30  python312.dll!PyThread_tss_set+0x303
+    31  python312.dll!PyMem_GetAllocator+0x5c6
+    32  python312.dll!Py_RunMain+0x18
+    33  python312.dll!Py_Main+0x2b
+    34  python.exe+0x1230
+    35  KERNEL32.DLL!BaseThreadInitThunk+0x17
+    36  ntdll.dll!RtlUserThreadStart+0x2c
+    [walk ended: error 0]

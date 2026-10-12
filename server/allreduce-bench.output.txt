@@ -1,0 +1,10 @@
+run 2026-10-10 23:51:39  torch 2.14.1+xpu  engine shm
+rank 0: Intel(R) Arc(TM) Pro B60 Graphics, engine shm
+rank 0: 1 token  (7 KB): all_reduce median     32.6 us, p90     40.6 us  (0.22 GB/s)  sum correct: True
+rank 0: 32 tokens (224 KB): all_reduce median    147.4 us, p90    168.3 us  (1.56 GB/s)  sum correct: True
+rank 0: 1000-token prefill (7 MB): all_reduce median   1763.3 us, p90   2186.1 us  (4.07 GB/s)  sum correct: True
+rank 1: Intel(R) Arc(TM) Pro B60 Graphics, engine shm
+rank 1: 1 token  (7 KB): all_reduce median     31.8 us, p90     40.4 us  (0.23 GB/s)  sum correct: True
+rank 1: 32 tokens (224 KB): all_reduce median    146.5 us, p90    172.5 us  (1.57 GB/s)  sum correct: True
+rank 1: 1000-token prefill (7 MB): all_reduce median   1776.5 us, p90   2181.5 us  (4.03 GB/s)  sum correct: True
+=> 56 x 33 us = 1.8 ms of exchange per token for the 7B at TP=2 (one card computes a token in ~34 ms)

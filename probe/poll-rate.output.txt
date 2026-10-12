@@ -1,0 +1,15 @@
+run Sun 10/11/2026  8:56:12.75 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+build exit 0 
+single_task     100000 polls:      15077 us  -> 150.8 ns per poll
+lane0/512       100000 polls:      15433 us  -> 154.3 ns per poll
+single_task    1000000 polls:     150909 us  -> 150.9 ns per poll
+lane0/512      1000000 polls:     154658 us  -> 154.7 ns per poll
+single_task    4000000 polls:     703418 us  -> 175.9 ns per poll
+lane0/512      4000000 polls:     718418 us  -> 179.6 ns per poll
+run exit 0 

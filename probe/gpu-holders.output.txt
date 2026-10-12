@@ -1,0 +1,41 @@
+﻿run 2026-10-11 08:11:26
+RAM free 20.6 of 31.3 GB
+-- adapters (MB)
+display/iGPU luid_0x00000000_0x00014364_phys_0  dedicated used       0  committed     833
+idle adapter luid_0x00000000_0x000147e3_phys_0  dedicated used       0  committed       3
+B60          luid_0x00000000_0x0001491c_phys_0  dedicated used       0  committed     323
+B60          luid_0x00000000_0x00014d83_phys_0  dedicated used       0  committed     323
+idle adapter luid_0x00000000_0x00015345_phys_0  dedicated used       0  committed       0
+-- processes holding more than 20 MB (MB)
+      41  explorer        pid 15224  shared usage     pid_15224_luid_0x00000000_0x00014364_phys_0
+      41  explorer        pid 15224  total committed  pid_15224_luid_0x00000000_0x00014364_phys_0
+      36  csrss           pid 1568   shared usage     pid_1568_luid_0x00000000_0x00014364_phys_0
+      60  csrss           pid 1568   total committed  pid_1568_luid_0x00000000_0x00014364_phys_0
+     530  dwm             pid 1696   shared usage     pid_1696_luid_0x00000000_0x00014364_phys_0
+     352  dwm             pid 1696   total committed  pid_1696_luid_0x00000000_0x00014364_phys_0
+      20  msedgewebview2  pid 17628  shared usage     pid_17628_luid_0x00000000_0x00014364_phys_0
+      21  msedgewebview2  pid 17628  total committed  pid_17628_luid_0x00000000_0x00014364_phys_0
+     103  Code            pid 19872  shared usage     pid_19872_luid_0x00000000_0x00014364_phys_0
+     104  Code            pid 19872  total committed  pid_19872_luid_0x00000000_0x00014364_phys_0
+      83  steamwebhelper  pid 22080  shared usage     pid_22080_luid_0x00000000_0x00014364_phys_0
+      93  steamwebhelper  pid 22080  total committed  pid_22080_luid_0x00000000_0x00014364_phys_0
+      36  XboxPcApp       pid 23600  shared usage     pid_23600_luid_0x00000000_0x00014364_phys_0
+      36  XboxPcApp       pid 23600  total committed  pid_23600_luid_0x00000000_0x00014364_phys_0
+      83  IntelGraphicsSoftware pid 24020  shared usage     pid_24020_luid_0x00000000_0x00014364_phys_0
+      83  IntelGraphicsSoftware pid 24020  total committed  pid_24020_luid_0x00000000_0x00014364_phys_0
+      64  IntelGraphicsSoftware pid 24020  total committed  pid_24020_luid_0x00000000_0x0001491c_phys_0
+      64  IntelGraphicsSoftware pid 24020  total committed  pid_24020_luid_0x00000000_0x00014d83_phys_0
+      64  IntelGraphicsSoftware.Overlay pid 25284  total committed  pid_25284_luid_0x00000000_0x0001491c_phys_0
+      64  IntelGraphicsSoftware.Overlay pid 25284  total committed  pid_25284_luid_0x00000000_0x00014d83_phys_0
+      64  IntelGraphicsSoftware.Service.Graphics pid 2868   total committed  pid_2868_luid_0x00000000_0x0001491c_phys_0
+      64  IntelGraphicsSoftware.Service.Graphics pid 2868   total committed  pid_2868_luid_0x00000000_0x00014d83_phys_0
+      64  IntelGFXFWupdateTool pid 5124   total committed  pid_5124_luid_0x00000000_0x0001491c_phys_0
+      64  IntelGFXFWupdateTool pid 5124   total committed  pid_5124_luid_0x00000000_0x00014d83_phys_0
+      64  PresentMonService pid 9012   total committed  pid_9012_luid_0x00000000_0x0001491c_phys_0
+      64  PresentMonService pid 9012   total committed  pid_9012_luid_0x00000000_0x00014d83_phys_0
+      22  StartMenuExperienceHost pid 9444   shared usage     pid_9444_luid_0x00000000_0x00014364_phys_0
+      22  StartMenuExperienceHost pid 9444   total committed  pid_9444_luid_0x00000000_0x00014364_phys_0
+-- python / llama / ollama processes
+pid 3032   parent 2428              started 10-11 08:10:18  ws   0.0 GB  (no command line visible: elevated or another session)
+pid 9420   parent 3032              started 10-11 08:10:22  ws   0.0 GB  (no command line visible: elevated or another session)
+pid 11180  parent 2948              started 10-11 08:10:27  ws   0.0 GB  (no command line visible: elevated or another session)

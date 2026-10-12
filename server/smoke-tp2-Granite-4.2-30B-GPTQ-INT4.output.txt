@@ -1,0 +1,7 @@
+run 2026-10-11 14:21:58  model C:\Users\claude\models-hf\Granite-4.2-30B-GPTQ-INT4  tensor_parallel_size=2  exchange gloo relay
+torch 2.14.1+xpu, cards: Intel(R) Arc(TM) Pro B60 Graphics, Intel(R) Arc(TM) Pro B60 Graphics
+engine up on two cards (tensor split) in 88.4 s (Granite-4.2-30B-GPTQ-INT4, bfloat16, max_model_len 4096, util 0.9, attention FLASH_ATTN, eager True)
+run 1: 21 in, 256 out, 7.50 s -> 34.1 tok/s end to end
+run 2: 21 in, 256 out, 7.76 s -> 33.0 tok/s end to end
+run 3: 21 in, 256 out, 7.73 s -> 33.1 tok/s end to end
+median 33.1 tok/s; first 200 chars: '```python\n# Example INI file content:\n# [section1]\n# key1 = value1\n# key2 = value2\n# ; comment line\n# [section2]\n# key3 = value3\n# key4 = value4\n# ; another comment\n```\n\nThe function should handle:\n- '

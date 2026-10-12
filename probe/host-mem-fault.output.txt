@@ -1,0 +1,113 @@
+﻿sample start 17:06:05  free RAM GB | standby (cache) GB | python working sets GB
+17:06:06  free  23.15 | standby  20.15 | 
+17:06:08  free  23.15 | standby   20.1 | 
+17:06:10  free  22.83 | standby  20.01 | 16484:0.6
+17:06:12  free  22.44 | standby  20.04 | 16484:0.75
+17:06:14  free  22.35 | standby  20.05 | 16484:0.76
+17:06:17  free  22.29 | standby  20.11 | 16484:0.86
+17:06:19  free  22.09 | standby  20.12 | 16484:1.16
+17:06:21  free  21.69 | standby  20.12 | 4044:0.62 16484:1.16
+17:06:23  free  21.46 | standby  20.13 | 4044:0.68 16484:1.16
+17:06:25  free  21.42 | standby  20.12 | 4044:0.76 16484:1.16
+17:06:27  free  21.32 | standby   20.1 | 4044:0.85 16484:1.16
+17:06:29  free  20.53 | standby  20.12 | 4044:0.85 7676:0.67 16484:1.16 21636:0.67
+17:06:31  free   20.4 | standby  20.12 | 4044:0.85 7676:0.68 16484:1.16 21636:0.68
+17:06:33  free  20.31 | standby  20.11 | 4044:0.85 7676:0.75 16484:1.16 21636:0.75
+17:06:35  free  20.15 | standby  19.46 | 4044:0.85 7676:1.11 16484:1.16 21636:1.05
+17:06:37  free  18.08 | standby  16.45 | 4044:0.85 7676:2.51 16484:1.16 21636:2.54
+17:06:39  free  14.47 | standby  16.47 | 4044:0.85 7676:2.86 16484:1.16 21636:2.79
+17:06:41  free  14.54 | standby  16.65 | 4044:0.85 7676:2.71 16484:1.16 21636:2.64
+17:06:43  free  14.91 | standby  16.93 | 4044:0.85 7676:2.51 16484:1.16 21636:2.44
+17:06:46  free  15.24 | standby  18.04 | 4044:0.85 16484:1.16 21636:2.29
+17:06:48  free  17.83 | standby  19.43 | 4044:0.85 16484:1.16 21636:1.89
+17:06:50  free  18.38 | standby  17.13 | 4044:0.85 16484:1.16 21636:4.19
+17:06:52  free  21.25 | standby  19.75 | 4044:0.65 16484:1.16
+17:06:54  free  21.98 | standby  19.73 | 16484:1.16
+17:06:56  free  21.98 | standby  19.75 | 16484:1.16
+17:06:58  free  23.12 | standby  19.95 | 
+17:07:00  free  23.13 | standby  19.96 | 
+17:07:02  free  23.13 | standby  19.96 | 
+17:07:04  free  23.13 | standby  19.96 | 
+17:07:06  free  23.15 | standby  19.96 | 
+17:07:08  free  23.14 | standby  19.96 | 
+17:07:10  free  23.14 | standby  19.96 | 
+17:07:12  free  23.15 | standby  19.96 | 
+17:07:14  free  23.17 | standby  19.96 | 
+17:07:16  free  23.15 | standby  19.96 | 
+17:07:19  free  23.13 | standby  19.97 | 
+17:07:21  free  23.12 | standby  19.97 | 
+17:07:23  free  23.13 | standby  19.97 | 
+17:07:25  free  23.13 | standby  19.97 | 
+17:07:27  free  23.14 | standby  19.97 | 
+17:07:29  free  23.14 | standby  19.97 | 
+17:07:31  free  23.14 | standby  19.97 | 
+17:07:33  free  23.14 | standby  19.97 | 
+17:07:35  free  23.15 | standby  19.97 | 
+17:07:37  free  23.15 | standby  19.97 | 
+17:07:39  free  23.15 | standby  19.97 | 
+17:07:41  free  23.15 | standby  19.97 | 
+17:07:43  free  23.15 | standby  19.97 | 
+17:07:45  free  23.15 | standby  19.97 | 
+17:07:47  free  23.15 | standby  19.97 | 
+17:07:49  free  23.15 | standby  19.97 | 
+17:07:52  free  23.15 | standby  19.97 | 
+17:07:54  free  23.16 | standby  19.98 | 
+17:07:56  free  23.16 | standby  19.98 | 
+17:07:58  free  23.16 | standby  19.98 | 
+17:08:00  free  23.16 | standby  19.98 | 
+17:08:02  free  23.15 | standby  19.98 | 
+17:08:04  free  23.15 | standby  19.98 | 
+17:08:06  free  23.15 | standby  19.98 | 
+17:08:08  free  23.15 | standby  19.98 | 
+17:08:10  free  23.15 | standby  19.98 | 
+17:08:12  free  23.15 | standby  19.98 | 
+17:08:14  free  23.15 | standby  19.98 | 
+17:08:16  free  23.15 | standby  19.98 | 
+17:08:18  free  23.14 | standby  19.98 | 
+17:08:21  free  23.14 | standby  19.98 | 
+17:08:23  free  23.14 | standby  19.98 | 
+17:08:25  free  23.14 | standby  19.98 | 
+17:08:27  free  23.16 | standby  19.98 | 
+17:08:29  free  23.16 | standby  19.98 | 
+17:08:31  free  23.08 | standby  19.98 | 
+17:08:33  free   23.1 | standby  19.98 | 
+17:08:35  free  23.11 | standby  19.98 | 
+17:08:37  free  23.11 | standby  19.98 | 
+17:08:39  free  23.13 | standby  19.99 | 
+17:08:41  free  23.12 | standby  19.99 | 
+17:08:43  free  23.13 | standby  19.99 | 
+17:08:45  free  23.11 | standby  19.98 | 
+17:08:48  free  23.11 | standby  19.98 | 
+17:08:50  free  23.11 | standby  19.98 | 
+17:08:52  free  23.11 | standby  19.98 | 
+17:08:54  free  23.11 | standby  19.98 | 
+17:08:56  free  23.11 | standby  19.98 | 
+17:08:58  free  23.13 | standby  19.98 | 
+17:09:00  free  23.09 | standby  19.98 | 
+17:09:02  free  23.11 | standby  19.98 | 
+17:09:04  free  23.12 | standby  19.98 | 
+17:09:06  free  23.12 | standby  19.98 | 
+17:09:08  free  23.13 | standby  19.98 | 
+17:09:10  free  23.13 | standby  19.99 | 
+17:09:12  free  23.15 | standby  19.99 | 
+17:09:14  free  23.15 | standby  19.99 | 
+17:09:16  free  23.15 | standby  19.99 | 
+17:09:19  free  23.15 | standby  19.99 | 
+17:09:21  free  23.15 | standby  19.99 | 
+17:09:23  free  23.15 | standby  19.99 | 
+17:09:25  free  23.15 | standby  19.99 | 
+17:09:27  free  23.16 | standby  19.99 | 
+17:09:29  free  23.16 | standby  19.99 | 
+17:09:31  free  23.15 | standby  19.99 | 
+17:09:33  free  23.15 | standby  19.99 | 
+17:09:35  free  23.15 | standby  19.99 | 
+17:09:37  free  23.15 | standby  19.99 | 
+17:09:39  free  23.15 | standby  19.99 | 
+17:09:41  free  23.15 | standby  19.99 | 
+17:09:43  free  23.16 | standby  19.99 | 
+17:09:46  free  23.16 | standby  19.99 | 
+17:09:48  free  23.15 | standby  19.99 | 
+17:09:50  free  23.15 | standby  19.99 | 
+17:09:52  free  23.15 | standby  19.99 | 
+
+MIN free RAM 14.47 GB   PEAK single python working set 4.19 GB

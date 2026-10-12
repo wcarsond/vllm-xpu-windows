@@ -1,0 +1,20 @@
+run 2026-10-11 02:27:41
+case                       q     k causal window    paged blk head  result
+np_full_8                  8     8 False  (-1, -1)  False   0   64  ok   max abs err 0.0067
+np_full_64                64    64 False  (-1, -1)  False   0   64  ok   max abs err 0.0036
+np_full_128              128   128 False  (-1, -1)  False   0   64  ok   max abs err 0.0026
+np_full_512              512   512 False  (-1, -1)  False   0   64  ok   max abs err 0.0018
+np_full_2048            2048  2048 False  (-1, -1)  False   0   64  ok   max abs err 0.0009
+np_win64_8                 8     8 False  (64, 64)  False   0   64  FALLBACK (kernel not compiled: 64,false,false,true,false,false); reference ok   max abs err 0.0089
+np_win64_512             512   512 False  (64, 64)  False   0   64  FALLBACK (kernel not compiled: 64,false,false,true,false,false); reference ok   max abs err 0.0133
+np_win64_2048           2048  2048 False  (64, 64)  False   0   64  FALLBACK (kernel not compiled: 64,false,false,true,false,false); reference ok   max abs err 0.0124
+np_causal_8                8     8 True   (-1, -1)  False   0   64  ok   max abs err 0.0074
+np_causal_512            512   512 True   (-1, -1)  False   0   64  ok   max abs err 0.0080
+np_causal_win_512        512   512 True   (64, 64)  False   0   64  FALLBACK (kernel not compiled: 64,false,false,true,false,false); reference ok   max abs err 0.0122
+np_full_512_h128         512   512 False  (-1, -1)  False   0  128  ok   max abs err 0.0016
+np_win64_512_h128        512   512 False  (64, 64)  False   0  128  FALLBACK (kernel not compiled: 128,false,false,true,false,false); reference ok   max abs err 0.0137
+pg16_causal_13            13    13 True   (-1, -1)  True   16   64  ok   max abs err 0.0063
+pg64_causal_13            13    13 True   (-1, -1)  True   64   64  ok   max abs err 0.0082
+pg64_causal_13_h128       13    13 True   (-1, -1)  True   64  128  ok   max abs err 0.0078
+pg64_win_13               13    13 False  (64, 64)  True   64   64  ok   max abs err 0.0082
+pg64_full_13              13    13 False  (-1, -1)  True   64   64  ok   max abs err 0.0082

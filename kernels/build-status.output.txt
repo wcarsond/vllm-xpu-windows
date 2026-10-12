@@ -1,0 +1,7 @@
+﻿status 2026-10-11 12:55:15
+step 720 of 754
+elapsed 44 min, 0.1 min/step so far, finish about 12:57 if the pace holds
+now: csrc\xpu\lora\lora_ops.cpp
+free RAM 20.1 of 31.3 GB
+compiler: clang-cl 0.7 GB, clang-cl 0.0 GB, icx 0.0 GB, ninja 0.1 GB
+guard: 12:55:12  free 20.5 GB  step [720/754]

@@ -1,0 +1,7 @@
+run 2026-10-11 16:03:05  8192x8192 fp16 (128 MiB), 48 copies per child
+whole   = copy the whole tensor          (what a pipeline split does)
+narrow0 = contiguous half, dim 0         (column-parallel)
+narrow1 = STRIDED half, dim 1            (row-parallel: o_proj, down_proj)
+whole     (two processes, one card each, no mask)   OK
+narrow0   (two processes, one card each, no mask)   OK
+narrow1   (two processes, one card each, no mask)   OK

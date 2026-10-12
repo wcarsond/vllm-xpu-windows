@@ -1,0 +1,8 @@
+﻿run 2026-10-11 03:12:50  model qwen2.5-coder-7b (router, Q4_K_M GGUF, Vulkan1+Vulkan2 layer split)  depth leg
+warm-up (loads the model if idle): 0.9 s
+server context size (n_ctx): 0
+depth 0 : prompt_n 50, prefill 75.4 tok/s (0.66 s), decode 11.4 tok/s over 128 tokens, wall 11.82 s
+depth 4096 : prompt_n 3523, prefill 205.0 tok/s (17.19 s), decode 10.4 tok/s over 128 tokens, wall 29.48 s
+depth 8192 : prompt_n , prefill 0 tok/s (0 s), decode 0 tok/s over  tokens, wall 9.1 s
+depth 16384 : prompt_n , prefill 0 tok/s (0 s), decode 0 tok/s over  tokens, wall 2.02 s
+depth 32768 : prompt_n , prefill 0 tok/s (0 s), decode 0 tok/s over  tokens, wall 2.03 s

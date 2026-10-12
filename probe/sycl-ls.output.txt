@@ -1,0 +1,94 @@
+run Sat 10/10/2026 22:20:46.21 
+== with compiler vars.bat, loader log on 
+C:\Program Files (x86)\Intel\oneAPI\compiler\2026.1\bin\sycl-ls.exe
+<LOADER>[INFO]: loaded adapter 0x00007FFDF0530000: C:\Program Files (x86)\Intel\oneAPI\compiler\2026.1\bin\ur_adapter_opencl.dll
+[opencl:cpu][opencl:0] Intel(R) OpenCL, Intel(R) Core(TM) Ultra 5 250K Plus OpenCL 3.0 (Build 0) [2026.21.6.0.17_160000]
+[opencl:gpu][opencl:1] Intel(R) OpenCL Graphics, Intel(R) Graphics OpenCL 3.0 NEO  [32.0.101.8860]
+[opencl:gpu][opencl:2] Intel(R) OpenCL Graphics, Intel(R) Arc(TM) Pro B60 Graphics OpenCL 3.0 NEO  [32.0.101.9033]
+[opencl:gpu][opencl:3] Intel(R) OpenCL Graphics, Intel(R) Arc(TM) Pro B60 Graphics OpenCL 3.0 NEO  [32.0.101.9033]
+
+Platforms: 3
+Platform [#1]:
+    Version  : OpenCL 3.0 WINDOWS
+    Name     : Intel(R) OpenCL
+    Vendor   : Intel(R) Corporation
+    Devices  : 1
+        Device [#0]:
+        Type              : cpu
+        Version           : OpenCL 3.0 (Build 0)
+        Name              : Intel(R) Core(TM) Ultra 5 250K Plus
+        Vendor            : Intel(R) Corporation
+        Driver            : 2026.21.6.0.17_160000
+        UUID              : 86806206-0c00-fffb-fa7f-fffbebbf0000
+        DeviceID          : 788066
+        Num SubDevices    : 0
+        Num SubSubDevices : 0
+        Aspects           : cpu fp16 fp64 online_compiler online_linker queue_profiling usm_device_allocations usm_host_allocations usm_shared_allocations usm_system_allocations ext_intel_gpu_slices ext_intel_gpu_subslices_per_slice ext_intel_gpu_eu_count_per_subslice usm_atomic_host_allocations usm_atomic_shared_allocations atomic64 ext_intel_device_info_uuid ext_oneapi_srgb ext_oneapi_native_assert ext_intel_gpu_hw_threads_per_eu ext_intel_device_id ext_intel_legacy_image ext_oneapi_fragment ext_oneapi_chunk ext_oneapi_tangle ext_oneapi_limited_graph ext_oneapi_private_alloca ext_oneapi_atomic16 ext_oneapi_virtual_functions ext_intel_device_info_node_mask ext_oneapi_clock_sub_group ext_oneapi_clock_work_group ext_oneapi_clock_device
+        info::device::sub_group_sizes: 4 8 16 32 64
+        Architecture: x86_64
+Platform [#2]:
+    Version  : OpenCL 3.0 
+    Name     : Intel(R) OpenCL Graphics
+    Vendor   : Intel(R) Corporation
+    Devices  : 1
+        Device [#1]:
+        Type              : gpu
+        Version           : OpenCL 3.0 NEO 
+        Name              : Intel(R) Graphics
+        Vendor            : Intel(R) Corporation
+        Driver            : 32.0.101.8860
+        UUID              : 8680677d-0600-0000-0002-000000000000
+        DeviceID          : 32103
+        Num SubDevices    : 0
+        Num SubSubDevices : 0
+        Aspects           : gpu fp16 fp64 online_compiler online_linker queue_profiling usm_device_allocations usm_host_allocations usm_shared_allocations ext_intel_pci_address ext_intel_gpu_eu_count ext_intel_gpu_slices ext_intel_gpu_subslices_per_slice ext_intel_gpu_eu_count_per_subslice atomic64 ext_intel_device_info_uuid ext_oneapi_srgb ext_intel_gpu_hw_threads_per_eu ext_intel_device_id ext_intel_legacy_image ext_intel_esimd ext_oneapi_fragment ext_oneapi_chunk ext_oneapi_tangle ext_oneapi_private_alloca ext_oneapi_atomic16 ext_oneapi_virtual_functions ext_intel_device_info_luid ext_intel_device_info_node_mask ext_oneapi_is_integrated_gpu
+        info::device::sub_group_sizes: 8 16 32
+        Architecture: intel_gpu_mtl_u
+Platform [#3]:
+    Version  : OpenCL 3.0 
+    Name     : Intel(R) OpenCL Graphics
+    Vendor   : Intel(R) Corporation
+    Devices  : 2
+        Device [#2]:
+        Type              : gpu
+        Version           : OpenCL 3.0 NEO 
+        Name              : Intel(R) Arc(TM) Pro B60 Graphics
+        Vendor            : Intel(R) Corporation
+        Driver            : 32.0.101.9033
+        UUID              : 868011e2-0000-0000-0400-000000000000
+        DeviceID          : 57873
+        Num SubDevices    : 0
+        Num SubSubDevices : 0
+        Aspects           : gpu fp16 fp64 online_compiler online_linker queue_profiling usm_device_allocations usm_host_allocations usm_shared_allocations ext_intel_pci_address ext_intel_gpu_eu_count ext_intel_gpu_slices ext_intel_gpu_subslices_per_slice ext_intel_gpu_eu_count_per_subslice atomic64 ext_intel_device_info_uuid ext_oneapi_srgb ext_intel_gpu_hw_threads_per_eu ext_intel_device_id ext_intel_legacy_image ext_intel_esimd ext_oneapi_fragment ext_oneapi_chunk ext_oneapi_tangle ext_intel_matrix ext_oneapi_private_alloca ext_oneapi_atomic16 ext_oneapi_virtual_functions ext_intel_device_info_luid ext_intel_device_info_node_mask
+        info::device::sub_group_sizes: 16 32
+        Architecture: intel_gpu_bmg_g21
+        Device [#3]:
+        Type              : gpu
+        Version           : OpenCL 3.0 NEO 
+        Name              : Intel(R) Arc(TM) Pro B60 Graphics
+        Vendor            : Intel(R) Corporation
+        Driver            : 32.0.101.9033
+        UUID              : 868011e2-0000-0000-0800-000000000000
+        DeviceID          : 57873
+        Num SubDevices    : 0
+        Num SubSubDevices : 0
+        Aspects           : gpu fp16 fp64 online_compiler online_linker queue_profiling usm_device_allocations usm_host_allocations usm_shared_allocations ext_intel_pci_address ext_intel_gpu_eu_count ext_intel_gpu_slices ext_intel_gpu_subslices_per_slice ext_intel_gpu_eu_count_per_subslice atomic64 ext_intel_device_info_uuid ext_oneapi_srgb ext_intel_gpu_hw_threads_per_eu ext_intel_device_id ext_intel_legacy_image ext_intel_esimd ext_oneapi_fragment ext_oneapi_chunk ext_oneapi_tangle ext_intel_matrix ext_oneapi_private_alloca ext_oneapi_atomic16 ext_oneapi_virtual_functions ext_intel_device_info_luid ext_intel_device_info_node_mask
+        info::device::sub_group_sizes: 16 32
+        Architecture: intel_gpu_bmg_g21
+default_selector()      : gpu, Intel(R) OpenCL Graphics, Intel(R) Graphics OpenCL 3.0 NEO  [32.0.101.8860]
+accelerator_selector()  : No device of requested type available. Please chec...
+cpu_selector()          : cpu, Intel(R) OpenCL, Intel(R) Core(TM) Ultra 5 250K Plus OpenCL 3.0 (Build 0) [2026.21.6.0.17_160000]
+gpu_selector()          : gpu, Intel(R) OpenCL Graphics, Intel(R) Graphics OpenCL 3.0 NEO  [32.0.101.8860]
+custom_selector(gpu)    : gpu, Intel(R) OpenCL Graphics, Intel(R) Graphics OpenCL 3.0 NEO  [32.0.101.8860]
+custom_selector(cpu)    : cpu, Intel(R) OpenCL, Intel(R) Core(TM) Ultra 5 250K Plus OpenCL 3.0 (Build 0) [2026.21.6.0.17_160000]
+custom_selector(acc)    : No device of requested type available. Please chec...
+<LOADER>[INFO]: unloaded adapter 0x00007FFDF0530000
+<LOADER>[INFO]: ---> urLoaderTearDown() -> UR_RESULT_SUCCESS
+ 
+== ze_loader.dll copies on this PC 
+C:\Windows\System32\ze_loader.dll
+The system cannot find the path specified.
+== UR adapters shipped with the compiler 
+ur_adapter_level_zero.dll
+ur_adapter_level_zero_v2.dll
+ur_adapter_opencl.dll

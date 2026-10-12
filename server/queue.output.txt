@@ -1,0 +1,23 @@
+queue started Sun 10/11/2026 14:27:49.23 
+ 
+== Qwen3.5-27B-GPTQ-Int4  Sun 10/11/2026 14:27:49.24 
+RAM free 22.0 GB at start
+(Worker_TP1 pid=12020) ERROR 10-11 14:30:45 [multiproc_executor.py:1113] PermissionError: [Errno 13] Permission denied: 'C:\\Users\\wcars\\.triton\\cache\\LSXTWMTUZLLKMTV2GUARYD3XGE7AIWQK5Z5ROPYROEMNIYRZDXQQ\\_fused_post_conv_kernel.json'
+(Worker_TP1 pid=12020) ERROR 10-11 14:30:45 [multiproc_executor.py:1113] PermissionError: [Errno 13] Permission denied: 'C:\\Users\\wcars\\.triton\\cache\\LSXTWMTUZLLKMTV2GUARYD3XGE7AIWQK5Z5ROPYROEMNIYRZDXQQ\\_fused_post_conv_kernel.json'
+(EngineCore pid=18924) ERROR 10-11 14:30:49 [core.py:1498]     raise RuntimeError(
+(EngineCore pid=18924) ERROR 10-11 14:30:49 [core.py:1498] RuntimeError: Worker failed with error '[Errno 13] Permission denied: 'C:\\Users\\wcars\\.triton\\cache\\LSXTWMTUZLLKMTV2GUARYD3XGE7AIWQK5Z5ROPYROEMNIYRZDXQQ\\_fused_post_conv_kernel.json'', please check the stack trace above for the root cause
+    raise RuntimeError(
+RuntimeError: Worker failed with error '[Errno 13] Permission denied: 'C:\\Users\\wcars\\.triton\\cache\\LSXTWMTUZLLKMTV2GUARYD3XGE7AIWQK5Z5ROPYROEMNIYRZDXQQ\\_fused_post_conv_kernel.json'', please check the stack trace above for the root cause
+    raise RuntimeError(
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+tp2 exit 1 
+exit 0 
+ 
+== Qwen2.5-72B-Instruct-AWQ  Sun 10/11/2026 14:31:01.29 
+RAM free 22.2 GB at start
+    raise RuntimeError(
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {'EngineCore': 1}
+tp2 exit 1 
+exit 0 
+ 
+queue finished Sun 10/11/2026 14:31:50.50 

@@ -1,0 +1,21 @@
+﻿sample start 16:40:52  (bytes; one line per second per adapter instance with any usage)
+16:40:53  luid_0x00000000_0x0001491c_phys_0  dedicated  0 GB
+16:40:53  luid_0x00000000_0x00014364_phys_0  shared  1.07 GB
+16:40:53  luid_0x00000000_0x000147e3_phys_0  shared  0 GB
+16:40:53  luid_0x00000000_0x0001491c_phys_0  shared  0 GB
+16:40:53  luid_0x00000000_0x00014d83_phys_0  shared  0.01 GB
+16:40:53  luid_0x00000000_0x00015345_phys_0  shared  0 GB
+16:40:55  luid_0x00000000_0x0001491c_phys_0  dedicated  0 GB
+16:40:55  luid_0x00000000_0x00014364_phys_0  shared  1.07 GB
+16:40:55  luid_0x00000000_0x000147e3_phys_0  shared  0 GB
+16:40:55  luid_0x00000000_0x0001491c_phys_0  shared  0 GB
+16:40:55  luid_0x00000000_0x00014d83_phys_0  shared  0.01 GB
+16:40:55  luid_0x00000000_0x00015345_phys_0  shared  0 GB
+
+PEAKS over 2 s:
+  luid_0x00000000_0x0001491c_phys_0  dedicated peak 0 GB
+  luid_0x00000000_0x000147e3_phys_0  SHARED peak 0 GB
+  luid_0x00000000_0x00014d83_phys_0  SHARED peak 0.01 GB
+  luid_0x00000000_0x00014364_phys_0  SHARED peak 1.07 GB
+  luid_0x00000000_0x0001491c_phys_0  SHARED peak 0 GB
+  luid_0x00000000_0x00015345_phys_0  SHARED peak 0 GB

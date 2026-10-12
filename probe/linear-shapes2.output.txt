@@ -1,0 +1,18 @@
+run 2026-10-10 21:24:38  torch 2.14.1+xpu  free before: 12.1 GiB
+ok    M=13 plain  (out (13, 896))
+ok    M=13 + bias  (out (13, 896))
+ok    M=13 non-contiguous x  (out (13, 896))
+ok    M=13 non-contiguous x + bias  (out (13, 896))
+ok    M=13 bias, 24 layers in a row  (out (13, 896))
+ok    M=1 plain  (out (1, 896))
+ok    M=1 + bias  (out (1, 896))
+ok    M=1 non-contiguous x  (out (1, 896))
+ok    M=1 non-contiguous x + bias  (out (1, 896))
+ok    M=1 bias, 24 layers in a row  (out (1, 896))
+holding 9.5 GiB; free now 2.4 GiB
+ok    M=13 + bias under memory pressure  (out (13, 896))
+ok    M=13 plain under memory pressure  (out (13, 896))
+ok    M=13 bias, 24 layers under memory pressure  (out (13, 896))
+ok    M=1 + bias under memory pressure  (out (1, 896))
+ok    M=1 plain under memory pressure  (out (1, 896))
+ok    M=1 bias, 24 layers under memory pressure  (out (1, 896))

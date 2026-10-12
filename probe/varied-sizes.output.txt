@@ -1,0 +1,2 @@
+run 2026-10-11 16:29:56  two processes, one card each, no affinity mask, copy into preallocated device tensors and retain
+varied      40.0 GiB retained each   FAULT 0x00000001

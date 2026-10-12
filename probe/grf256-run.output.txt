@@ -1,0 +1,62 @@
+run Sat 10/10/2026 22:35:35.61 
+-- run aot-128 on B60 
+<LOADER>[INFO]: loaded adapter 0x00007FFD25980000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_level_zero.dll
+<LOADER>[INFO]: loaded adapter 0x00007FFD17730000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_level_zero_v2.dll
+<LOADER>[INFO]: loaded adapter 0x00007FFD25CD0000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_opencl.dll
+[aot-128] device: Intel(R) Arc(TM) Pro B60 Graphics  driver 1.17.39500+2  platform Intel(R) oneAPI Unified Runtime over Level-Zero V2
+[aot-128] A plain:               c[0..3] = 168 168 168 168 -> OK
+[aot-128] B slm+barrier+subgroup: d[0..3] = 768 768 768 768 -> OK
+[aot-128] C dpas joint_matrix:   C[0..3] = 16 16 16 16 -> OK
+[aot-128] D 2D block load:       o[0..3] = 112 112 112 112 -> OK
+[aot-128] E cutlass step:        C = 16 16 16 16 .. 16 16 -> OK
+<LOADER>[INFO]: unloaded adapter 0x00007FFD25980000
+<LOADER>[INFO]: unloaded adapter 0x00007FFD17730000
+<LOADER>[INFO]: unloaded adapter 0x00007FFD25CD0000
+<LOADER>[INFO]: ---> urLoaderTearDown() -> UR_RESULT_SUCCESS
+   exit 0 
+-- run aot-256 on B60 
+<LOADER>[INFO]: loaded adapter 0x00007FFD25980000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_level_zero.dll
+<LOADER>[INFO]: loaded adapter 0x00007FFD17730000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_level_zero_v2.dll
+<LOADER>[INFO]: loaded adapter 0x00007FFD25CD0000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_opencl.dll
+[aot-256] device: Intel(R) Arc(TM) Pro B60 Graphics  driver 1.17.39500+2  platform Intel(R) oneAPI Unified Runtime over Level-Zero V2
+[aot-256] A plain:               c[0..3] = 168 168 168 168 -> OK
+[aot-256] B slm+barrier+subgroup: d[0..3] = 768 768 768 768 -> OK
+[aot-256] C dpas joint_matrix:   C[0..3] = 16 16 16 16 -> OK
+[aot-256] D 2D block load:       o[0..3] = 112 112 112 112 -> OK
+[aot-256] E cutlass step:        C = 16 16 16 16 .. 16 16 -> OK
+<LOADER>[INFO]: unloaded adapter 0x00007FFD25980000
+<LOADER>[INFO]: unloaded adapter 0x00007FFD17730000
+<LOADER>[INFO]: unloaded adapter 0x00007FFD25CD0000
+<LOADER>[INFO]: ---> urLoaderTearDown() -> UR_RESULT_SUCCESS
+   exit 0 
+-- run jit default GRF on B60 
+<LOADER>[INFO]: loaded adapter 0x00007FFD25980000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_level_zero.dll
+<LOADER>[INFO]: loaded adapter 0x00007FFD17730000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_level_zero_v2.dll
+<LOADER>[INFO]: loaded adapter 0x00007FFD25CD0000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_opencl.dll
+[jit-default] device: Intel(R) Arc(TM) Pro B60 Graphics  driver 1.17.39500+2  platform Intel(R) oneAPI Unified Runtime over Level-Zero V2
+[jit-default] A plain:               c[0..3] = 168 168 168 168 -> OK
+[jit-default] B slm+barrier+subgroup: d[0..3] = 768 768 768 768 -> OK
+[jit-default] C dpas joint_matrix:   C[0..3] = 16 16 16 16 -> OK
+[jit-default] D 2D block load:       o[0..3] = 112 112 112 112 -> OK
+[jit-default] E cutlass step:        C = 16 16 16 16 .. 16 16 -> OK
+<LOADER>[INFO]: unloaded adapter 0x00007FFD25980000
+<LOADER>[INFO]: unloaded adapter 0x00007FFD17730000
+<LOADER>[INFO]: unloaded adapter 0x00007FFD25CD0000
+<LOADER>[INFO]: ---> urLoaderTearDown() -> UR_RESULT_SUCCESS
+   exit 0 
+-- run jit with SYCL_PROGRAM_COMPILE_OPTIONS=-ze-opt-large-register-file on B60 
+<LOADER>[INFO]: loaded adapter 0x00007FFD25980000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_level_zero.dll
+<LOADER>[INFO]: loaded adapter 0x00007FFD17730000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_level_zero_v2.dll
+<LOADER>[INFO]: loaded adapter 0x00007FFD25CD0000: C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Library\bin\ur_adapter_opencl.dll
+[jit-largeGRF] device: Intel(R) Arc(TM) Pro B60 Graphics  driver 1.17.39500+2  platform Intel(R) oneAPI Unified Runtime over Level-Zero V2
+[jit-largeGRF] A plain:               c[0..3] = 168 168 168 168 -> OK
+[jit-largeGRF] B slm+barrier+subgroup: d[0..3] = 768 768 768 768 -> OK
+[jit-largeGRF] C dpas joint_matrix:   C[0..3] = 16 16 16 16 -> OK
+[jit-largeGRF] D 2D block load:       o[0..3] = 112 112 112 112 -> OK
+[jit-largeGRF] E cutlass step:        C = 16 16 16 16 .. 16 16 -> OK
+<LOADER>[INFO]: unloaded adapter 0x00007FFD25980000
+<LOADER>[INFO]: unloaded adapter 0x00007FFD17730000
+<LOADER>[INFO]: unloaded adapter 0x00007FFD25CD0000
+<LOADER>[INFO]: ---> urLoaderTearDown() -> UR_RESULT_SUCCESS
+   exit 0 
+done 22:35:37.04 

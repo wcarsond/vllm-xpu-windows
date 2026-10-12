@@ -1,0 +1,21 @@
+run 2026-10-10 17:40:42
+Qwen/Qwen2.5-0.5B-Instruct -> C:\Users\claude\models-hf\Qwen2.5-0.5B-Instruct: 7 files, 1.00 GB, 0 s (1000 MB/s)
+  config.json  659
+  generation_config.json  242
+  merges.txt  1,671,839
+  model.safetensors  988,097,824
+  tokenizer.json  7,031,645
+  tokenizer_config.json  7,305
+  vocab.json  2,776,833
+Qwen/Qwen2.5-Coder-7B-Instruct -> C:\Users\claude\models-hf\Qwen2.5-Coder-7B-Instruct: 11 files, 15.24 GB, 228 s (67 MB/s)
+  config.json  663
+  generation_config.json  242
+  merges.txt  1,671,839
+  model-00001-of-00004.safetensors  4,877,660,776
+  model-00002-of-00004.safetensors  4,932,751,008
+  model-00003-of-00004.safetensors  4,330,865,200
+  model-00004-of-00004.safetensors  1,089,994,880
+  model.safetensors.index.json  27,752
+  tokenizer.json  7,031,645
+  tokenizer_config.json  7,305
+  vocab.json  2,776,833

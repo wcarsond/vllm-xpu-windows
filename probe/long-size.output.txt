@@ -1,0 +1,12 @@
+run Sat 10/10/2026 22:48:04.41 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+C:\Users\claude\scripts\vllm-xpu-windows\probe\long-size.cpp(12,19): error: static assertion failed due to requirement 'sizeof(long) == 8': DEVICE_LONG_IS_NOT_8_BYTES
+   12 |     static_assert(sizeof(long) == 8, "DEVICE_LONG_IS_NOT_8_BYTES");
+      |                   ^~~~~~~~~~~~~~~~~
+C:\Users\claude\scripts\vllm-xpu-windows\probe\long-size.cpp(12,32): note: expression evaluates to '4 == 8'
+   12 |     static_assert(sizeof(long) == 8, "DEVICE_LONG_IS_NOT_8_BYTES");
+      |                   ~~~~~~~~~~~~~^~~~
+1 error generated.
+exit 1 (0 = device long is 8 bytes; a DEVICE_LONG_IS_NOT_8_BYTES error = 4 bytes) 

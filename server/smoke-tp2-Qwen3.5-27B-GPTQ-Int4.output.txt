@@ -1,0 +1,7 @@
+run 2026-10-11 15:45:39  model C:\Users\claude\models-hf\Qwen3.5-27B-GPTQ-Int4  tensor_parallel_size=2  exchange gloo relay
+torch 2.14.1+xpu, cards: Intel(R) Arc(TM) Pro B60 Graphics, Intel(R) Arc(TM) Pro B60 Graphics
+engine up on two cards (tensor split) in 158.4 s (Qwen3.5-27B-GPTQ-Int4, bfloat16, max_model_len 2048, util 0.97, attention FLASH_ATTN, eager True)
+run 1: 21 in, 256 out, 10.78 s -> 23.7 tok/s end to end
+run 2: 21 in, 256 out, 10.75 s -> 23.8 tok/s end to end
+run 3: 21 in, 256 out, 10.84 s -> 23.6 tok/s end to end
+median 23.7 tok/s; first 200 chars: '<think>\nThe user wants me to write a Python function that parses an INI file into a nested dictionary. I should include comments explaining each step.\n\nLet me think about what an INI file looks like:\n'

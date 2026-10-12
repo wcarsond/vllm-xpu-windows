@@ -1,0 +1,7 @@
+run 2026-10-11 13:05:59  model C:\Users\claude\models-hf\Qwen2.5-32B-Instruct-AWQ  tensor_parallel_size=2  exchange gloo relay
+torch 2.14.1+xpu, cards: Intel(R) Arc(TM) Pro B60 Graphics, Intel(R) Arc(TM) Pro B60 Graphics
+engine up on two cards (tensor split) in 102.1 s (attention FLASH_ATTN, eager True)
+run 1: 21 in, 256 out, 7.66 s -> 33.4 tok/s end to end
+run 2: 21 in, 256 out, 7.70 s -> 33.2 tok/s end to end
+run 3: 21 in, 256 out, 7.76 s -> 33.0 tok/s end to end
+median 33.2 tok/s; first 200 chars: 'The INI file format is a simple key-value format that is often used for configuration files. The file is divided into sections, each of which contains a number of key-value pairs. The sections are ide'

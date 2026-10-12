@@ -1,0 +1,4 @@
+run 2026-10-11 13:26:48 - each test in its own process
+A pin only, 14B shapes, 10 GiB budget: FAIL at tensor 125 step 'to cpu' (layer 17, input_layernorm (5120,), 0.0 MiB) after 124 ok / 9.23 GiB nominal: level_zero backend failed with error: 39 (UR_RESULT_ERROR_OUT_OF_DEVICE_MEMORY)
+B pin + card view + kernel through it, 14B shapes, 4 GiB budget: budget 4 GiB reached, 54 tensors (layer 7), 1.4 s, no failure
+C card fills host memory through the view, CPU reads 4.0: ok; matmul 16x4096x4096 fp16 with weights in host memory 1.47 ms (21.8 GB/s of weights) vs on the card 0.100 ms; max |diff| 0.0000

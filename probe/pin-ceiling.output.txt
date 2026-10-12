@@ -1,0 +1,2 @@
+torch 2.14.1+xpu, card Intel(R) Arc(TM) Pro B60 Graphics, 2026-10-11 13:26:45, RAM 31.3 GiB, free 24.1 GiB
+no refusal up to the 19.00 GiB cap

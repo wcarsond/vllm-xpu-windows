@@ -1,0 +1,19 @@
+run Sun 10/11/2026 17:35:28.10  72B tensor split, lock OFF, private copy per tensor ON, 3 repeats 
+ 
+== repeat 1  17:35:28.10 
+(Worker_TP1 pid=6356) INFO 10-11 17:36:25 [model_runner.py:422] Model loading took 19.39 GiB memory and 28.897261 seconds
+(Worker_TP0 pid=25456) INFO 10-11 17:36:25 [model_runner.py:422] Model loading took 19.39 GiB memory and 29.106560 seconds
+engine up on two cards (tensor split) in 157.6 s (Qwen2.5-72B-Instruct-AWQ, float16, max_model_len 2048, util 0.97, attention FLASH_ATTN, eager True)
+median 17.3 tok/s; first 200 chars: 'The function should handle sections, key-value pairs, and comments in the INI file. Additionally, the function should be able to handle and ignore any lines that are blank or contain only whitespace. '
+ 
+== repeat 2  17:39:02.94 
+(Worker_TP1 pid=2176) INFO 10-11 17:39:58 [model_runner.py:422] Model loading took 19.39 GiB memory and 28.719500 seconds
+(Worker_TP0 pid=6796) INFO 10-11 17:39:58 [model_runner.py:422] Model loading took 19.39 GiB memory and 28.895812 seconds
+engine up on two cards (tensor split) in 155.8 s (Qwen2.5-72B-Instruct-AWQ, float16, max_model_len 2048, util 0.97, attention FLASH_ATTN, eager True)
+median 17.2 tok/s; first 200 chars: 'The function should handle sections, key-value pairs, and comments in the INI file. Additionally, the function should be able to handle and ignore any lines that are blank or contain only whitespace. '
+ 
+== repeat 3  17:42:35.36 
+(Worker_TP0 pid=6064) INFO 10-11 17:43:30 [model_runner.py:422] Model loading took 19.39 GiB memory and 28.466999 seconds
+(Worker_TP1 pid=8980) INFO 10-11 17:43:30 [model_runner.py:422] Model loading took 19.39 GiB memory and 28.445608 seconds
+engine up on two cards (tensor split) in 159.2 s (Qwen2.5-72B-Instruct-AWQ, float16, max_model_len 2048, util 0.97, attention FLASH_ATTN, eager True)
+median 17.3 tok/s; first 200 chars: 'The function should handle sections, key-value pairs, and comments in the INI file. Additionally, the function should be able to handle and ignore any lines that are blank or contain only whitespace. '

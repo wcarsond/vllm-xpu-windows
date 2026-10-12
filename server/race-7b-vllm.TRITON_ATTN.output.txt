@@ -1,0 +1,7 @@
+run 2026-10-11 02:28:27  model C:\Users\claude\models-hf\Qwen2.5-Coder-7B-Instruct  prompt 'Write a Python function that parses an INI file into a nested dict, with comments explaining each step.'
+torch 2.14.1+xpu, card: Intel(R) Arc(TM) Pro B60 Graphics
+engine up in 41.0 s (bf16, enforce_eager, max_model_len 4096, attention TRITON_ATTN)
+run 1: 21 in, 256 out, 8.70 s -> 29.4 tok/s end to end (prompt+decode)
+run 2: 21 in, 256 out, 8.70 s -> 29.4 tok/s end to end (prompt+decode)
+run 3: 21 in, 256 out, 8.69 s -> 29.4 tok/s end to end (prompt+decode)
+median 29.4 tok/s; first 200 chars: "Here's the INI file:\n\n```\n[section1]\nkey1 = value1\nkey2 = value2\n\n[section2]\nkey3 = value3\nkey4 = value4\n```\n\nHere's the Python function that parses the INI file into a nested dict:\n\n```python\ndef par"

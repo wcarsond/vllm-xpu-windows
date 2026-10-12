@@ -1,0 +1,95 @@
+run Sun 10/11/2026  8:23:44.91 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+build exit 0 
+-- valloc / none 
+[valloc/none] step 1: memory
+  memory at 00000181B3DB0000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (none)
+  no import
+step 4: kernel writes a pattern into the host memory
+  kernel threw: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+exit 5 
+-- valloc / sycl 
+[valloc/sycl] step 1: memory
+  memory at 0000024A79700000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (sycl)
+exit -1073741819 
+-- valloc / zex 
+[valloc/zex] step 1: memory
+  memory at 000002836C370000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (zex)
+  zeInit 0, 2 driver(s)
+  driver 0: import result 0 (0 = success)
+  driver 1: import result 0 (0 = success)
+step 4: kernel writes a pattern into the host memory
+  kernel threw: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+exit 5 
+-- malloc / none 
+[malloc/none] step 1: memory
+  memory at 000001921AE60000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (none)
+  no import
+step 4: kernel writes a pattern into the host memory
+  kernel threw: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+exit 5 
+-- malloc / sycl 
+[malloc/sycl] step 1: memory
+  memory at 00000214AEFA0000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (sycl)
+exit -1073741819 
+-- malloc / zex 
+[malloc/zex] step 1: memory
+  memory at 000002868CCF0000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (zex)
+  zeInit 0, 2 driver(s)
+  driver 0: import result 0 (0 = success)
+  driver 1: import result 0 (0 = success)
+step 4: kernel writes a pattern into the host memory
+  kernel threw: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+exit 5 
+-- section / none 
+[section/none] step 1: memory
+  memory at 00000237A1250000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (none)
+  no import
+step 4: kernel writes a pattern into the host memory
+  kernel threw: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+exit 5 
+-- section / sycl 
+[section/sycl] step 1: memory
+  memory at 000001755C480000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (sycl)
+exit -1073741819 
+-- section / zex 
+[section/zex] step 1: memory
+  memory at 00000157633E0000
+step 2: card
+  Intel(R) Arc(TM) Pro B60 Graphics
+step 3: import (zex)
+  zeInit 0, 2 driver(s)
+  driver 0: import result 0 (0 = success)
+  driver 1: import result 0 (0 = success)
+step 4: kernel writes a pattern into the host memory
+  kernel threw: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+exit 5 

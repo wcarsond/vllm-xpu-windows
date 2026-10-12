@@ -1,0 +1,9 @@
+﻿run 2026-10-11 03:40:00
+pid 23416: user time 482.3s (+0.86s in 3 s), kernel time 958.8s (+2.25s in 3 s), threads 1
+   thread 34876: state running, wait reason 33, priority 8, kernel ms 952328, user ms 467218
+pid 35360: user time 501.3s (+1.23s in 3 s), kernel time 967.4s (+1.92s in 3 s), threads 1
+   thread 13852: state running, wait reason 33, priority 8, kernel ms 956437, user ms 466828
+pid 11124: user time 344.6s (+0.78s in 3 s), kernel time 667.0s (+2.36s in 3 s), threads 1
+   thread 16552: state running, wait reason 33, priority 8, kernel ms 649906, user ms 322890
+pid 25340: user time 347.8s (+0.91s in 3 s), kernel time 669.6s (+2.25s in 3 s), threads 1
+   thread 21964: state running, wait reason 33, priority 8, kernel ms 652734, user ms 323750

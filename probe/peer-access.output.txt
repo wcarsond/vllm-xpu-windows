@@ -1,0 +1,33 @@
+run Sun 10/11/2026 14:20:45.55 
+diagnostic: 7 devices of any type, 5 platforms
+   backend 2  gpu=1  Intel(R) Arc(TM) Pro B60 Graphics
+   backend 2  gpu=1  Intel(R) Arc(TM) Pro B60 Graphics
+   backend 2  gpu=1  Intel(R) Graphics
+   backend 1  gpu=0  Intel(R) Core(TM) Ultra 5 250K Plus
+   backend 1  gpu=1  Intel(R) Graphics
+   backend 1  gpu=1  Intel(R) Arc(TM) Pro B60 Graphics
+   backend 1  gpu=1  Intel(R) Arc(TM) Pro B60 Graphics
+   (level_zero enum is 2)
+Level Zero GPUs: 2
+  [0] Intel(R) Arc(TM) Pro B60 Graphics, 25.1 GB
+  [1] Intel(R) Arc(TM) Pro B60 Graphics, 25.1 GB
+
+step 2: entry points in ze_loader.dll
+  zeDeviceCanAccessPeer  present
+  zeMemGetIpcHandle      present
+  zeMemOpenIpcHandle     present
+  zeDeviceGetP2PProperties present
+
+step 1: zeDeviceCanAccessPeer (the stub's answer, as user space sees it)
+  0 -> 1: result SUCCESS, can access = 0
+  1 -> 0: result SUCCESS, can access = 0
+
+step 3: the Linux path - export a card-0 allocation, import it on card 1
+  allocated 1024 KB on card 0 at FFFFB80208680000 and filled it
+  zeMemGetIpcHandle on card 0: ERROR_INVALID_ARGUMENT
+  -> the export itself is refused, so there is no handle to give the other card.
+
+step 4: skipped, nothing imported.
+
+done
+run exit 0 

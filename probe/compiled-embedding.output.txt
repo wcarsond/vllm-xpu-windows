@@ -1,0 +1,20 @@
+run 2026-10-11 11:39:50  torch 2.14.1+xpu
+rank 1: rows 75968..151936, ids [122535, 105620, 76219, 56324, 22598, 88829, 98860, 106591]... (12 of 21 in my slice)
+eager ok: (21, 3584), zero rows 9
+compiled (default): ran in 2.3 s, matches eager: True
+compiled (reduce-overhead): ran in 0.0 s, matches eager: True
+compiled (max-autotune-no-cudagraphs): ran in 0.1 s, matches eager: True
+compiled dynamic, 1 ids: matches eager: True
+compiled dynamic, 2048 ids: matches eager: True
+vllm math, rank 0, 21 int32 ids, index assert True: matches eager: True
+vllm math, rank 0, 21 int32 ids, index assert False: matches eager: True
+vllm math, rank 0, 512 int32 ids, index assert True: matches eager: True
+vllm math, rank 0, 512 int32 ids, index assert False: matches eager: True
+vllm math, rank 0, 8192 int32 ids, index assert True: matches eager: True
+vllm math, rank 0, 8192 int32 ids, index assert False: matches eager: True
+vllm math, rank 1, 21 int32 ids, index assert True: matches eager: True
+vllm math, rank 1, 21 int32 ids, index assert False: matches eager: True
+vllm math, rank 1, 512 int32 ids, index assert True: matches eager: True
+vllm math, rank 1, 512 int32 ids, index assert False: matches eager: True
+vllm math, rank 1, 8192 int32 ids, index assert True: matches eager: True
+vllm math, rank 1, 8192 int32 ids, index assert False: matches eager: True

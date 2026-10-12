@@ -1,0 +1,6 @@
+run 2026-10-01 20:39:24  torch 2.14.1+xpu
+float32  on card: ok, 16777217.0 came back as 16777215.0, exact=False
+float64  on card: ok, 7515755912.5 came back as 7515755912.5, exact=True
+int32    on card: ok, 2000000000 came back as 2000000000, exact=True
+int64    on card: ok, 7515755912 came back as 7515755912, exact=True
+

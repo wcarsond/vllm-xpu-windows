@@ -1,0 +1,11 @@
+run 2026-10-10 21:24:40  ZE_AFFINITY_MASK=None
+ok    1 plain / no bias
+ok    1 plain / bias
+ok    2 after torch.xpu.set_device / no bias
+ok    2 after torch.xpu.set_device / bias
+ok    3 after gloo process group (world 1) / no bias
+ok    3 after gloo process group (world 1) / bias
+ok    4 on a non-default torch.xpu.Stream / no bias
+ok    4 on a non-default torch.xpu.Stream / bias
+ok    5 under inference_mode / no bias
+ok    5 under inference_mode / bias

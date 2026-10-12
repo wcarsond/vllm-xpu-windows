@@ -1,0 +1,50 @@
+run Sat 10/10/2026 22:12:59.82  UR_LOADER_USE_LEVEL_ZERO_V2=0 
+platform: Intel(R) oneAPI Unified Runtime over Level-Zero
+== np_win64_8 
+XPU kernel not compiled for this config, falling back to PyTorch reference attention. Performance will be significantly degraded.
+To fix: rebuild with the config line shown above.
+If this is unexpected, report at: https://github.com/vllm-project/vllm-xpu-kernels/issues/364
+Original error: Chunk prefill kernel tuple not compiled for this configuration.
+
+Add this line to your chunk_prefill config file (csrc/xpu/attn/kernel_configs/chunk_prefill_default.conf):
+
+  64,false,false,true,false,false
+
+Then rebuild:
+  VLLM_CHUNK_PREFILL_CONFIG=chunk_prefill_default.conf pip install .
+
+Or use full config (all combinations, slower build):
+  VLLM_CHUNK_PREFILL_CONFIG=chunk_prefill_full.conf pip install .
+
+Available configs: chunk_prefill_full.conf | chunk_prefill_default.conf
+Config location: csrc/xpu/attn/kernel_configs/
+See: KERNEL_CONFIGURATION.md
+
+If this is unexpected, please report at:
+  https://github.com/vllm-project/vllm-xpu-kernels/issues/364
+[vllm_xpu_kernels] XPU kernel not compiled for this config, falling back to PyTorch reference attention. Performance will be significantly degraded.
+To fix: rebuild with the config line shown above.
+If this is unexpected, report at: https://github.com/vllm-project/vllm-xpu-kernels/issues/364
+Original error: Chunk prefill kernel tuple not compiled for this configuration.
+
+Add this line to your chunk_prefill config file (csrc/xpu/attn/kernel_configs/chunk_prefill_default.conf):
+
+  64,false,false,true,false,false
+
+Then rebuild:
+  VLLM_CHUNK_PREFILL_CONFIG=chunk_prefill_default.conf pip install .
+
+Or use full config (all combinations, slower build):
+  VLLM_CHUNK_PREFILL_CONFIG=chunk_prefill_full.conf pip install .
+
+Available configs: chunk_prefill_full.conf | chunk_prefill_default.conf
+Config location: csrc/xpu/attn/kernel_configs/
+See: KERNEL_CONFIGURATION.md
+
+If this is unexpected, please report at:
+  https://github.com/vllm-project/vllm-xpu-kernels/issues/364
+ok   max abs err 0.0089
+== np_full_8 
+FAIL RuntimeError: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+== pg64_causal_13 
+FAIL RuntimeError: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)

@@ -1,0 +1,105 @@
+run 2026-10-10 22:05:11  torch 2.14.1+xpu
+-- xpu:0
+   architecture = 21479031808
+   device_id = 57873
+   driver_version = 1.17.39500+2
+   gpu_eu_count = 160
+   gpu_subslice_count = 20
+   has_atomic64 = True
+   has_bfloat16_conversions = False
+   has_fp16 = True
+   has_fp64 = True
+   has_subgroup_2d_block_io = False
+   has_subgroup_matrix_multiply_accumulate = False
+   has_subgroup_matrix_multiply_accumulate_tensor_float32 = False
+   is_integrated_gpu = False
+   last_level_cache_size = 18874368
+   local_mem_size = 131072
+   max_compute_units = 160
+   max_num_sub_groups = 64
+   max_work_group_size = 1024
+   memory_bus_width = 64
+   memory_clock_rate = 0
+   name = Intel(R) Arc(TM) Pro B60 Graphics
+   platform_name = Intel(R) oneAPI Unified Runtime over Level-Zero V2
+   sub_group_sizes = [16, 32]
+   total_memory = 25055051776
+   type = gpu
+   uuid = 868011e2-0000-0000-0400-000000000000
+   vendor = Intel(R) Corporation
+   version = 20.1.0
+-- xpu:1
+   architecture = 21479031808
+   device_id = 57873
+   driver_version = 1.17.39500+2
+   gpu_eu_count = 160
+   gpu_subslice_count = 20
+   has_atomic64 = True
+   has_bfloat16_conversions = False
+   has_fp16 = True
+   has_fp64 = True
+   has_subgroup_2d_block_io = False
+   has_subgroup_matrix_multiply_accumulate = False
+   has_subgroup_matrix_multiply_accumulate_tensor_float32 = False
+   is_integrated_gpu = False
+   last_level_cache_size = 18874368
+   local_mem_size = 131072
+   max_compute_units = 160
+   max_num_sub_groups = 64
+   max_work_group_size = 1024
+   memory_bus_width = 64
+   memory_clock_rate = 0
+   name = Intel(R) Arc(TM) Pro B60 Graphics
+   platform_name = Intel(R) oneAPI Unified Runtime over Level-Zero V2
+   sub_group_sizes = [16, 32]
+   total_memory = 25055051776
+   type = gpu
+   uuid = 868011e2-0000-0000-0800-000000000000
+   vendor = Intel(R) Corporation
+   version = 20.1.0
+-- sycl-ls --verbose (lines of interest)
+   Platforms: 5
+   Platform [#1]:
+   Version  : 1.17
+   Name     : Intel(R) oneAPI Unified Runtime over Level-Zero V2
+   Device [#0]:
+   Version           : 20.1.0
+   Name              : Intel(R) Arc(TM) Pro B60 Graphics
+   Driver            : 1.17.39500+2
+   Device [#1]:
+   Version           : 20.1.0
+   Name              : Intel(R) Arc(TM) Pro B60 Graphics
+   Driver            : 1.17.39500+2
+   Platform [#2]:
+   Version  : 1.15
+   Name     : Intel(R) oneAPI Unified Runtime over Level-Zero V2
+   Device [#2]:
+   Version           : 12.70.4
+   Name              : Intel(R) Graphics
+   Driver            : 1.15.38308
+   Platform [#3]:
+   Version  : OpenCL 3.0
+   Name     : Intel(R) OpenCL Graphics
+   Device [#0]:
+   Version           : OpenCL 3.0 NEO
+   Name              : Intel(R) Graphics
+   Driver            : 32.0.101.8860
+   Platform [#4]:
+   Version  : OpenCL 3.0
+   Name     : Intel(R) OpenCL Graphics
+   Device [#1]:
+   Version           : OpenCL 3.0 NEO
+   Name              : Intel(R) Arc(TM) Pro B60 Graphics
+   Driver            : 32.0.101.9033
+   Device [#2]:
+   Version           : OpenCL 3.0 NEO
+   Name              : Intel(R) Arc(TM) Pro B60 Graphics
+   Driver            : 32.0.101.9033
+   Platform [#5]:
+   Version  : OpenCL 3.0 WINDOWS
+   Name     : Intel(R) OpenCL
+   Device [#3]:
+   Version           : OpenCL 3.0 (Build 0)
+   Name              : Intel(R) Core(TM) Ultra 5 250K Plus
+   Driver            : 2026.21.6.0.17_160000
+   stderr: <LOADER>[INFO]: ---> urLoaderTearDown() -> UR_RESULT_SUCCESS

@@ -1,0 +1,12 @@
+run Sun 10/11/2026 14:17:02.26 
+-- as the workers see it (selector unset) 
+ONEAPI_DEVICE_SELECTOR=(unset)
+default_selector (compat device 0):  level_zero  gpu  Intel(R) Arc(TM) Pro B60 Graphics  slices 5 x subslices 4 = sm_count 20, EUs 160  usm_device=yes
+all[0]:  level_zero  gpu  Intel(R) Arc(TM) Pro B60 Graphics  slices 5 x subslices 4 = sm_count 20, EUs 160  usm_device=yes
+all[1]:  level_zero  gpu  Intel(R) Arc(TM) Pro B60 Graphics  slices 5 x subslices 4 = sm_count 20, EUs 160  usm_device=yes
+all[2]:  level_zero  gpu  Intel(R) Graphics  slices 1 x subslices 8 = sm_count 8, EUs 64  usm_device=yes
+all[3]:  opencl  cpu  Intel(R) Core(TM) Ultra 5 250K Plus  usm_device=yes
+all[4]:  opencl  gpu  Intel(R) Graphics  slices 1 x subslices 8 = sm_count 8, EUs 64  usm_device=yes
+all[5]:  opencl  gpu  Intel(R) Arc(TM) Pro B60 Graphics  slices 5 x subslices 4 = sm_count 20, EUs 160  usm_device=yes
+all[6]:  opencl  gpu  Intel(R) Arc(TM) Pro B60 Graphics  slices 5 x subslices 4 = sm_count 20, EUs 160  usm_device=yes
+run exit 0 

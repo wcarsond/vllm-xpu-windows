@@ -1,0 +1,12 @@
+torch 2.14.1+xpu, card Intel(R) Arc(TM) Pro B60 Graphics, 2026-10-11 13:21:17
+A single 0.25 GB: ok (0.02 s)
+A single  0.5 GB: ok (0.04 s)
+A single    1 GB: ok (0.13 s)
+A single  1.5 GB: ok (0.20 s)
+A single    2 GB: ok (0.21 s)
+A single    3 GB: ok (0.83 s)
+A single    4 GB: ok (0.46 s)
+A single    6 GB: ok (2.41 s)
+A single    8 GB: ok (6.09 s)
+B cumulative 256 MB chunks: 16 GB pinned at once, no failure (stopped by the cap)
+C UVA view: FAIL level_zero backend failed with error: 40 (UR_RESULT_ERROR_OUT_OF_RESOURCES)

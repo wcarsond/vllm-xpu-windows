@@ -1,0 +1,26 @@
+run Sat 10/10/2026 22:24:51.26 
+== ForcePreemptionMode=3  attention np_full_8 
+FAIL RuntimeError: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+== ForcePreemptionMode=3  attention pg64_causal_13 
+FAIL RuntimeError: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+== ForcePreemptionMode=3  mhc tests 
+E   RuntimeError: level_zero backend failed with error: 40 (UR_RESULT_ERROR_OUT_OF_RESOURCES)
+C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Lib\site-packages\torch\utils\_device.py:122: RuntimeError: level_zero backend failed with error: 40 (UR_RESULT_ERROR_OUT_OF_RESOURCES)
+1 failed, 2 passed in 1.93s
+== ForcePreemptionMode=1  attention np_full_8 
+FAIL RuntimeError: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+== ForcePreemptionMode=1  attention pg64_causal_13 
+FAIL RuntimeError: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+== ForcePreemptionMode=1  mhc tests 
+E   RuntimeError: level_zero backend failed with error: 40 (UR_RESULT_ERROR_OUT_OF_RESOURCES)
+C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Lib\site-packages\torch\utils\_device.py:122: RuntimeError: level_zero backend failed with error: 40 (UR_RESULT_ERROR_OUT_OF_RESOURCES)
+1 failed, 2 passed in 1.61s
+== ForcePreemptionMode=2  attention np_full_8 
+FAIL RuntimeError: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+== ForcePreemptionMode=2  attention pg64_causal_13 
+FAIL RuntimeError: level_zero backend failed with error: 20 (UR_RESULT_ERROR_DEVICE_LOST)
+== ForcePreemptionMode=2  mhc tests 
+E   RuntimeError: level_zero backend failed with error: 40 (UR_RESULT_ERROR_OUT_OF_RESOURCES)
+C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Lib\site-packages\torch\utils\_device.py:122: RuntimeError: level_zero backend failed with error: 40 (UR_RESULT_ERROR_OUT_OF_RESOURCES)
+1 failed, 2 passed in 1.90s
+done 22:25:21.07 

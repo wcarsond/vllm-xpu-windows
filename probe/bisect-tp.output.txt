@@ -1,0 +1,2 @@
+run 2026-10-11 16:14:29  model Qwen2.5-72B-Instruct-AWQ  tensor_parallel_size=2, load lock OFF, no affinity mask
+layers  first 70 layers only                           other exit 1: RuntimeError: Engine core initialization failed. See root cause above.   [58 s]

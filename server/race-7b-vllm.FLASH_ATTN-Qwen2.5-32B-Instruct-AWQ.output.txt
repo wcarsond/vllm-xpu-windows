@@ -1,0 +1,7 @@
+run 2026-10-11 13:16:22  model C:\Users\claude\models-hf\Qwen2.5-32B-Instruct-AWQ  prompt 'Write a Python function that parses an INI file into a nested dict, with comments explaining each step.'
+torch 2.14.1+xpu, card: Intel(R) Arc(TM) Pro B60 Graphics
+engine up in 43.8 s (Qwen2.5-32B-Instruct-AWQ, float16, eager True, max_model_len 4096, attention FLASH_ATTN, cpu_offload_gb 0.0)
+run 1: 21 in, 256 out, 11.03 s -> 23.2 tok/s end to end (prompt+decode)
+run 2: 21 in, 256 out, 11.03 s -> 23.2 tok/s end to end (prompt+decode)
+run 3: 21 in, 256 out, 11.03 s -> 23.2 tok/s end to end (prompt+decode)
+median 23.2 tok/s; first 200 chars: 'The INI file format is a simple key-value format that is often used for configuration files. The file is divided into sections, each of which contains a number of key-value pairs. The sections are ide'

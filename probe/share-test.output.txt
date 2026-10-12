@@ -1,0 +1,55 @@
+run Sun 10/11/2026 17:30:38.49  two readers, one card each, cap 20 GiB, 3 repeats each 
+ 
+== same  repeat 1  17:30:38.50 
+run 2026-10-11 17:30:38  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 35.2 s
+ 
+== same  repeat 2  17:31:13.80 
+run 2026-10-11 17:31:13  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 30.3 s
+ 
+== same  repeat 3  17:31:44.15 
+run 2026-10-11 17:31:44  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 30.3 s
+ 
+== disjoint  repeat 1  17:32:14.50 
+run 2026-10-11 17:32:14  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 20.3 s
+ 
+== disjoint  repeat 2  17:32:34.87 
+run 2026-10-11 17:32:34  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 20.2 s
+ 
+== disjoint  repeat 3  17:32:55.17 
+run 2026-10-11 17:32:55  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 20.3 s
+ 
+== same+clone  repeat 1  17:33:15.51 
+run 2026-10-11 17:33:15  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 41.6 s
+ 
+== same+clone  repeat 2  17:33:57.19 
+run 2026-10-11 17:33:57  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 40.8 s
+ 
+== same+clone  repeat 3  17:34:38.07 
+run 2026-10-11 17:34:38  Qwen2.5-72B-Instruct-AWQ  11 shards, 41.6 GB  2 concurrent readers x 1 pass(es)
+reader0: OK
+reader1: OK
+wall 40.9 s

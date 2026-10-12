@@ -1,0 +1,4 @@
+﻿run 2026-10-11 03:14:01
+could not stop llama-server pid 13044: Cannot stop process "llama-server (13044)" because of the following error: Access is denied (elevated; Carson can from an admin shell)
+could not stop llama-server pid 26748: Cannot stop process "llama-server (26748)" because of the following error: Access is denied (elevated; Carson can from an admin shell)
+still running: 13044, 26748

@@ -1,0 +1,7 @@
+run 2026-10-11 17:51:03  model C:\Users\claude\models-hf\Qwen2.5-0.5B-Instruct  tensor_parallel_size=2  exchange gloo relay
+torch 2.14.1+xpu, cards: Intel(R) Arc(TM) Pro B60 Graphics, Intel(R) Arc(TM) Pro B60 Graphics
+engine up on two cards (tensor split) in 21.6 s (Qwen2.5-0.5B-Instruct, bfloat16, max_model_len 2048, util 0.35, attention FLASH_ATTN, eager True)
+run 1: 21 in, 256 out, 2.84 s -> 90.3 tok/s end to end
+run 2: 21 in, 256 out, 2.82 s -> 90.7 tok/s end to end
+run 3: 21 in, 256 out, 2.83 s -> 90.4 tok/s end to end
+median 90.4 tok/s; first 200 chars: 'The function should handle nested dictionaries and lists, and should be able to parse a single INI file or a list of INI files. The function should return a nested dict with the parsed data. The funct'

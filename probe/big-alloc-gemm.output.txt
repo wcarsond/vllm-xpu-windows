@@ -1,0 +1,27 @@
+run 2026-10-10 21:51:22
+device Intel(R) Arc(TM) Pro B60 Graphics, total 23.33 GiB, torch 2.14.1+xpu
+== A_gemm_alone (exit 0)
+   before: gemm ok, sum -1820.6
+   holding 0 tensor(s), 0.00 GiB (zeros); torch reports allocated 0.00 GiB
+   after: gemm ok, sum 2329.3
+== B_one_3.5GiB (exit 0)
+   before: gemm ok, sum 312.6
+   holding 1 tensor(s), 3.50 GiB (zeros); torch reports allocated 3.50 GiB
+   after: gemm ok, sum 7204.5
+== C_one_5GiB (exit 0)
+   before: gemm ok, sum -131.8
+   holding 1 tensor(s), 5.00 GiB (zeros); torch reports allocated 5.00 GiB
+   after: gemm ok, sum 2335.1
+== D_one_9.5GiB (exit 0)
+   before: gemm ok, sum -940.1
+   holding 1 tensor(s), 9.50 GiB (zeros); torch reports allocated 9.50 GiB
+   after: gemm ok, sum 2919.0
+== E_24x400MiB (exit 0)
+   before: gemm ok, sum 4625.8
+   holding 24 tensor(s), 9.38 GiB (zeros); torch reports allocated 9.38 GiB
+   after: gemm ok, sum -10270.7
+== F_one_9.5GiB_empty (exit 0)
+   before: gemm ok, sum -5542.5
+   holding 1 tensor(s), 9.50 GiB (empty); torch reports allocated 9.50 GiB
+   after: gemm ok, sum 444.0
+   after fill: gemm ok, sum -2973.0

@@ -1,0 +1,4 @@
+run Sun 10/11/2026 17:06:05.18  72B tensor split, lock OFF 
+ 
+== 0 control: no ceiling, host memory sampled 
+(EngineCore pid=4044) ERROR 10-11 17:06:45 [multiproc_executor.py:867] WorkerProc rank 1 died before signalling READY: exit code 3221225477 (0xC0000005). No traceback above means it was killed rather than raising.

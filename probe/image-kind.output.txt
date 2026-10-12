@@ -1,0 +1,121 @@
+== gemm-128.exe  (0.5 MB): 2 device images: zebin x2
+   16 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, indirect_stateless_count, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_memory_buffers, per_thread_payload_arguments, private_size, simd_size, size, slm_alignment, source_offset, spill_size, subgroup_independent_forward_progress, usage
+   access_type                              (absent):8  readwrite:8
+   addrmode                                 (absent):8  stateless:7  slm:1
+   addrspace                                (absent):8  global:7  local:1
+   arg_index                                1:9  0:3  6:2  5:1  3:1
+   barrier_count                            (absent):15  1:1
+   eu_thread_count                          8:16
+   grf_count                                128:16
+   has_4gb_buffers                          true:16
+   has_dpas                                 (absent):15  true:1
+   has_no_stateless_write                   true:16
+   indirect_stateless_count                 (absent):15  320:1
+   inline_data_payload_size                 32:16
+   is_ptr                                   true:9  (absent):7
+   offset                                   0:16
+   payload_arguments                        :16
+   per_thread_memory_buffers                (absent):14  :2
+   per_thread_payload_arguments             :16
+   private_size                             (absent):15  768:1
+   simd_size                                32:13  16:3
+   size                                     64:11  192:2  128:1  1024:1  16384:1
+   slm_alignment                            (absent):15  1:1
+   source_offset                            8:7  (absent):6  48:1  0:1  328:1
+   spill_size                               (absent):15  8512:1
+   subgroup_independent_forward_progress    true:16
+   usage                                    (absent):14  single_space:2
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail19__pf_kernel_wrapperIZZN6compat6detailL6memcpyENS0_5queueEPvPKvNS0_5
+     img.0 _ZTSZZN6compat6detailL6memcpyEN4sycl3_V15queueEPvPKvNS2_5rangeILi3EEES8_NS2_2idILi3EEESA_S
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillItEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillItEEvPvRKT_yEUlNS0_2idILi1EEEE_
+== gemm-256.exe  (0.6 MB): 2 device images: zebin x2
+   16 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, indirect_stateless_count, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_memory_buffers, per_thread_payload_arguments, private_size, simd_size, size, slm_alignment, source_offset, subgroup_independent_forward_progress, usage
+   access_type                              (absent):8  readwrite:8
+   addrmode                                 (absent):8  stateless:7  slm:1
+   addrspace                                (absent):8  global:7  local:1
+   arg_index                                1:9  0:3  6:2  5:1  3:1
+   barrier_count                            (absent):15  1:1
+   eu_thread_count                          4:16
+   grf_count                                256:16
+   has_4gb_buffers                          true:16
+   has_dpas                                 (absent):15  true:1
+   has_no_stateless_write                   true:16
+   indirect_stateless_count                 (absent):15  320:1
+   inline_data_payload_size                 32:16
+   is_ptr                                   true:9  (absent):7
+   offset                                   0:16
+   payload_arguments                        :16
+   per_thread_memory_buffers                (absent):15  :1
+   per_thread_payload_arguments             :16
+   private_size                             (absent):15  1536:1
+   simd_size                                32:15  16:1
+   size                                     64:12  192:2  128:1  2048:1
+   slm_alignment                            (absent):15  1:1
+   source_offset                            8:7  (absent):6  48:1  0:1  328:1
+   subgroup_independent_forward_progress    true:16
+   usage                                    (absent):15  single_space:1
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail19__pf_kernel_wrapperIZZN6compat6detailL6memcpyENS0_5queueEPvPKvNS0_5
+     img.0 _ZTSZZN6compat6detailL6memcpyEN4sycl3_V15queueEPvPKvNS2_5rangeILi3EEES8_NS2_2idILi3EEESA_S
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillItEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillItEEvPvRKT_yEUlNS0_2idILi1EEEE_
+== gemm-plain.exe  (0.4 MB): 2 device images: zebin x2
+   16 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_payload_arguments, simd_size, size, slm_alignment, source_offset, subgroup_independent_forward_progress
+   access_type                              (absent):8  readwrite:8
+   addrmode                                 (absent):8  stateless:7  slm:1
+   addrspace                                (absent):8  global:7  local:1
+   arg_index                                1:9  0:3  6:2  5:1  3:1
+   barrier_count                            (absent):15  1:1
+   eu_thread_count                          4:16
+   grf_count                                256:16
+   has_4gb_buffers                          true:16
+   has_dpas                                 (absent):15  true:1
+   has_no_stateless_write                   true:16
+   inline_data_payload_size                 32:16
+   is_ptr                                   true:9  (absent):7
+   offset                                   0:16
+   payload_arguments                        :16
+   per_thread_payload_arguments             :16
+   simd_size                                32:14  16:2
+   size                                     64:12  192:2  128:2
+   slm_alignment                            (absent):15  1:1
+   source_offset                            8:7  (absent):6  48:1  0:1  328:1
+   subgroup_independent_forward_progress    true:16
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail19__pf_kernel_wrapperIZZN6compat6detailL6memcpyENS0_5queueEPvPKvNS0_5
+     img.0 _ZTSZZN6compat6detailL6memcpyEN4sycl3_V15queueEPvPKvNS2_5rangeILi3EEES8_NS2_2idILi3EEESA_S
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillItEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillItEEvPvRKT_yEUlNS0_2idILi1EEEE_
+== gemm-legacy.exe  (0.6 MB): 2 device images: zebin x2
+   16 kernels; execution_env keys: access_type, addrmode, addrspace, arg_index, barrier_count, eu_thread_count, grf_count, has_4gb_buffers, has_dpas, has_no_stateless_write, indirect_stateless_count, inline_data_payload_size, is_ptr, offset, payload_arguments, per_thread_memory_buffers, per_thread_payload_arguments, private_size, simd_size, size, slm_alignment, source_offset, subgroup_independent_forward_progress, usage
+   access_type                              (absent):8  readwrite:8
+   addrmode                                 (absent):8  stateless:7  slm:1
+   addrspace                                (absent):8  global:7  local:1
+   arg_index                                1:9  0:3  6:2  5:1  3:1
+   barrier_count                            (absent):15  1:1
+   eu_thread_count                          4:16
+   grf_count                                256:16
+   has_4gb_buffers                          true:16
+   has_dpas                                 (absent):15  true:1
+   has_no_stateless_write                   true:16
+   indirect_stateless_count                 (absent):15  320:1
+   inline_data_payload_size                 32:16
+   is_ptr                                   true:9  (absent):7
+   offset                                   0:16
+   payload_arguments                        :16
+   per_thread_memory_buffers                (absent):15  :1
+   per_thread_payload_arguments             :16
+   private_size                             (absent):15  1536:1
+   simd_size                                32:15  16:1
+   size                                     64:12  192:2  128:1  2048:1
+   slm_alignment                            (absent):15  1:1
+   source_offset                            8:7  (absent):6  48:1  0:1  264:1
+   subgroup_independent_forward_progress    true:16
+   usage                                    (absent):15  single_space:1
+   first kernels:
+     img.0 _ZTSN4sycl3_V16detail19__pf_kernel_wrapperIZZN6compat6detailL6memcpyENS0_5queueEPvPKvNS0_5
+     img.0 _ZTSZZN6compat6detailL6memcpyEN4sycl3_V15queueEPvPKvNS2_5rangeILi3EEES8_NS2_2idILi3EEESA_S
+     img.0 _ZTSN4sycl3_V16detail18RoundedRangeKernelINS0_4itemILi1ELb1EEELi1EZNS0_7handler4fillItEEvP
+     img.0 _ZTSZN4sycl3_V17handler4fillItEEvPvRKT_yEUlNS0_2idILi1EEEE_

@@ -1,0 +1,7 @@
+run Sun 10/11/2026 17:02:36.17  72B tensor split, lock OFF, trim ON, 2 repeats 
+ 
+== repeat 1  17:02:36.17 
+(EngineCore pid=15332) ERROR 10-11 17:03:20 [multiproc_executor.py:867] WorkerProc rank 0 died before signalling READY: exit code 3221225477 (0xC0000005). No traceback above means it was killed rather than raising.
+ 
+== repeat 2  17:03:36.38 
+(EngineCore pid=10752) ERROR 10-11 17:04:14 [multiproc_executor.py:867] WorkerProc rank 0 died before signalling READY: exit code 3221225477 (0xC0000005). No traceback above means it was killed rather than raising.

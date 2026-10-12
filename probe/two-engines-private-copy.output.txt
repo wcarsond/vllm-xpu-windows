@@ -1,0 +1,12 @@
+run Sun 10/11/2026 22:27:42.61 
+--- default (private copy off for tensor-parallel size 1) 
+two 0.5B engines, SAME card (0 and 0)          OK   ["CHILD OK 0 ' What is the number of objects in the se'", "CHILD OK 0 ' What is the number of objects in the se'"]
+two 0.5B engines, one card each (0 and 1)      FAULT 0xC0000005   ["CHILD OK 0 ' What is the number of objects in the se'", 'Windows fatal exception: access violation']
+--- VLLM_XPU_PRIVATE_COPY=1 
+two 0.5B engines, SAME card (0 and 0)          OK   ["CHILD OK 0 ' What is the number of objects in the se'", "CHILD OK 0 ' What is the number of objects in the se'"]
+two 0.5B engines, one card each (0 and 1)      FAULT 0xC0000005   ["CHILD OK 0 ' What is the number of objects in the se'", 'Windows fatal exception: access violation']
+--- VLLM_XPU_PRIVATE_COPY=1 again 
+Traceback (most recent call last):
+  File "C:\Users\claude\scripts\vllm-xpu-windows\probe\two-engines.input.py", line 14, in <module>
+    "import os,sys,torch\n"
+TypeError: not enough arguments for format string

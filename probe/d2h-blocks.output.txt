@@ -1,0 +1,30 @@
+run 2026-10-11 11:44:11  torch 2.14.1+xpu  PYTORCH_ALLOC_CONF=expandable_segments:True
+alloc  0    1.0 MB ptr 0x14161800000 NEW block: clone ok; cpu ok
+alloc  1   20.0 MB ptr 0x147f6a00000 NEW block: clone ok; cpu ok
+alloc  2   40.0 MB ptr 0x147f8180000 NEW block: clone ok; cpu ok
+alloc  3  128.0 MB ptr 0x147fad00000 NEW block: clone ok; cpu ok
+alloc  4    3.5 MB ptr 0x147fa980000 same block: clone ok; cpu ok
+alloc  5    3.5 MB ptr 0x147f7e00000 same block: clone ok; cpu ok
+alloc  6    3.5 MB ptr 0x14802d00000 NEW block: clone ok; cpu ok
+alloc  7    3.5 MB ptr 0x14803080000 same block: clone ok; cpu ok
+alloc  8    3.5 MB ptr 0x14803400000 same block: clone ok; cpu ok
+alloc  9    3.5 MB ptr 0x14803780000 same block: clone ok; cpu ok
+alloc 10    3.5 MB ptr 0x14803b00000 same block: clone ok; cpu ok
+alloc 11    3.5 MB ptr 0x14803e80000 same block: clone ok; cpu ok
+alloc 12    3.5 MB ptr 0x14804200000 NEW block: clone ok; cpu ok
+alloc 13    3.5 MB ptr 0x14804580000 same block: clone ok; cpu ok
+alloc 14    3.5 MB ptr 0x14804900000 same block: clone ok; cpu ok
+alloc 15    3.5 MB ptr 0x14804c80000 same block: clone ok; cpu ok
+alloc 16    3.5 MB ptr 0x14805000000 same block: clone ok; cpu ok
+alloc 17    3.5 MB ptr 0x14805380000 same block: clone ok; cpu ok
+alloc 18    3.5 MB ptr 0x14805700000 same block: clone ok; cpu ok
+alloc 19    3.5 MB ptr 0x14805a80000 same block: clone ok; cpu ok
+alloc 20    3.5 MB ptr 0x14805e00000 same block: clone ok; cpu ok
+alloc 21    3.5 MB ptr 0x14806180000 NEW block: clone ok; cpu ok
+alloc 22    3.5 MB ptr 0x14806500000 same block: clone ok; cpu ok
+alloc 23    3.5 MB ptr 0x14806880000 same block: clone ok; cpu ok
+alloc 24    3.5 MB ptr 0x14806c00000 same block: clone ok; cpu ok
+alloc 25    3.5 MB ptr 0x14806f80000 same block: clone ok; cpu ok
+alloc 26    3.5 MB ptr 0x14807300000 same block: clone ok; cpu ok
+alloc 27    3.5 MB ptr 0x14807680000 same block: clone ok; cpu ok
+0 failures over 28 allocations, 7 distinct 32 MB granules

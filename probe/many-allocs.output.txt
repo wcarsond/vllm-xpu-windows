@@ -1,0 +1,10 @@
+run 2026-10-10 21:21:21  torch 2.14.1+xpu  free 23.3 GiB
+held     0 allocations: ok
+held   100 allocations (0.4 GiB): ok
+held   250 allocations (1.0 GiB): ok
+held   500 allocations (2.0 GiB): ok
+held  1000 allocations (3.9 GiB): ok
+held  1500 allocations (5.9 GiB): ok
+held  2000 allocations (7.8 GiB): ok
+held  3000 allocations (11.7 GiB): ok
+held  4000 allocations (15.6 GiB): ok

@@ -1,0 +1,34 @@
+run Sat 10/10/2026 22:43:24.00 
+exit -1073740791 
+-- kernel launches and errors in the trace 
+259:   ---> urEnqueueKernelLaunchWithArgsExp
+277:   ---> urEnqueueKernelLaunchWithArgsExp
+305:   ---> urEnqueueKernelLaunchWithArgsExp
+341:   ---> urEnqueueKernelLaunchWithArgsExp
+348:   <--- urQueueFinish(.hQueue = 00000217D28C0CA0) -> UR_RESULT_ERROR_DEVICE_LOST;
+-- last 25 lines 
+   <--- urDeviceGetInfo(.hDevice = 00000217D28B5610, .propName = UR_DEVICE_INFO_SUB_GROUP_SIZES_INTEL, .propSize = 8, .pPropValue = {16, 32}, .pPropSizeRet = nullptr) -> UR_RESULT_SUCCESS;
+   ---> urPlatformGetBackendOption
+   <--- urPlatformGetBackendOption(.hPlatform = 00000217D2898610, .pFrontendOption = 000000F5AD6FD8F0 (-O3), .ppPlatformOption = 000000F5AD6FDA58 (00007FFD259E258E (-ze-opt-level=2))) -> UR_RESULT_SUCCESS;
+   ---> urDeviceGetInfo
+   <--- urDeviceGetInfo(.hDevice = 00000217D28B5610, .propName = UR_DEVICE_INFO_VENDOR_ID, .propSize = 4, .pPropValue = 000000F5AD6FD910 (32902), .pPropSizeRet = nullptr) -> UR_RESULT_SUCCESS;
+   ---> urProgramCreateWithBinary
+   <--- urProgramCreateWithBinary(.hContext = 00000217D5963A80, .numDevices = 1, .phDevices = 00000217D59BDBB0 {00000217D28B5610}, .pLengths = 00000217D59BDB90 {66160}, .ppBinaries = 00000217D59BDA60 {00007FF7FC3037C0 (true)}, .pProperties = 000000F5AD6FD620 ((struct ur_program_properties_t){.stype 
+   ---> urProgramBuildExp
+   <--- urProgramBuildExp(.hProgram = 00000217D58BD6F0, .numDevices = 1, .phDevices = 00000217D59BDA60 {00000217D28B5610}, .flags = 0, .pOptions = 000000F5AD6FDA60 (-ze-opt-level=2)) -> UR_RESULT_SUCCESS;
+   ---> urProgramRetain
+   <--- urProgramRetain(.hProgram = 00000217D58BD6F0) -> UR_RESULT_SUCCESS;
+   ---> urKernelCreate
+   <--- urKernelCreate(.hProgram = 00000217D58BD6F0, .pKernelName = 00007FF7FC29C366 (_ZTSN7cutlass4gemm6kernel13GemmUniversalIN4cute5tupleIJiiiiEEENS0_10collective13CollectiveMmaINS0_18MainloopXeL1StagedILi2ENS0_8KernelXeEEENS4_IJNS3_1CILi256EEESC_NSB_ILi32EEEEEENS_10bfloat16_tENS4_IJxNSB_ILi1EEExE
+   ---> urKernelSetExecInfo
+   <--- urKernelSetExecInfo(.hKernel = 00000217D59871A0, .propName = UR_KERNEL_EXEC_INFO_USM_INDIRECT_ACCESS, .propSize = 1, .pProperties = nullptr, .pPropValue = 000000F5AD6FE2AF (true)) -> UR_RESULT_SUCCESS;
+   ---> urKernelRetain
+   <--- urKernelRetain(.hKernel = 00000217D59871A0) -> UR_RESULT_SUCCESS;
+   ---> urEnqueueKernelLaunchWithArgsExp
+UR ---> calculateKernelWorkDimensions(hZeKernel, hDevice.get(), zeThreadGroupDimensions, WG, workDim, pGlobalWorkSize, pLocalWorkSize)
+UR <--- calculateKernelWorkDimensions(hZeKernel, hDevice.get(), zeThreadGroupDimensions, WG, workDim, pGlobalWorkSize, pLocalWorkSize)(UR_RESULT_SUCCESS)
+UR ---> hKernel->prepareForSubmission( hContext.get(), hDevice.get(), pGlobalWorkOffset, workDim, WG[0], WG[1], WG[2], getZeCommandList(), waitListView)
+UR <--- hKernel->prepareForSubmission( hContext.get(), hDevice.get(), pGlobalWorkOffset, workDim, WG[0], WG[1], WG[2], getZeCommandList(), waitListView)(UR_RESULT_SUCCESS)
+   <--- urEnqueueKernelLaunchWithArgsExp(.hQueue = 00000217D28C0CA0, .hKernel = 00000217D59871A0, .workDim = 3, .pGlobalWorkOffset = nullptr, .pGlobalWorkSize = 000000F5AD6FEE00 (512), .pLocalWorkSize = 000000F5AD6FEE18 (512), .numArgs = 2, .pArgs = 00000217D59B7F50 {(struct ur_exp_kernel_arg_proper
+   ---> urQueueFinish
+   <--- urQueueFinish(.hQueue = 00000217D28C0CA0) -> UR_RESULT_ERROR_DEVICE_LOST;
