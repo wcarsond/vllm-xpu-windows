@@ -59,7 +59,8 @@ if __name__ == "__main__":
     # SMOKE_MAX_LEN (2026-10-12): a smaller window for a model whose KV cannot hold 32K on one card; deeper depths are skipped
     MAXLEN = int(os.environ.get("SMOKE_MAX_LEN", "32768"))
     llm = LLM(model=model, dtype=DTYPE, max_model_len=MAXLEN, gpu_memory_utilization=util,
-              enforce_eager=True, enable_prefix_caching=False, max_num_batched_tokens=CHUNK, **extra)
+              enforce_eager=os.environ.get("SMOKE_EAGER", "1") != "0",   # SMOKE_EAGER=0: torch.compile (+ graphs where allowed)
+              enable_prefix_caching=False, max_num_batched_tokens=CHUNK, **extra)
     log(f"engine up in {time.time()-t0:.1f} s ({os.path.basename(os.path.normpath(model))}, {DTYPE}, max_model_len {MAXLEN}, "
         f"{SHAPE}, chunk {CHUNK}, util {util})")
     for depth in DEPTHS:

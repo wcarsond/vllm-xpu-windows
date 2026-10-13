@@ -1,0 +1,27 @@
+run Tue 10/13/2026 14:38:38.49  Qwen2.5-0.5B-Instruct, one card 
+engine up in 13.3 s (Qwen2.5-0.5B-Instruct, bfloat16, eager True, max_model_len 4096, attention FLASH_ATTN, cpu_offload_gb 0.0)
+run 1: 21 in, 256 out, 2.17 s -> 117.8 tok/s end to end (prompt+decode)
+run 2: 21 in, 256 out, 2.14 s -> 119.8 tok/s end to end (prompt+decode)
+run 3: 21 in, 256 out, 2.14 s -> 119.9 tok/s end to end (prompt+decode)
+median 119.8 tok/s; first 200 chars: 'The function should handle nested dictionaries and lists, and should be able to parse a single INI file or a list of INI files. The function should return a nested dict with the parsed data. The funct'
+race exit 0 
+(EngineCore pid=476) INFO 10-13 14:39:48 [monitor.py:91] [backbone] Initial profiling/warmup run took 0.08 s
+engine up in 38.7 s (Qwen2.5-0.5B-Instruct, bfloat16, eager False, max_model_len 4096, attention FLASH_ATTN, cpu_offload_gb 0.0)
+run 1: 21 in, 256 out, 0.80 s -> 319.1 tok/s end to end (prompt+decode)
+run 2: 21 in, 256 out, 0.80 s -> 319.2 tok/s end to end (prompt+decode)
+run 3: 21 in, 256 out, 0.80 s -> 319.6 tok/s end to end (prompt+decode)
+median 319.2 tok/s; first 200 chars: 'The function should handle nested dictionaries and lists, and should be able to parse a single INI file or a list of INI files. The function should return a nested dict with the parsed data. The funct'
+race exit 0 
+engine up in 12.8 s (Qwen2.5-0.5B-Instruct, bfloat16, eager True, max_model_len 4096, attention FLASH_ATTN, cpu_offload_gb 0.0)
+run 1: 21 in, 256 out, 2.27 s -> 112.5 tok/s end to end (prompt+decode)
+run 2: 21 in, 256 out, 2.20 s -> 116.3 tok/s end to end (prompt+decode)
+run 3: 21 in, 256 out, 2.19 s -> 117.0 tok/s end to end (prompt+decode)
+median 116.3 tok/s; first 200 chars: 'The function should handle nested dictionaries and lists, and should be able to parse a single INI file or a list of INI files. The function should return a nested dict with the parsed data. The funct'
+race exit 0 
+(EngineCore pid=19472) INFO 10-13 14:41:01 [monitor.py:91] [backbone] Initial profiling/warmup run took 0.09 s
+engine up in 21.4 s (Qwen2.5-0.5B-Instruct, bfloat16, eager False, max_model_len 4096, attention FLASH_ATTN, cpu_offload_gb 0.0)
+run 1: 21 in, 256 out, 0.80 s -> 319.7 tok/s end to end (prompt+decode)
+run 2: 21 in, 256 out, 0.80 s -> 319.5 tok/s end to end (prompt+decode)
+run 3: 21 in, 256 out, 0.80 s -> 319.5 tok/s end to end (prompt+decode)
+median 319.5 tok/s; first 200 chars: 'The function should handle nested dictionaries and lists, and should be able to parse a single INI file or a list of INI files. The function should return a nested dict with the parsed data. The funct'
+race exit 0 

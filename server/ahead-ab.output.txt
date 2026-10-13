@@ -1,0 +1,12 @@
+﻿run 2026-10-13 14:29:21  K = 1,8, repeats 2
+exchange-test at AHEAD=8:
+  [rank 1] 159 all_reduces, 0 wrong; last stage times us (seq, bytes, wait_card, memcpy_in, wait_peer, memcpy_out, enqueue): [(158, 3584, 5, 0
+  [rank 1] 2000 x 7 KB back to back: 27.6 us per call on the main thread, 27.7 us per all_reduce wall
+  [rank 1] PASS
+  [rank 0] 159 all_reduces, 0 wrong; last stage times us (seq, bytes, wait_card, memcpy_in, wait_peer, memcpy_out, enqueue): [(158, 3584, 5, 0
+  [rank 0] 2000 x 7 KB back to back: 27.6 us per call on the main thread, 27.7 us per all_reduce wall
+  [rank 0] PASS
+K=1 run 1  depth:decode/prefill  0:46.8/887  4096:45.7/7588  8192:44.7/7224  16384:43.7/6519  32000:42.0/5423
+K=8 run 1  depth:decode/prefill  0:47.3/885  4096:46.0/7549  8192:44.2/7222  16384:43.5/6516  32000:41.8/5419
+K=1 run 2  depth:decode/prefill  0:47.2/864  4096:46.2/7597  8192:44.9/7215  16384:43.3/6516  32000:41.9/5419
+K=8 run 2  depth:decode/prefill  0:46.6/885  4096:46.1/7142  8192:45.1/7223  16384:44.0/6503  32000:41.9/5416

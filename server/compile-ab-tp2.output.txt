@@ -1,0 +1,3 @@
+﻿run 2026-10-13 14:41:53  Granite-4.2-30B-GPTQ-INT4 bfloat16, two cards
+eager: engine up 33.9 s  depth:decode/prefill  0:35.0/469  4096:32.8/1849  8192:31.3/1788  16384:29.1/1653  32000:25.4/1442  
+compiled: engine up 68.1 s  depth:decode/prefill  0:35.3/495  4096:33.3/1889  8192:31.9/1821  16384:29.5/1703  32000:25.6/1516  
