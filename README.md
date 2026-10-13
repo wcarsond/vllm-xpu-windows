@@ -18,6 +18,31 @@ depth on two cards holds 1.5-1.7x one card out to 32K context.
 Everything here was measured on one machine: a Core Ultra 5 250K, 32 GB of RAM, two Arc Pro B60s
 on PCIe Gen5 x8 each, Windows 11, Intel driver 32.0.101.9033.
 
+## 2026-10-13 (evening): both cards in one process - ahead of Linux on decode too
+
+On Windows a kernel cannot touch another process's memory and IPC handles are refused for both card and host memory,
+so between two worker processes every decode-size all_reduce was relayed by a CPU helper thread (28 us). With both
+tensor-parallel ranks inside one process, both cards' kernels read and write the same pinned host buffer directly:
+**7 us** per 7B decode all_reduce (`probe/one-process-allreduce.cpp`; spreading the tagged words over 16-32 work-groups
+is what makes it fast). The new executor, `vllm.v1.executor.oneproc_executor.OneProcExecutor`, runs the two ranks as
+threads. Two threads running oneDNN matmuls on two cards at the same time hang this driver (`probe/threads-hang`), so
+the threads take turns under a baton that changes hands at every collective and after every graph replay; per-rank
+module state is swapped with it. Run with full decode graphs (`compilation_config={"mode": 0, "cudagraph_mode":
+"FULL_DECODE_ONLY"}`); eager is slower in one process because the two ranks' host work no longer overlaps.
+
+Decode tok/s, two B60s, full decode graphs, greedy tokens identical between the two executors:
+
+| model | two processes | **one process** | Linux, Intel's stack |
+|---|---|---|---|
+| Qwen2.5-Coder-7B bf16, short / 4K / 16K / 32K context | 48.3 / 46.7 / 44.5 / 42.4 | **56.6 / 54.9 / 52.3 / 49.4** | 51.5 / 50.2 / 50.2 / 44.7 |
+| Qwen3.5-27B int4 | 24.6 | **29.0** | |
+| Granite 4.2 30B int4 | 36.5 | **44.6** | |
+| Qwen2.5-72B-Instruct-AWQ | 17.5 | **20.1** | |
+
+Prefill is unchanged (7B: 7,589 / 6,561 / 5,456 tok/s at 4K / 16K / 32K, 27-36% ahead of Linux). The 7B decode step
+(17.8 ms) is within ~4% of what the cards' memory bandwidth allows. Scripts: `server/oneproc-smoke`, `oneproc-race`,
+`oneproc-models`, `oneproc-ab` (async scheduling is worth +8% of it; aligning the two cards' replays nothing).
+
 ## 2026-10-13: the two-card exchange without a CPU hop
 
 The large-message path of the two-card exchange (prefill chunks) used to stage every byte through a CPU thread. The
