@@ -1,0 +1,2 @@
+2026-10-13 18:50:28  deterministic=0: 20 runs, 1 distinct token sequences (first divergence at token None); among runs with the first run's tokens, 0 have different log-probabilities (largest difference 0); 55.7 tok/s average incl. prefill
+2026-10-13 18:51:44  deterministic=1: 20 runs, 1 distinct token sequences (first divergence at token None); among runs with the first run's tokens, 0 have different log-probabilities (largest difference 0); 54.9 tok/s average incl. prefill

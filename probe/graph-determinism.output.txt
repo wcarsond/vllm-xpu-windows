@@ -5,3 +5,12 @@
 17:00:18 samestr eager twice equal True; 40 replays, max diff to eager each: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 17:00:22 plain eager twice equal True; 40 replays, max diff to eager each: [0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0]
 17:00:56 eager 40 eager steps, max diff to the first each: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+18:47:41 plain   eager twice equal True; 100 replays: 8 differ from eager, largest difference 0.5 (|eager| max 79)
+18:47:44 eager   100 eager steps: 6 differ from the first, largest 0.5
+18:47:48 mm1     eager twice equal True; 100 replays: 0 differ from eager, largest difference 0.0 (|eager| max 4.28)
+18:47:51 mm2     eager twice equal True; 100 replays: 0 differ from eager, largest difference 0.0 (|eager| max 3.67)
+18:47:55 mm1x28  eager twice equal True; 100 replays: 0 differ from eager, largest difference 0.0 (|eager| max 4.28)
+18:47:59 det     eager twice equal True; 100 replays: 0 differ from eager, largest difference 0.0 (|eager| max 79)
+18:48:26 normonly eager twice equal True; 100 replays: 0 differ from eager, largest difference 0.0 (|eager| max 3.58)
+18:48:29 nonorm  eager twice equal True; 100 replays: 0 differ from eager, largest difference 0.0 (|eager| max 13.8)
+18:48:32 nomm    eager twice equal True; 100 replays: 0 differ from eager, largest difference 0.0 (|eager| max 88)

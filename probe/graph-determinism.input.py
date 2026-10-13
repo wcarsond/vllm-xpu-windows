@@ -7,6 +7,12 @@
 #   presync  synchronize between the input copy and the replay (is the copy racing the replay?)
 #   samestr  the input copy made on the capture stream itself
 #   eager    no graph: the eager step N times against the first eager step (is the matmul itself order-dependent?)
+#   mm1      the graph holds ONE matmul, x @ w1 (1 x 3584 @ 3584 x 2304)
+#   mm2      the graph holds ONE matmul, y @ w2 (1 x 2304 @ 2304 x 3584)
+#   mm1x28   28 copies of mm1 in one graph, each on its own output (no data dependence between them)
+#   det      plain, with torch.use_deterministic_algorithms(True)
+#   normonly the norm alone, 28 times on the same input;  nonorm  matmuls + silu + residual, no norm
+# (2026-10-13 18:50: bisecting the plain-step replay difference down to one op)
 # Usage:  .venv312\Scripts\python.exe probe\graph-determinism.input.py [plain|sync|nomm] [replays]
 #         (appends one line per case to probe\graph-determinism.output.txt)
 # Why (2026-10-13 17:00): in the one-process exchange test, replays of a graph from the same input gave answers 0 to 1.0
@@ -29,8 +35,26 @@ w2 = (torch.randn(F, H, generator=g) * 0.02).to(torch.bfloat16).to(d)
 x0 = torch.randn(1, H, generator=torch.Generator().manual_seed(99)).to(torch.bfloat16).to(d)
 
 
+if CASE == "det":
+    torch.use_deterministic_algorithms(True)
+x2 = torch.randn(1, F, generator=torch.Generator().manual_seed(7)).to(torch.bfloat16).to(d)
+
+
 def step(x):
+    if CASE == "mm1":
+        return x @ w1
+    if CASE == "mm2":
+        return x2 @ w2
+    if CASE == "mm1x28":
+        return torch.stack([x @ w1 for _ in range(LAYERS)])
+    if CASE == "normonly":
+        return torch.stack([x * torch.rsqrt((x.float() * x.float()).mean(-1, keepdim=True) + 1e-6).to(x.dtype)
+                            for _ in range(LAYERS)])
     for _ in range(LAYERS):
+        if CASE == "nonorm":
+            y = torch.nn.functional.silu(x @ w1) @ w2
+            x = x + y * 0.1
+            continue
         y = x * torch.rsqrt((x.float() * x.float()).mean(-1, keepdim=True) + 1e-6).to(x.dtype)
         if CASE == "nomm":
             y = torch.nn.functional.silu(y * 1.01) * 0.5
@@ -44,7 +68,7 @@ eager = step(x0.clone())
 if CASE == "eager":
     torch.xpu.synchronize(d)
     diffs = [round((step(x0.clone()).float() - eager.float()).abs().max().item(), 4) for _ in range(N)]
-    line = f"{time.strftime('%H:%M:%S')} eager {N} eager steps, max diff to the first each: {diffs}"
+    line = f"{time.strftime('%H:%M:%S')} eager   {N} eager steps: {sum(v != 0 for v in diffs)} differ from the first, largest {max(diffs)}"
     print(line, flush=True)
     with OUT.open("a", encoding="utf-8") as f:
         f.write(line + "\n")
@@ -76,8 +100,9 @@ for _ in range(N):
     if CASE == "sync":
         torch.xpu.synchronize(d)
     diffs.append(round((y.float() - eager.float()).abs().max().item(), 4))
-line = (f"{time.strftime('%H:%M:%S')} {CASE:5} eager twice equal {torch.equal(eager, eager2)}; {N} replays, max diff "
-        f"to eager each: {diffs}")
+bad = [v for v in diffs if v != 0]
+line = (f"{time.strftime('%H:%M:%S')} {CASE:7} eager twice equal {torch.equal(eager, eager2)}; {N} replays: {len(bad)} differ "
+        f"from eager, largest difference {max(diffs) if diffs else 0} (|eager| max {eager.float().abs().max().item():.3g})")
 print(line, flush=True)
 with OUT.open("a", encoding="utf-8") as f:
     f.write(line + "\n")
