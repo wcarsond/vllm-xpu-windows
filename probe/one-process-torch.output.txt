@@ -1,0 +1,9 @@
+run Tue 10/13/2026 16:08:54.01 
+T1 current device: thread set 1 and reads 1; main thread (set 0) now reads 0 -> PER THREAD
+T1: exit  - 
+T2: TIMEOUT after 200 s (killed)
+T3 one thread, two graphs: card0 alone 2752 us per step; both cards replayed from one thread 2748 us per step (in parallel); outputs match eager: [False, True]
+T3: exit  - 
+T3b card 0 alone: graph vs eager max abs diff 0 (|ref| max 15.8)
+T3b card 1 alone: graph vs eager max abs diff 0 (|ref| max 15.5)
+T3 one thread, two graphs: card0 alone 2748 us per step; both cards replayed from one thread 2747 us per step (in parallel); outputs match eager: ['DIFFER (max abs diff 0.0938, |ref| max 15.1, nan in y False)', 'match (max abs diff 0, |ref| max 15.6, nan in y False)']

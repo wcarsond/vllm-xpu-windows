@@ -1,0 +1,5 @@
+﻿run 2026-10-13 16:01:59  Qwen2.5-Coder-7B-Instruct, two cards, eager; prefill tok/s at 4K / 16K / 32K, decode tok/s same depths
+chunk   512: prefill 6,931 / 5,814 / 4,787   decode 45.7 / 43.1 / 41.5
+chunk  1024: prefill 7,497 / 6,190 / 4,975   decode 45.1 / 43.8 / 41.5
+chunk  2048: prefill 7,598 / 6,514 / 5,428   decode 45.9 / 43.0 / 41.1
+chunk  4096: prefill 7,761 / 6,625 / 5,532   decode 46.0 / 43.8 / 41.2

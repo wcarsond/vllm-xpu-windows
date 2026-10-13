@@ -31,7 +31,11 @@ para = ("The quick brown fox jumps over the lazy dog while the committee reviews
 # The model's max_position_embeddings is 32768 (vLLM refuses a longer max_model_len), so the deepest leg is 32000 tokens
 # of prompt plus 128 generated inside that window.
 DEPTHS = [0, 4096, 8192, 16384, 32000]
-SUFFIX = ("-tp2" if TP == 2 else "-pp2" if PP == 2 else "") + MODEL_TAG
+# RACE_DEPTHS="4096,16384,32000" runs only those depths; RACE_TAG=<text> adds a suffix to the output file name, so a sweep
+# keeps one table per setting (2026-10-13, as on the Ubuntu side's copy of this script)
+if os.environ.get("RACE_DEPTHS"):
+    DEPTHS = [int(d) for d in os.environ["RACE_DEPTHS"].split(",")]
+SUFFIX = ("-tp2" if TP == 2 else "-pp2" if PP == 2 else "") + MODEL_TAG + (("-" + os.environ["RACE_TAG"]) if os.environ.get("RACE_TAG") else "")
 SHAPE = "two cards, tensor split" if TP == 2 else "two cards, pipeline split" if PP == 2 else "one card"
 out = pathlib.Path(__file__).with_name(f"race-7b-depth{SUFFIX}.output.txt")
 backend = os.environ.get("SMOKE_ATTN_BACKEND", "default")
