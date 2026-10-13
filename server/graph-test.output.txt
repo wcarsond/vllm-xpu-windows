@@ -1,0 +1,11 @@
+run 2026-10-13 15:16:10  replays 200
+[rank 0] exchange up; big path direct
+[rank 0] captured 56 all_reduces; exchange counts (small, recorded, big) = (115, 56, 3)
+[rank 0] 200 replays x 56 all_reduces + eager calls between: 0 wrong
+[rank 0] 56 all_reduces: replayed graph 28.5 us each, eager 28.4 us each; status (0, 0, 5758)
+[rank 0] PASS
+[rank 1] exchange up; big path direct
+[rank 1] captured 56 all_reduces; exchange counts (small, recorded, big) = (115, 56, 3)
+[rank 1] 200 replays x 56 all_reduces + eager calls between: 0 wrong
+[rank 1] 56 all_reduces: replayed graph 28.5 us each, eager 28.4 us each; status (0, 0, 5758)
+[rank 1] PASS
