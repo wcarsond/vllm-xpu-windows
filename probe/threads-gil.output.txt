@@ -1,0 +1,7 @@
+run Tue 10/13/2026 15:53:49.52  28 layers, 200 steps, us per step (lower is better) 
+eager A:     3603 us per step  (one thread, one card)
+eager B: TIMEOUT after 180 s
+eager C:     3629     3692 us per step  (two processes)
+graph A:     2748 us per step  (one thread, one card)
+graph B:     2749        1 us per step  (two threads, one process)
+graph C:     2760     2764 us per step  (two processes)

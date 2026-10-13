@@ -1,0 +1,12 @@
+run Tue 10/13/2026 15:42:14.47 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+build exit 0 
+exit codes  
+[0] host USM 000001F135240000, zeMemGetIpcHandle: ERROR_INVALID_ARGUMENT (0x78000003)
+[0] -> host memory cannot be exported on this driver either
+[1] no handle from rank 0
