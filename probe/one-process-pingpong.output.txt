@@ -1,0 +1,24 @@
+run Tue 10/13/2026 14:01:07.57 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+build exit 0 
+-- words 896 rounds 20 
+exit 
+one context, two cards: Intel(R) Arc(TM) Pro B60 Graphics | Intel(R) Arc(TM) Pro B60 Graphics
+896 tagged words (7168 B) x 20 rounds: 10079.3 us per round trip (card0 -> card1 -> card0), 5039.6 us one way; wrong words card0 0 card1 0, poll timeouts card0 0 card1 0
+-- words 896 rounds 2000 
+exit 
+one context, two cards: Intel(R) Arc(TM) Pro B60 Graphics | Intel(R) Arc(TM) Pro B60 Graphics
+896 tagged words (7168 B) x 2000 rounds: 28.6 us per round trip (card0 -> card1 -> card0), 14.3 us one way; wrong words card0 0 card1 0, poll timeouts card0 0 card1 0
+-- words 32 rounds 2000 
+exit 
+one context, two cards: Intel(R) Arc(TM) Pro B60 Graphics | Intel(R) Arc(TM) Pro B60 Graphics
+32 tagged words (256 B) x 2000 rounds: 9.9 us per round trip (card0 -> card1 -> card0), 5.0 us one way; wrong words card0 0 card1 0, poll timeouts card0 0 card1 0
+-- words 4096 rounds 500 
+exit 
+one context, two cards: Intel(R) Arc(TM) Pro B60 Graphics | Intel(R) Arc(TM) Pro B60 Graphics
+4096 tagged words (32768 B) x 500 rounds: 115.5 us per round trip (card0 -> card1 -> card0), 57.8 us one way; wrong words card0 0 card1 0, poll timeouts card0 0 card1 0
