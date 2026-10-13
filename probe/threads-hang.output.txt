@@ -1,0 +1,7 @@
+run Tue 10/13/2026 16:36:35.40 
+E: completed, us per step card0 3397, card1 3398
+E: exit  (hung; stacks in threads-hang.E.err.log)
+M: exit  (hung; stacks in threads-hang.M.err.log)
+W: exit  (hung; stacks in threads-hang.W.err.log)
+S: exit  (hung; stacks in threads-hang.S.err.log)
+F: exit  (hung; stacks in threads-hang.F.err.log)

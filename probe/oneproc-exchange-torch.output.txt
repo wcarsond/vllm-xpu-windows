@@ -1,0 +1,39 @@
+run 2026-10-13 16:51:02  28 layers, hidden 3584 bf16, 200 steps
+correctness: cards identical True, equal to the torch reference True (max diff 0); status (0, 0)
+one card alone, no exchange: 3559 us per step
+eager, two rank threads under the baton: 11881 / 11880 us per step (56 hand-overs per step); status (0, 0)
+run 2026-10-13 16:53:24  28 layers, hidden 3584 bf16, 200 steps
+correctness: cards identical True, equal to the torch reference True (max diff 0); status (0, 0)
+one card alone, no exchange: 3611 us per step
+eager, two rank threads under the baton: 10094 / 10092 us per step (56 hand-overs per step); status (0, 0)
+run 2026-10-13 16:56:55  28 layers, hidden 3584 bf16, 200 steps
+correctness: cards identical True, equal to the torch reference True (max diff 0); status (0, 0)
+one card alone, no exchange: 3513 us per step
+graph: counts after capture card0 (140, 28, 0), card1 (140, 28, 0) (small, recorded, big); replay: cards identical True, equal to the eager step False; 2940 / 2941 us per step; status (0, 0)
+run 2026-10-13 16:57:22  28 layers, hidden 3584 bf16, 200 steps
+correctness: cards identical True, equal to the torch reference True (max diff 0); status (0, 0)
+one card alone, no exchange: 3520 us per step
+graph: counts after capture card0 (140, 28, 0), card1 (140, 28, 0) (small, recorded, big); replay: cards identical True, equal to the eager step False (max diff 0.5; one card, no exchange, graph vs eager max diff 0); 2938 / 2939 us per step; status (0, 0)
+run 2026-10-13 16:57:59  28 layers, hidden 3584 bf16, 200 steps
+correctness: cards identical True, equal to the torch reference True (max diff 0); status (0, 0)
+one card alone, no exchange: 3620 us per step
+graph per-layer sums vs torch sum of the graph's own partials: all exact
+graph: counts after capture card0 (140, 28, 0), card1 (140, 28, 0) (small, recorded, big); replay: cards identical True, equal to the eager step True (max diff 0; one card, no exchange, graph vs eager max diff 0); 3037 / 3037 us per step; status (0, 0)
+run 2026-10-13 16:58:33  28 layers, hidden 3584 bf16, 200 steps
+correctness: cards identical True, equal to the torch reference True (max diff 0); status (0, 0)
+one card alone, no exchange: 3504 us per step
+graph clones none: five replays from the same input, max diff to the eager step: [1.0, 0.75, 0.75, 0.75, 0.75]
+graph per-layer sums vs torch sum of the graph's own partials: all exact
+graph: counts after capture card0 (140, 28, 0), card1 (140, 28, 0) (small, recorded, big); replay: cards identical True, equal to the eager step False (max diff 1; one card, no exchange, graph vs eager max diff 0); 2938 / 2939 us per step; status (0, 0)
+run 2026-10-13 16:58:39  28 layers, hidden 3584 bf16, 200 steps
+correctness: cards identical True, equal to the torch reference True (max diff 0); status (0, 0)
+one card alone, no exchange: 3507 us per step
+graph clones parts: five replays from the same input, max diff to the eager step: [0.5, 0.0, 0.5, 0.5, 0.0]
+graph per-layer sums vs torch sum of the graph's own partials: all exact
+graph: counts after capture card0 (140, 28, 0), card1 (140, 28, 0) (small, recorded, big); replay: cards identical True, equal to the eager step False (max diff 0.5; one card, no exchange, graph vs eager max diff 0); 3003 / 3003 us per step; status (0, 0)
+run 2026-10-13 16:58:46  28 layers, hidden 3584 bf16, 200 steps
+correctness: cards identical True, equal to the torch reference True (max diff 0); status (0, 0)
+one card alone, no exchange: 3539 us per step
+graph clones sums: five replays from the same input, max diff to the eager step: [0.0, 0.75, 0.0, 0.5, 0.5]
+graph per-layer sums vs torch sum of the graph's own partials: all exact
+graph: counts after capture card0 (140, 28, 0), card1 (140, 28, 0) (small, recorded, big); replay: cards identical True, equal to the eager step True (max diff 0; one card, no exchange, graph vs eager max diff 0); 2993 / 2994 us per step; status (0, 0)

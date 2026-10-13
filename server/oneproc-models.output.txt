@@ -1,0 +1,4 @@
+﻿run 2026-10-13 18:35:18  two cards, full decode graphs; decode tok/s over 256 tokens, greedy ids compared
+Qwen2.5-72B-Instruct-AWQ oneproc: decode 20.1 tok/s over 256 tokens (prefill 0.110 s subtracted); engine up in 64.6 s
+Qwen2.5-72B-Instruct-AWQ mp: decode 17.5 tok/s over 256 tokens (prefill 0.123 s subtracted); engine up in 48.8 s
+Qwen2.5-72B-Instruct-AWQ token ids identical across executors: True

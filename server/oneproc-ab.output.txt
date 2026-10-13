@@ -1,0 +1,9 @@
+﻿run 2026-10-13 18:13:36  7B, two cards, one process, full decode graphs; decode tok/s over 256 tokens
+async 1 align 1: decode 56.6 tok/s over 256 tokens (prefill 0.043 s subtracted)
+    baton over that generation: 2.4 hand-overs per token, waiting per token: rank 0 0.28 ms, rank 1 0.64 ms (of 17.78 ms per token)
+async 0 align 1: decode 52.2 tok/s over 256 tokens (prefill 0.042 s subtracted)
+    baton over that generation: 2.4 hand-overs per token, waiting per token: rank 0 0.28 ms, rank 1 0.61 ms (of 19.26 ms per token)
+async 1 align 0: decode 56.6 tok/s over 256 tokens (prefill 0.041 s subtracted)
+    baton over that generation: 2.4 hand-overs per token, waiting per token: rank 0 0.29 ms, rank 1 0.65 ms (of 17.76 ms per token)
+async 0 align 0: decode 52.2 tok/s over 256 tokens (prefill 0.040 s subtracted)
+    baton over that generation: 2.4 hand-overs per token, waiting per token: rank 0 0.28 ms, rank 1 0.61 ms (of 19.25 ms per token)

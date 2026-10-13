@@ -1,0 +1,98 @@
+run Tue 10/13/2026 16:34:11.53 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+C:\Users\claude\scripts\vllm-xpu-windows\probe\one-process-allreduce.cpp(158,28): warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  158 |     { const char* e = std::getenv("OP_WIDTHS"); std::string t = e ? e : "1"; size_t a = 0; while (a < t.size()) { size_t z = t.find(',', a); if (z == std::string::npos) z = t.size(); Vs.push_back(std::atoi(t.substr(a, z - a).c_str())); a = z + 1; } }
+      |                            ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(1183,20): note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+C:\Users\claude\scripts\vllm-xpu-windows\probe\one-process-allreduce.cpp(159,28): warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  159 |     { const char* e = std::getenv("OP_GROUPS"); std::string t = e ? e : "1,4,8,16,32,64"; size_t a = 0; while (a < t.size()) { size_t z = t.find(',', a); if (z == std::string::npos) z = t.size(); Gs.push_back(std::atoi(t.substr(a, z - a).c_str())); a = z + 1; } }
+      |                            ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(1183,20): note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+2 warnings generated.
+C:\Users\claude\scripts\vllm-xpu-windows\probe\one-process-allreduce.cpp(158,28): warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  158 |     { const char* e = std::getenv("OP_WIDTHS"); std::string t = e ? e : "1"; size_t a = 0; while (a < t.size()) { size_t z = t.find(',', a); if (z == std::string::npos) z = t.size(); Vs.push_back(std::atoi(t.substr(a, z - a).c_str())); a = z + 1; } }
+      |                            ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(1183,20): note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+C:\Users\claude\scripts\vllm-xpu-windows\probe\one-process-allreduce.cpp(159,28): warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  159 |     { const char* e = std::getenv("OP_GROUPS"); std::string t = e ? e : "1,4,8,16,32,64"; size_t a = 0; while (a < t.size()) { size_t z = t.find(',', a); if (z == std::string::npos) z = t.size(); Gs.push_back(std::atoi(t.substr(a, z - a).c_str())); a = z + 1; } }
+      |                            ^
+C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h(1183,20): note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(368,55): note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h(358,47): note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+2 warnings generated.
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+build exit 0 
+-- words 1792 rounds 2000 
+exit 
+words 1792 (14336 B tagged, 7168 B data), rounds 2000; peer access 0->1 no, 1->0 no
+empty kernel launch, both cards, one thread: 45.7 us per round
+host W 8 G1: persistent   56.8 us per all_reduce, launched   55.2 us; wrong 0/0, timeouts 0/0
+host W 8 G4: persistent   14.9 us per all_reduce, launched   16.4 us; wrong 0/0, timeouts 0/0
+host W 8 G8: persistent    7.8 us per all_reduce, launched    9.4 us; wrong 0/0, timeouts 0/0
+host W 8 G16: persistent    4.8 us per all_reduce, launched    7.0 us; wrong 0/0, timeouts 0/0
+host W 8 G32: persistent    4.4 us per all_reduce, launched    7.0 us; wrong 0/0, timeouts 0/0
+host W 8 G64: persistent  125.3 us per all_reduce, launched  134.2 us; wrong 0/0, timeouts 0/0
+-- words 2048 rounds 2000 
+exit 
+words 2048 (16384 B tagged, 8192 B data), rounds 2000; peer access 0->1 no, 1->0 no
+empty kernel launch, both cards, one thread: 43.8 us per round
+host W 8 G1: persistent   64.6 us per all_reduce, launched   64.9 us; wrong 0/0, timeouts 0/0
+host W 8 G4: persistent   16.4 us per all_reduce, launched   18.7 us; wrong 0/0, timeouts 0/0
+host W 8 G8: persistent    9.0 us per all_reduce, launched   10.5 us; wrong 0/0, timeouts 0/0
+host W 8 G16: persistent    4.8 us per all_reduce, launched    7.2 us; wrong 0/0, timeouts 0/0
+host W 8 G32: persistent    4.5 us per all_reduce, launched    7.0 us; wrong 0/0, timeouts 0/0
+host W 8 G64: persistent    4.7 us per all_reduce, launched    7.0 us; wrong 0/0, timeouts 0/0
+-- words 4096 rounds 1000 
+exit 
+words 4096 (32768 B tagged, 16384 B data), rounds 1000; peer access 0->1 no, 1->0 no
+empty kernel launch, both cards, one thread: 41.8 us per round
+host W 8 G1: persistent  127.6 us per all_reduce, launched  126.4 us; wrong 0/0, timeouts 0/0
+host W 8 G4: persistent   32.7 us per all_reduce, launched   33.6 us; wrong 0/0, timeouts 0/0
+host W 8 G8: persistent   16.8 us per all_reduce, launched   19.2 us; wrong 0/0, timeouts 0/0
+host W 8 G16: persistent    9.4 us per all_reduce, launched   11.3 us; wrong 0/0, timeouts 0/0
+host W 8 G32: persistent    7.6 us per all_reduce, launched   11.2 us; wrong 0/0, timeouts 0/0
+host W 8 G64: persistent    6.3 us per all_reduce, launched    9.4 us; wrong 0/0, timeouts 0/0
+-- words 64 rounds 2000 
+exit 
+words 64 (512 B tagged, 256 B data), rounds 2000; peer access 0->1 no, 1->0 no
+empty kernel launch, both cards, one thread: 45.5 us per round
+host W 8 G1: persistent    1.9 us per all_reduce, launched    7.4 us; wrong 0/0, timeouts 0/0
+host W 8 G4: persistent    1.6 us per all_reduce, launched    7.8 us; wrong 0/0, timeouts 0/0
+host W 8 G8: persistent    1.6 us per all_reduce, launched    7.5 us; wrong 0/0, timeouts 0/0
+host W 8 G16: persistent    8.0 us per all_reduce, launched   10.8 us; wrong 0/0, timeouts 0/0
+host W 8 G32: persistent    6.9 us per all_reduce, launched    9.8 us; wrong 0/0, timeouts 0/0
+host W 8 G64: persistent    5.2 us per all_reduce, launched    9.0 us; wrong 0/0, timeouts 0/0

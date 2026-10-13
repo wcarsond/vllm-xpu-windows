@@ -59,11 +59,18 @@ if __name__ == "__main__":
         extra["tensor_parallel_size"] = TP
         extra["pipeline_parallel_size"] = PP
         extra["distributed_executor_backend"] = "mp"
+        # RACE_EXECUTOR=oneproc (2026-10-13): both cards in this process (v1/executor/oneproc_executor.py)
+        if os.environ.get("RACE_EXECUTOR") == "oneproc":
+            extra["distributed_executor_backend"] = "vllm.v1.executor.oneproc_executor.OneProcExecutor"
+    # RACE_GRAPHS=full (2026-10-13): whole-step decode graphs without torch.compile, the mode the one-process executor
+    # runs in (one Dynamo cache shared by two ranks of one process is untested)
+    if os.environ.get("RACE_GRAPHS") == "full":
+        extra["compilation_config"] = {"mode": 0, "cudagraph_mode": "FULL_DECODE_ONLY"}
     util = float(os.environ.get("SMOKE_GPU_UTIL", "0.9" if TP == 1 and PP == 1 else "0.85"))
     # SMOKE_MAX_LEN (2026-10-12): a smaller window for a model whose KV cannot hold 32K on one card; deeper depths are skipped
     MAXLEN = int(os.environ.get("SMOKE_MAX_LEN", "32768"))
     llm = LLM(model=model, dtype=DTYPE, max_model_len=MAXLEN, gpu_memory_utilization=util,
-              enforce_eager=os.environ.get("SMOKE_EAGER", "1") != "0",   # SMOKE_EAGER=0: torch.compile (+ graphs where allowed)
+              enforce_eager=os.environ.get("SMOKE_EAGER", "1") != "0" and os.environ.get("RACE_GRAPHS") != "full",   # SMOKE_EAGER=0: torch.compile (+ graphs where allowed)
               enable_prefix_caching=False, max_num_batched_tokens=CHUNK, **extra)
     log(f"engine up in {time.time()-t0:.1f} s ({os.path.basename(os.path.normpath(model))}, {DTYPE}, max_model_len {MAXLEN}, "
         f"{SHAPE}, chunk {CHUNK}, util {util})")

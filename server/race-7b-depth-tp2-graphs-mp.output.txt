@@ -1,0 +1,7 @@
+run 2026-10-13 18:08:18  model C:\Users\claude\models-hf\Qwen2.5-Coder-7B-Instruct  two cards, tensor split, bfloat16, attention FLASH_ATTN, prefix caching off, max_num_batched_tokens 2048
+engine up in 29.5 s (Qwen2.5-Coder-7B-Instruct, bfloat16, max_model_len 32768, two cards, tensor split, chunk 2048, util 0.88)
+depth     0: prompt_n    21, prefill    868.9 tok/s (0.02 s), decode   48.3 tok/s over 128 tokens, wall 2.65 s
+depth  4096: prompt_n  4080, prefill   7520.2 tok/s (0.54 s), decode   46.7 tok/s over 128 tokens, wall 3.26 s
+depth 16384: prompt_n 16368, prefill   6503.3 tok/s (2.52 s), decode   44.5 tok/s over 128 tokens, wall 5.37 s
+depth 32000: prompt_n 31983, prefill   5419.1 tok/s (5.90 s), decode   42.4 tok/s over 128 tokens, wall 8.90 s
+last answer starts: Here is an example INI file:  ```ini [section1] key1=value1 key2=value2  [section2] key3=value3 key4=value4 ```  Here is
