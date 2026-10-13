@@ -1,9 +1,13 @@
-run 2026-10-11 12:04:32  rounds 1
-[rank 1] exchange up and warm-up checked in 0.5 s
-[rank 1] 53 all_reduces, 0 wrong; last stage times us (seq, bytes, wait_card, memcpy_in, wait_peer, memcpy_out, enqueue): [(52, 3584, 8, 0, 3, 1, 0), (53, 14680064, 3805, 0, 4, 1418, 0), (54, 3584, 8, 0, 118, 1, 0), (55, 512, 6, 0, 9, 0, 0), (56, 33554432, 7555, 0, 3, 2967, 0), (57, 256, 4, 0, 18, 0, 0), (58, 131072, 16, 0, 3, 16, 0), (59, 3584, 7, 0, 3, 1, 0)]
-[rank 1] 2000 x 7 KB back to back: 29.0 us per call on the main thread, 29.0 us per all_reduce wall
+run 2026-10-13 13:38:48  rounds 3
+[rank 1] exchange up and warm-up checked in 0.5 s; big path: direct copy-engine through the imported section
+[rank 1] 159 all_reduces, 0 wrong; last stage times us (seq, bytes, wait_card, memcpy_in, wait_peer, memcpy_out, enqueue): [(158, 3584, 5, 0, 3, 1, 0), (159, 14680064, 2061, 0, 1, 0, 0), (160, 3584, 4, 0, 22, 1, 0), (161, 512, 4, 0, 20, 0, 0), (162, 33554432, 4795, 0, 2, 0, 0), (163, 256, 4, 0, 97, 0, 0), (164, 131072, 5, 0, 22, 0, 0), (165, 3584, 4, 0, 9, 1, 0)]
+[rank 1] 2000 x 7 KB back to back: 27.6 us per call on the main thread, 27.6 us per all_reduce wall
+[rank 1] 50 x 14.7 MB back to back: 1289 us per all_reduce wall; helper stages us (seq, bytes, wait_card, memcpy_in, wait_peer, write_out): [(2217, 14680064, 1290, 0, 1, 0), (2218, 14680064, 1279, 0, 1, 0), (2219, 14680064, 1279, 0, 1, 0), (2220, 14680064, 1281, 0, 1, 0)]
+[rank 1] 100 x 3.7 MB back to back: 319 us per all_reduce wall; helper stages us (seq, bytes, wait_card, memcpy_in, wait_peer, write_out): [(2322, 3670016, 315, 0, 1, 0), (2323, 3670016, 316, 0, 1, 0), (2324, 3670016, 316, 0, 1, 0), (2325, 3670016, 315, 0, 2, 0)]
 [rank 1] PASS
-[rank 0] exchange up and warm-up checked in 0.5 s
-[rank 0] 53 all_reduces, 0 wrong; last stage times us (seq, bytes, wait_card, memcpy_in, wait_peer, memcpy_out, enqueue): [(52, 3584, 8, 0, 3, 1, 0), (53, 14680064, 3716, 0, 76, 1547, 0), (54, 3584, 8, 0, 2, 1, 0), (55, 512, 6, 0, 3, 0, 0), (56, 33554432, 7446, 0, 104, 2946, 0), (57, 256, 7, 0, 3, 0, 0), (58, 131072, 15, 0, 3, 18, 0), (59, 3584, 7, 0, 3, 1, 0)]
-[rank 0] 2000 x 7 KB back to back: 29.0 us per call on the main thread, 29.0 us per all_reduce wall
+[rank 0] exchange up and warm-up checked in 0.5 s; big path: direct copy-engine through the imported section
+[rank 0] 159 all_reduces, 0 wrong; last stage times us (seq, bytes, wait_card, memcpy_in, wait_peer, memcpy_out, enqueue): [(158, 3584, 5, 0, 1, 2, 0), (159, 14680064, 2004, 0, 58, 0, 0), (160, 3584, 4, 0, 1, 1, 0), (161, 512, 4, 0, 1, 0, 0), (162, 33554432, 4658, 0, 123, 0, 0), (163, 256, 2, 0, 2, 0, 0), (164, 131072, 5, 0, 1, 0, 0), (165, 3584, 4, 0, 1, 1, 0)]
+[rank 0] 2000 x 7 KB back to back: 27.6 us per call on the main thread, 27.6 us per all_reduce wall
+[rank 0] 50 x 14.7 MB back to back: 1289 us per all_reduce wall; helper stages us (seq, bytes, wait_card, memcpy_in, wait_peer, write_out): [(2217, 14680064, 1243, 0, 49, 0), (2218, 14680064, 1242, 0, 39, 0), (2219, 14680064, 1251, 0, 29, 0), (2220, 14680064, 1254, 0, 28, 0)]
+[rank 0] 100 x 3.7 MB back to back: 319 us per all_reduce wall; helper stages us (seq, bytes, wait_card, memcpy_in, wait_peer, write_out): [(2322, 3670016, 310, 0, 7, 0), (2323, 3670016, 311, 0, 7, 0), (2324, 3670016, 310, 0, 7, 0), (2325, 3670016, 308, 0, 8, 0)]
 [rank 0] PASS

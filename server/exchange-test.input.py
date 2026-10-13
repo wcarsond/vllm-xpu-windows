@@ -46,7 +46,8 @@ def worker(rank, rounds, q):
         log(f"FAIL at construction/warm-up: {e}")
         q.put("\n".join(lines))
         return
-    log(f"exchange up and warm-up checked in {time.time() - t0:.1f} s")
+    log(f"exchange up and warm-up checked in {time.time() - t0:.1f} s; big path: "
+        + ("direct copy-engine through the imported section" if getattr(ex.ext, "direct", lambda: False)() else "helper memcpy"))
     fails = 0
     n = 0
     for r in range(rounds):
@@ -79,6 +80,24 @@ def worker(rank, rounds, q):
     torch.xpu.synchronize(rank)
     t3 = time.perf_counter()
     log(f"2000 x 7 KB back to back: {1e6 * (t2 - t1) / 2000:.1f} us per call on the main thread, {1e6 * (t3 - t1) / 2000:.1f} us per all_reduce wall")
+    # prefill-size timing (2026-10-13): back-to-back all_reduces of a 2048-token chunk of the 7B (2048 x 3584 bf16 =
+    # 14.7 MB) and of 512 tokens (3.7 MB), wall per all_reduce, so Windows lines up with the Linux side's oneCCL figure
+    # (~2,720 us for 14.7 MB) and its copy-engine probe (1,340 us). Then the helper's stage split for the last jobs.
+    for label, numel, reps in (("14.7 MB", 2048 * 3584, 50), ("3.7 MB", 512 * 3584, 100)):
+        t = torch.ones(numel, dtype=torch.bfloat16, device=dev)
+        for _ in range(5):
+            t = ex.all_reduce(t)
+        dist.barrier()
+        torch.xpu.synchronize(rank)
+        t1 = time.perf_counter()
+        for _ in range(reps):
+            t = ex.all_reduce(t)
+        torch.xpu.synchronize(rank)
+        t3 = time.perf_counter()
+        st = ex.stats(4)
+        log(f"{reps} x {label} back to back: {1e6 * (t3 - t1) / reps:.0f} us per all_reduce wall; helper stages us "
+            "(seq, bytes, wait_card, memcpy_in, wait_peer, write_out): "
+            + str([(s, b, round(a), round(c), round(d), round(e)) for s, b, a, c, d, e, f in st]))
     log("PASS" if fails == 0 else "FAIL")
     ex.close()
     dist.destroy_process_group()

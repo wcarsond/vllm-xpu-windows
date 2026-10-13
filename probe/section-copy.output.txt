@@ -1,0 +1,58 @@
+run Tue 10/13/2026 13:35:50.15 
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+Intel(R) oneAPI DPC++/C++ Compiler for applications running on Intel(R) 64, Version 2026.1.0 Build 20260617
+Copyright (C) 1985-2026 Intel Corporation. All rights reserved.
+
+build exit 0 
+-- zex 7168 
+exit codes  
+[0] imported the section into 2 driver(s)
+[0] zex        7168 B: all sums correct; per round us: copy in 39 (0.2 GB/s), wait peer 2, copy out 5 (1.4 GB/s), add+check 53, total 99
+[1] imported the section into 2 driver(s)
+[1] zex        7168 B: all sums correct; per round us: copy in 39 (0.2 GB/s), wait peer 4, copy out 5 (1.4 GB/s), add+check 53, total 101
+-- zex 1048576 
+exit codes  
+[0] imported the section into 2 driver(s)
+[0] zex     1048576 B: all sums correct; per round us: copy in 77 (13.6 GB/s), wait peer 25, copy out 46 (22.7 GB/s), add+check 56, total 205
+[1] imported the section into 2 driver(s)
+[1] zex     1048576 B: all sums correct; per round us: copy in 72 (14.5 GB/s), wait peer 0, copy out 43 (24.3 GB/s), add+check 82, total 198
+-- zex 3670016 
+exit codes  
+[0] imported the section into 2 driver(s)
+[0] zex     3670016 B: all sums correct; per round us: copy in 193 (19.0 GB/s), wait peer 10, copy out 146 (25.1 GB/s), add+check 63, total 413
+[1] imported the section into 2 driver(s)
+[1] zex     3670016 B: all sums correct; per round us: copy in 210 (17.5 GB/s), wait peer 1, copy out 138 (26.5 GB/s), add+check 62, total 411
+-- zex 14680064 
+exit codes  
+[0] imported the section into 2 driver(s)
+[0] zex    14680064 B: all sums correct; per round us: copy in 664 (22.1 GB/s), wait peer 40, copy out 568 (25.9 GB/s), add+check 132, total 1403
+[1] imported the section into 2 driver(s)
+[1] zex    14680064 B: all sums correct; per round us: copy in 726 (20.2 GB/s), wait peer 0, copy out 542 (27.1 GB/s), add+check 135, total 1403
+-- zex 33554432 
+exit codes  
+[0] imported the section into 2 driver(s)
+[0] zex    33554432 B: all sums correct; per round us: copy in 1470 (22.8 GB/s), wait peer 91, copy out 1291 (26.0 GB/s), add+check 244, total 3096
+[1] imported the section into 2 driver(s)
+[1] zex    33554432 B: all sums correct; per round us: copy in 1612 (20.8 GB/s), wait peer 1, copy out 1234 (27.2 GB/s), add+check 242, total 3089
+-- none 7168 
+exit codes  
+[0] none       7168 B: all sums correct; per round us: copy in 43 (0.2 GB/s), wait peer 6, copy out 7 (1.1 GB/s), add+check 53, total 108
+[1] none       7168 B: all sums correct; per round us: copy in 45 (0.2 GB/s), wait peer 1, copy out 6 (1.1 GB/s), add+check 53, total 106
+-- none 1048576 
+exit codes  
+[0] none    1048576 B: all sums correct; per round us: copy in 135 (7.8 GB/s), wait peer 8, copy out 86 (12.2 GB/s), add+check 58, total 286
+[1] none    1048576 B: all sums correct; per round us: copy in 141 (7.4 GB/s), wait peer 1, copy out 84 (12.5 GB/s), add+check 57, total 282
+-- none 3670016 
+exit codes  
+[0] none    3670016 B: all sums correct; per round us: copy in 359 (10.2 GB/s), wait peer 3, copy out 289 (12.7 GB/s), add+check 66, total 717
+[1] none    3670016 B: all sums correct; per round us: copy in 366 (10.0 GB/s), wait peer 5, copy out 283 (13.0 GB/s), add+check 64, total 717
+-- none 14680064 
+exit codes  
+[0] none   14680064 B: all sums correct; per round us: copy in 1320 (11.1 GB/s), wait peer 21, copy out 1241 (11.8 GB/s), add+check 134, total 2717
+[1] none   14680064 B: all sums correct; per round us: copy in 1331 (11.0 GB/s), wait peer 1, copy out 1236 (11.9 GB/s), add+check 144, total 2712
+-- none 33554432 
+exit codes  
+[0] none   33554432 B: all sums correct; per round us: copy in 2845 (11.8 GB/s), wait peer 2, copy out 2761 (12.2 GB/s), add+check 242, total 5849
+[1] none   33554432 B: all sums correct; per round us: copy in 2845 (11.8 GB/s), wait peer 12, copy out 2752 (12.2 GB/s), add+check 240, total 5849

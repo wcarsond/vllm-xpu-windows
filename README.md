@@ -18,6 +18,24 @@ depth on two cards holds 1.5-1.7x one card out to 32K context.
 Everything here was measured on one machine: a Core Ultra 5 250K, 32 GB of RAM, two Arc Pro B60s
 on PCIe Gen5 x8 each, Windows 11, Intel driver 32.0.101.9033.
 
+## 2026-10-13: the two-card exchange without a CPU hop
+
+The large-message path of the two-card exchange (prefill chunks) used to stage every byte through a CPU thread. The
+shared Windows section can be imported into Level Zero (`zexDriverImportExternalPointer`); kernels still cannot touch
+imported memory, but the copy engine can. Each card now copies its half straight into its slot of the section and the
+peer card copies it straight out. Probes: `probe/copy-bw.input.py` (raw card/host copies: 28 GB/s, same as Linux) and
+`probe/section-copy.cpp` (two processes, one imported section, bit-exact).
+
+| two B60s | before | now | Linux, Intel's stock oneCCL, same board |
+|---|---|---|---|
+| all_reduce, 14.7 MB | 4,204 us | **1,289 us** | ~2,720 us |
+| all_reduce, 3.7 MB | 887 us | **319 us** | 681 us |
+| Qwen2.5-Coder-7B bf16 prefill, 4K / 16K / 32K tokens | 4,504 / 4,087 / 3,629 | **7,617 / 6,518 / 5,420** | 6,019 / 5,472 / 4,729 |
+
+Two-card prefill on Windows is now 15-27% ahead of Linux running Intel's own stack (llm-scaler vLLM 0.26.0-b2,
+oneCCL with its all_reduce size threshold raised). Decode is unchanged at 47.2 tok/s short against Linux's 51.5: the
+small, decode-size exchange (28 us against oneCCL's 13) is the next target. The tables in BACKEND-RACE.md predate this.
+
 ## Against llama.cpp on the same cards
 
 Same models through stock and patched llama.cpp Vulkan, SYCL, a two-card Vulkan exchange, and this port, one card
