@@ -1,0 +1,5 @@
+run 2026-10-13 17:50:26  model C:\Users\claude\models-hf\gpt-oss-20b  one card, bfloat16, attention default, prefix caching off, max_num_batched_tokens 32768
+engine up in 28.4 s (gpt-oss-20b, bfloat16, max_model_len 8192, one card, chunk 32768, util 0.9)
+depth     0: prompt_n    21, prefill    705.4 tok/s (0.03 s), decode   88.5 tok/s over 128 tokens, wall 1.47 s
+depth  4096: prompt_n  4080, prefill   7089.7 tok/s (0.58 s), decode   86.0 tok/s over 128 tokens, wall 2.05 s
+last answer starts: Sure! Below is a Python function that parses an INI file into a nested dictionary. The function includes comments explai

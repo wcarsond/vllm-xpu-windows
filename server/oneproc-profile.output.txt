@@ -1,0 +1,114 @@
+run 2026-10-13 18:27:41  gpt-oss-20b, one: 64 tokens in 1.25 s (51.2 tok/s incl. prefill); card time recorded 187.3 ms in total, all cards
+     167.22 ms     136 calls    1229.5 us/call  gemm_kernel
+      15.32 ms      48 calls     319.2 us/call  _ZTSN3MoE12GemmCuteNameIN7cutlass10bfloat16_tEhhS2_Lc82ELc67ENS_16w4a16_policy_m_8ELNS_7A_
+       0.47 ms      64 calls       7.4 us/call  _ZTSN2at6native3xpu12ReduceKernelILi1ENS1_8ReduceOpIfNS1_9ArgMaxOpsIfEEjxLi4EEEEE
+       0.34 ms      64 calls       5.3 us/call  _compute_slot_mappings_kernel
+       0.29 ms      64 calls       4.6 us/call  _gumbel_sample_kernel
+       0.27 ms      64 calls       4.3 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi8EEEEEPc16Of
+       0.25 ms      64 calls       3.9 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi2EEEEEPc16Of
+       0.24 ms      64 calls       3.7 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi4EEEEEPc16Of
+       0.22 ms      64 calls       3.4 us/call  _gather_block_tables_kernel
+       0.21 ms      48 calls       4.3 us/call  _ZTSN2at6native3xpu28ElementwiseGlobalRangeKernelINS1_25LegacyKernelScalarFunctorIN3c108BF
+       0.18 ms     132 calls       1.3 us/call  Memcpy H2D (Host (Driver Allocated) -> Device)
+       0.17 ms      64 calls       2.7 us/call  _post_update_kernel
+       0.16 ms      64 calls       2.6 us/call  _ZTSN2at6native3xpu37ScatterGatherElementwiseKernelFunctorINS1_38ScatterGatherInternalKern
+       0.16 ms     224 calls       0.7 us/call  _ZTSN2at6native3xpu27VectorizedElementwiseKernelILi4ENS1_11FillFunctorIiEENS_6detail5Array
+       0.14 ms      48 calls       2.9 us/call  _ZTSN4vllm25fused_add_rms_norm_kernelIN4sycl3_V13ext6oneapi8bfloat16ELi8ELb1EEE
+       0.14 ms      64 calls       2.2 us/call  _get_num_sampled_and_rejected_kernel
+       0.13 ms      24 calls       5.4 us/call  _ZTSN4vllm3moe10TopKGatingILi8ELi32ELi4ELi16ELi32EN4sycl3_V13ext6oneapi8bfloat16EiLNS0_11S
+       0.13 ms      24 calls       5.3 us/call  _ZTSN4vllm3moe9MoeGatherIN4sycl3_V13ext6oneapi8bfloat16ELi4ELi8EEE
+run 2026-10-13 18:28:16  gpt-oss-20b, oneproc: 64 tokens in 1.93 s (33.1 tok/s incl. prefill); card time recorded 201.3 ms in total, all cards
+     168.78 ms     272 calls     620.5 us/call  gemm_kernel
+      16.66 ms      96 calls     173.5 us/call  _ZTSN3MoE12GemmCuteNameIN7cutlass10bfloat16_tEhhS2_Lc82ELc67ENS_16w4a16_policy_m_8ELNS_7A_
+       2.92 ms     226 calls      12.9 us/call  _ZTSZN12_GLOBAL__N_14Pair3bigERN4sycl3_V15queueEiRKN2at6TensorERS6_yiiiEUlvE0_
+       2.20 ms     490 calls       4.5 us/call  Memcpy H2D (Host (Driver Allocated) -> Device)
+       1.65 ms     482 calls       3.4 us/call  Memcpy D2H (Device -> Host (Driver Allocated))
+       0.94 ms     128 calls       7.3 us/call  _ZTSN2at6native3xpu12ReduceKernelILi1ENS1_8ReduceOpIfNS1_9ArgMaxOpsIfEEjxLi4EEEEE
+       0.66 ms     128 calls       5.2 us/call  _compute_slot_mappings_kernel
+       0.63 ms     128 calls       4.9 us/call  _gumbel_sample_kernel
+       0.51 ms     128 calls       4.0 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi8EEEEEPc16Of
+       0.50 ms     128 calls       3.9 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi2EEEEEPc16Of
+       0.49 ms     128 calls       3.8 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi4EEEEEPc16Of
+       0.46 ms     128 calls       3.6 us/call  _gather_block_tables_kernel
+       0.34 ms     448 calls       0.8 us/call  _ZTSN2at6native3xpu27VectorizedElementwiseKernelILi4ENS1_11FillFunctorIiEENS_6detail5Array
+       0.34 ms     128 calls       2.6 us/call  _post_update_kernel
+       0.32 ms     128 calls       2.5 us/call  _ZTSN2at6native3xpu37ScatterGatherElementwiseKernelFunctorINS1_38ScatterGatherInternalKern
+       0.29 ms      96 calls       3.0 us/call  _ZTSN2at6native3xpu28ElementwiseGlobalRangeKernelINS1_25LegacyKernelScalarFunctorIN3c108BF
+       0.26 ms     128 calls       2.0 us/call  _get_num_sampled_and_rejected_kernel
+       0.26 ms      96 calls       2.7 us/call  _ZTSN4vllm25fused_add_rms_norm_kernelIN4sycl3_V13ext6oneapi8bfloat16ELi8ELb1EEE
+run 2026-10-13 18:29:07  gpt-oss-20b, one: 64 tokens in 1.20 s (53.2 tok/s incl. prefill); card time recorded 187.3 ms in total, all cards
+     167.25 ms     136 calls    1229.8 us/call  gemm_kernel
+      15.32 ms      48 calls     319.2 us/call  _ZTSN3MoE12GemmCuteNameIN7cutlass10bfloat16_tEhhS2_Lc82ELc67ENS_16w4a16_policy_m_8ELNS_7A_
+       0.47 ms      64 calls       7.4 us/call  _ZTSN2at6native3xpu12ReduceKernelILi1ENS1_8ReduceOpIfNS1_9ArgMaxOpsIfEEjxLi4EEEEE
+       0.34 ms      64 calls       5.3 us/call  _compute_slot_mappings_kernel
+       0.31 ms      64 calls       4.8 us/call  _gumbel_sample_kernel
+       0.27 ms      64 calls       4.3 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi8EEEEEPc16Of
+       0.25 ms      64 calls       4.0 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi2EEEEEPc16Of
+       0.24 ms      64 calls       3.8 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi4EEEEEPc16Of
+       0.22 ms      64 calls       3.4 us/call  _gather_block_tables_kernel
+       0.21 ms      48 calls       4.3 us/call  _ZTSN2at6native3xpu28ElementwiseGlobalRangeKernelINS1_25LegacyKernelScalarFunctorIN3c108BF
+       0.17 ms     132 calls       1.3 us/call  Memcpy H2D (Host (Driver Allocated) -> Device)
+       0.17 ms      64 calls       2.7 us/call  _post_update_kernel
+       0.16 ms      64 calls       2.6 us/call  _ZTSN2at6native3xpu37ScatterGatherElementwiseKernelFunctorINS1_38ScatterGatherInternalKern
+       0.16 ms     224 calls       0.7 us/call  _ZTSN2at6native3xpu27VectorizedElementwiseKernelILi4ENS1_11FillFunctorIiEENS_6detail5Array
+       0.14 ms      48 calls       2.9 us/call  _ZTSN4vllm25fused_add_rms_norm_kernelIN4sycl3_V13ext6oneapi8bfloat16ELi8ELb1EEE
+       0.14 ms      64 calls       2.2 us/call  _get_num_sampled_and_rejected_kernel
+       0.13 ms      24 calls       5.4 us/call  _ZTSN4vllm3moe10TopKGatingILi8ELi32ELi4ELi16ELi32EN4sycl3_V13ext6oneapi8bfloat16EiLNS0_11S
+       0.13 ms      24 calls       5.3 us/call  _ZTSN4vllm3moe9MoeGatherIN4sycl3_V13ext6oneapi8bfloat16ELi4ELi8EEE
+run 2026-10-13 18:29:40  gpt-oss-20b, oneproc: 64 tokens in 1.72 s (37.2 tok/s incl. prefill); card time recorded 201.4 ms in total, all cards
+     168.72 ms     272 calls     620.3 us/call  gemm_kernel
+      16.65 ms      96 calls     173.5 us/call  _ZTSN3MoE12GemmCuteNameIN7cutlass10bfloat16_tEhhS2_Lc82ELc67ENS_16w4a16_policy_m_8ELNS_7A_
+       3.21 ms     226 calls      14.2 us/call  _ZTSZN12_GLOBAL__N_14Pair3bigERN4sycl3_V15queueEiRKN2at6TensorERS6_yiiiEUlvE0_
+       2.15 ms     490 calls       4.4 us/call  Memcpy H2D (Host (Driver Allocated) -> Device)
+       1.65 ms     482 calls       3.4 us/call  Memcpy D2H (Device -> Host (Driver Allocated))
+       0.94 ms     128 calls       7.3 us/call  _ZTSN2at6native3xpu12ReduceKernelILi1ENS1_8ReduceOpIfNS1_9ArgMaxOpsIfEEjxLi4EEEEE
+       0.67 ms     128 calls       5.2 us/call  _compute_slot_mappings_kernel
+       0.62 ms     128 calls       4.8 us/call  _gumbel_sample_kernel
+       0.51 ms     128 calls       4.0 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi8EEEEEPc16Of
+       0.50 ms     128 calls       3.9 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi2EEEEEPc16Of
+       0.49 ms     128 calls       3.8 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi4EEEEEPc16Of
+       0.44 ms     128 calls       3.4 us/call  _gather_block_tables_kernel
+       0.34 ms     448 calls       0.8 us/call  _ZTSN2at6native3xpu27VectorizedElementwiseKernelILi4ENS1_11FillFunctorIiEENS_6detail5Array
+       0.34 ms     128 calls       2.6 us/call  _post_update_kernel
+       0.32 ms     128 calls       2.5 us/call  _ZTSN2at6native3xpu37ScatterGatherElementwiseKernelFunctorINS1_38ScatterGatherInternalKern
+       0.28 ms      96 calls       3.0 us/call  _ZTSN2at6native3xpu28ElementwiseGlobalRangeKernelINS1_25LegacyKernelScalarFunctorIN3c108BF
+       0.27 ms     128 calls       2.1 us/call  _get_num_sampled_and_rejected_kernel
+       0.26 ms      96 calls       2.7 us/call  _ZTSN4vllm25fused_add_rms_norm_kernelIN4sycl3_V13ext6oneapi8bfloat16ELi8ELb1EEE
+run 2026-10-13 18:30:37  gpt-oss-20b, one EAGER: 64 tokens in 4.19 s (15.3 tok/s incl. prefill); card time recorded 718.9 ms in total, all cards
+     366.25 ms    4672 calls      78.4 us/call  gemm_kernel
+     292.86 ms    3072 calls      95.3 us/call  _ZTSN3MoE12GemmCuteNameIN7cutlass10bfloat16_tEhhS2_Lc82ELc67ENS_16w4a16_policy_m_8ELNS_7A_
+       8.43 ms    3072 calls       2.7 us/call  _ZTSN4vllm25fused_add_rms_norm_kernelIN4sycl3_V13ext6oneapi8bfloat16ELi8ELb1EEE
+       6.24 ms    1536 calls       4.1 us/call  _ZTSN4vllm23rotary_embedding_kernelIN4sycl3_V13ext6oneapi8bfloat16ELb1EEE
+       6.16 ms    1536 calls       4.0 us/call  _ZTSN4vllm3moe10TopKGatingILi8ELi32ELi4ELi16ELi32EN4sycl3_V13ext6oneapi8bfloat16EiLNS0_11S
+       5.14 ms    1536 calls       3.3 us/call  _ZTSN4vllm3moe17RemapHiddenStatesIN4sycl3_V13ext6oneapi8bfloat16EfLi4EEE
+       5.08 ms    1536 calls       3.3 us/call  _ZTSN4vllm3moe9MoeGatherIN4sycl3_V13ext6oneapi8bfloat16ELi4ELi8EEE
+       4.76 ms    3072 calls       1.6 us/call  _ZTSN2at6native3xpu28ElementwiseGlobalRangeKernelINS1_25LegacyKernelScalarFunctorIN3c108BF
+       4.53 ms     768 calls       5.9 us/call  _ZTSN6compat12experimental6detail13KernelFunctorIXadL_ZN7cutlass13device_kernelINS3_4fmha6
+       4.44 ms     768 calls       5.8 us/call  _ZTSN6compat12experimental6detail13KernelFunctorIXadL_ZN7cutlass13device_kernelINS3_4fmha6
+       3.05 ms    4760 calls       0.6 us/call  _ZTSN2at6native3xpu27VectorizedElementwiseKernelILi4ENS1_11FillFunctorIiEENS_6detail5Array
+       2.81 ms    1536 calls       1.8 us/call  _ZTSN4vllm38reshape_and_cache_flash_strided_kernelIN3c108BFloat16ES2_LNS_18Fp8KVCacheDataT
+       2.67 ms    1536 calls       1.7 us/call  _ZTSN4vllm24swigluoai_and_mul_kernelIN3c108BFloat16EXadL_ZNS_17swigluoai_and_mulIS2_EET_RK
+       2.15 ms    1536 calls       1.4 us/call  _ZTSN4vllm3moe18RowsPerExpertCountE
+       0.50 ms      64 calls       7.8 us/call  _ZTSN2at6native3xpu12ReduceKernelILi1ENS1_8ReduceOpIfNS1_9ArgMaxOpsIfEEjxLi4EEEEE
+       0.37 ms      64 calls       5.8 us/call  _gumbel_sample_kernel
+       0.35 ms      64 calls       5.4 us/call  _compute_slot_mappings_kernel
+       0.29 ms      64 calls       4.6 us/call  _ZTSN2at6native3xpu18IndexKernelFunctorINS1_12IndexFunctorINS1_10OpaqueTypeILi8EEEEEPc16Of
+run 2026-10-13 18:31:38  gpt-oss-20b, oneproc EAGER: 64 tokens in 8.11 s (7.9 tok/s incl. prefill); card time recorded 1503.9 ms in total, all cards
+     575.46 ms   12348 calls      46.6 us/call  _ZTSZN12_GLOBAL__N_14Pair5smallERN4sycl3_V15queueEiRKN2at6TensorERS6_yiiiEUlNS2_7nd_itemIL
+     413.28 ms    9344 calls      44.2 us/call  gemm_kernel
+     366.22 ms    6144 calls      59.6 us/call  _ZTSN3MoE12GemmCuteNameIN7cutlass10bfloat16_tEhhS2_Lc82ELc67ENS_16w4a16_policy_m_8ELNS_7A_
+      30.03 ms     226 calls     132.9 us/call  _ZTSZN12_GLOBAL__N_14Pair3bigERN4sycl3_V15queueEiRKN2at6TensorERS6_yiiiEUlvE0_
+      15.09 ms    6144 calls       2.5 us/call  _ZTSN4vllm25fused_add_rms_norm_kernelIN4sycl3_V13ext6oneapi8bfloat16ELi8ELb1EEE
+      12.32 ms    3072 calls       4.0 us/call  _ZTSN4vllm3moe10TopKGatingILi8ELi32ELi4ELi16ELi32EN4sycl3_V13ext6oneapi8bfloat16EiLNS0_11S
+      10.71 ms    3072 calls       3.5 us/call  _ZTSN4vllm3moe17RemapHiddenStatesIN4sycl3_V13ext6oneapi8bfloat16EfLi4EEE
+       9.90 ms    3072 calls       3.2 us/call  _ZTSN4vllm3moe9MoeGatherIN4sycl3_V13ext6oneapi8bfloat16ELi4ELi8EEE
+       9.33 ms    1536 calls       6.1 us/call  _ZTSN6compat12experimental6detail13KernelFunctorIXadL_ZN7cutlass13device_kernelINS3_4fmha6
+       9.09 ms    1536 calls       5.9 us/call  _ZTSN6compat12experimental6detail13KernelFunctorIXadL_ZN7cutlass13device_kernelINS3_4fmha6
+       9.06 ms    6144 calls       1.5 us/call  _ZTSN2at6native3xpu28ElementwiseGlobalRangeKernelINS1_25LegacyKernelScalarFunctorIN3c108BF
+       8.90 ms    3072 calls       2.9 us/call  _ZTSN4vllm23rotary_embedding_kernelIN4sycl3_V13ext6oneapi8bfloat16ELb1EEE
+       6.69 ms    9520 calls       0.7 us/call  _ZTSN2at6native3xpu27VectorizedElementwiseKernelILi4ENS1_11FillFunctorIiEENS_6detail5Array
+       5.74 ms    3072 calls       1.9 us/call  _ZTSN4vllm38reshape_and_cache_flash_strided_kernelIN3c108BFloat16ES2_LNS_18Fp8KVCacheDataT
+       4.69 ms    3072 calls       1.5 us/call  _ZTSN4vllm24swigluoai_and_mul_kernelIN3c108BFloat16EXadL_ZNS_17swigluoai_and_mulIS2_EET_RK
+       4.00 ms    3072 calls       1.3 us/call  _ZTSN4vllm3moe18RowsPerExpertCountE
+       2.33 ms     490 calls       4.7 us/call  Memcpy H2D (Host (Driver Allocated) -> Device)
+       1.80 ms     482 calls       3.7 us/call  Memcpy D2H (Device -> Host (Driver Allocated))

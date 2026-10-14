@@ -1,10 +1,10 @@
-run 2026-10-13 13:32:57  torch 2.14.1+xpu  card 0: Intel(R) Arc(TM) Pro B60 Graphics
+run 2026-10-13 19:44:49  torch 2.14.1+xpu  card 1: Intel(R) Arc(TM) Pro B60 Graphics
 size     | host     | d2h blocking      | d2h non_blocking  | h2d blocking      | h2d non_blocking
-7 KB     | pinned   |       6.0 us   1.2 GB/s |       2.6 us   2.7 GB/s |       6.6 us   1.1 GB/s |       2.6 us   2.7 GB/s
-7 KB     | pageable |       7.1 us   1.0 GB/s |       2.6 us   2.7 GB/s |       7.0 us   1.0 GB/s |       6.4 us   1.1 GB/s
-1 MB     | pinned   |      42.5 us  24.7 GB/s |      38.2 us  27.5 GB/s |      48.5 us  21.6 GB/s |      42.0 us  25.0 GB/s
-1 MB     | pageable |      88.0 us  11.9 GB/s |      38.4 us  27.3 GB/s |      90.5 us  11.6 GB/s |      58.4 us  17.9 GB/s
-14.7 MB  | pinned   |     521.7 us  28.1 GB/s |     514.6 us  28.5 GB/s |     568.8 us  25.8 GB/s |     560.7 us  26.2 GB/s
-14.7 MB  | pageable |     802.8 us  18.3 GB/s |     515.1 us  28.5 GB/s |     653.0 us  22.5 GB/s |     561.6 us  26.1 GB/s
-256 MB   | pinned   |    9407.5 us  28.5 GB/s |    9385.4 us  28.6 GB/s |   10243.7 us  26.2 GB/s |   10163.1 us  26.4 GB/s
-256 MB   | pageable |   12779.8 us  21.0 GB/s |    9393.2 us  28.6 GB/s |   13316.2 us  20.2 GB/s |   13539.8 us  19.8 GB/s
+7 KB     | pinned   |       6.0 us   1.2 GB/s |       2.7 us   2.6 GB/s |       6.5 us   1.1 GB/s |       2.6 us   2.8 GB/s
+7 KB     | pageable |       7.2 us   1.0 GB/s |       2.6 us   2.7 GB/s |       7.1 us   1.0 GB/s |       6.5 us   1.1 GB/s
+1 MB     | pinned   |      42.5 us  24.6 GB/s |      38.1 us  27.5 GB/s |      43.5 us  24.1 GB/s |      39.0 us  26.9 GB/s
+1 MB     | pageable |      96.9 us  10.8 GB/s |      46.4 us  22.6 GB/s |      88.3 us  11.9 GB/s |      53.7 us  19.5 GB/s
+14.7 MB  | pinned   |     570.5 us  25.7 GB/s |     611.0 us  24.0 GB/s |     539.9 us  27.2 GB/s |     532.6 us  27.6 GB/s
+14.7 MB  | pageable |     833.0 us  17.6 GB/s |     586.5 us  25.0 GB/s |     616.3 us  23.8 GB/s |     540.5 us  27.2 GB/s
+256 MB   | pinned   |   10617.9 us  25.3 GB/s |   10626.2 us  25.3 GB/s |    9766.4 us  27.5 GB/s |    9744.4 us  27.5 GB/s
+256 MB   | pageable |   12635.6 us  21.2 GB/s |   10438.0 us  25.7 GB/s |   13171.4 us  20.4 GB/s |   13212.9 us  20.3 GB/s

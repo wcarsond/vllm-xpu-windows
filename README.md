@@ -39,6 +39,11 @@ Decode tok/s, two B60s, full decode graphs, greedy tokens identical between the 
 | Granite 4.2 30B int4 | 36.5 | **44.6** | |
 | Qwen2.5-72B-Instruct-AWQ | 17.5 | **20.1** | |
 
+One exception so far: **gpt-oss-20b** (MoE, ~3.6B active) decodes 97.7 tok/s on two processes against 70.3 in one
+(tokens identical; 88.5 on one card). Its card work is only ~6.5 ms per token per card, so the two ranks' serialized
+host work and the 400 KB logits gather show; the 4B dense Qwen3.5 still wins in one process (87.1 against 64.8). Pick
+the executor per model (`server/oneproc-profile.input.py` has the per-kernel breakdown).
+
 Prefill is unchanged (7B: 7,589 / 6,561 / 5,456 tok/s at 4K / 16K / 32K, 27-36% ahead of Linux). The 7B decode step
 (17.8 ms) is within ~4% of what the cards' memory bandwidth allows. Scripts: `server/oneproc-smoke`, `oneproc-race`,
 `oneproc-models`, `oneproc-ab` (async scheduling is worth +8% of it; aligning the two cards' replays nothing).
