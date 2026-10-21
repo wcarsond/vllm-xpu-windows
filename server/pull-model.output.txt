@@ -4,3 +4,10 @@
 2026-10-11 14:10:38 done: derikn/Granite-4.2-30B-GPTQ-INT4 -> C:\Users\claude\models-hf\Granite-4.2-30B-GPTQ-INT4, 16.5 GB in 5.3 min
 2026-10-11 14:21:52 done: Qwen/Qwen3.5-27B-GPTQ-Int4 -> C:\Users\claude\models-hf\Qwen3.5-27B-GPTQ-Int4, 30.3 GB in 7.6 min
 2026-10-11 22:29:32 done: Qwen/Qwen3.5-4B -> C:\Users\claude\models-hf\Qwen3.5-4B, 9.3 GB in 2.4 min
+2026-10-16 02:16:30 done: Qwen/Qwen3-30B-A3B-GPTQ-Int4 -> C:\Users\claude\models-hf\Qwen3-30B-A3B-GPTQ-Int4, 16.9 GB in 4.8 min
+2026-10-16 10:44:40 done: unsloth/gemma-4-26B-A4B-it-GGUF/gemma-4-26B-A4B-it-UD-Q4_K_XL.gguf -> C:\Users\claude\models-b60\gemma4-26b-a4b\gemma-4-26B-A4B-it-UD-Q4_K_XL.gguf, 17.0 GB in 4.9 min
+2026-10-16 10:45:02 done: unsloth/gemma-4-26B-A4B-it-GGUF/mmproj-F16.gguf -> C:\Users\claude\models-b60\gemma4-26b-a4b\mmproj-F16.gguf, 1.2 GB in 0.4 min
+2026-10-16 10:50:26 done: unsloth/gemma-4-31B-it-GGUF/gemma-4-31B-it-UD-Q4_K_XL.gguf -> C:\Users\claude\models-b60\gemma4-31b\gemma-4-31B-it-UD-Q4_K_XL.gguf, 18.8 GB in 5.4 min
+2026-10-16 10:50:48 done: unsloth/gemma-4-31B-it-GGUF/mmproj-F16.gguf -> C:\Users\claude\models-b60\gemma4-31b\mmproj-F16.gguf, 1.2 GB in 0.4 min
+2026-10-17 08:20:20 done: nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16 -> C:\Users\claude\models-hf\Dory1.0-4B-BF16, 8.0 GB in 1.9 min
+2026-10-17 08:25:06 done: unsloth/gemma-4-E4B-it -> C:\Users\claude\models-hf\gemma-4-E4B-it, 16.0 GB in 4.8 min

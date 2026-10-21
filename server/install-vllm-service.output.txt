@@ -1,0 +1,9 @@
+﻿run 2026-10-11 23:58:02
+1. stopped llama-server pid 11180
+2. no scheduled task runs llama (check Startup folders / registry Run keys if it comes back)
+3. service llamacpp stopped and disabled (was Stopped, Disabled)
+3. service Ollama stopped and disabled (was Stopped, Disabled)
+4. service vllm-b60 installed: cmd /c C:\Users\claude\scripts\vllm-xpu-windows\server\start-server.input.cmd (auto start, restart on exit, LocalSystem)
+5. started; waiting for http://localhost:11434/v1/models ...
+5. UP in 167 s; models: local
+service state: Running

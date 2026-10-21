@@ -1,0 +1,33 @@
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm\vllm\__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+W1013 18:29:22.365000 11208 Lib\site-packages\torch\_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1013 18:29:22.366000 11208 Lib\site-packages\torch\_library\opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1013 18:29:22.366000 11208 Lib\site-packages\torch\_library\opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+Loading safetensors checkpoint shards:   0% Completed | 0/11 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   9% Completed | 1/11 [00:02<00:22,  2.20s/it]
+Loading safetensors checkpoint shards:  18% Completed | 2/11 [00:03<00:12,  1.39s/it]
+Loading safetensors checkpoint shards:  27% Completed | 3/11 [00:03<00:08,  1.06s/it]
+Loading safetensors checkpoint shards:  36% Completed | 4/11 [00:04<00:06,  1.12it/s]
+Loading safetensors checkpoint shards:  45% Completed | 5/11 [00:04<00:04,  1.24it/s]
+Loading safetensors checkpoint shards:  55% Completed | 6/11 [00:05<00:03,  1.33it/s]
+Loading safetensors checkpoint shards:  64% Completed | 7/11 [00:06<00:02,  1.39it/s]
+Loading safetensors checkpoint shards:  73% Completed | 8/11 [00:07<00:02,  1.04it/s]
+Loading safetensors checkpoint shards:  82% Completed | 9/11 [00:09<00:02,  1.33s/it]
+Loading safetensors checkpoint shards:  91% Completed | 10/11 [00:12<00:01,  1.65s/it]
+Loading safetensors checkpoint shards: 100% Completed | 11/11 [00:13<00:00,  1.49s/it]
+Loading safetensors checkpoint shards: 100% Completed | 11/11 [00:13<00:00,  1.22s/it]
+
+Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  50%|█████     | 1/2 [00:00<00:00,  1.38it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00,  2.59it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00,  2.29it/s]
+Capturing CUDA graphs (FULL):   0%|          | 0/3 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  33%|███▎      | 1/3 [00:00<00:00,  8.64it/s]Capturing CUDA graphs (FULL):  67%|██████▋   | 2/3 [00:00<00:00,  7.63it/s]Capturing CUDA graphs (FULL): 100%|██████████| 3/3 [00:00<00:00,  7.33it/s]Capturing CUDA graphs (FULL): 100%|██████████| 3/3 [00:00<00:00,  7.47it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<00:00, 992.26it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.49it/s, est. speed input: 52.36 toks/s, output: 19.95 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.49it/s, est. speed input: 52.36 toks/s, output: 19.95 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  2.49it/s, est. speed input: 52.36 toks/s, output: 19.95 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.48s/it, est. speed input: 4.69 toks/s, output: 28.60 toks/s]Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.48s/it, est. speed input: 4.69 toks/s, output: 28.60 toks/s]Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.48s/it, est. speed input: 4.69 toks/s, output: 28.60 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.48s/it, est. speed input: 2.45 toks/s, output: 28.56 toks/s]Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.48s/it, est. speed input: 2.45 toks/s, output: 28.56 toks/s]Processed prompts: 100%|██████████| 1/1 [00:04<00:00,  4.49s/it, est. speed input: 2.45 toks/s, output: 28.56 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  9.46it/s, est. speed input: 198.60 toks/s, output: 9.46 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  9.46it/s, est. speed input: 198.60 toks/s, output: 9.46 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  9.46it/s, est. speed input: 198.60 toks/s, output: 9.46 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:08<00:00,  8.88s/it, est. speed input: 2.36 toks/s, output: 28.82 toks/s]Processed prompts: 100%|██████████| 1/1 [00:08<00:00,  8.88s/it, est. speed input: 2.36 toks/s, output: 28.82 toks/s]Processed prompts: 100%|██████████| 1/1 [00:08<00:00,  8.89s/it, est. speed input: 2.36 toks/s, output: 28.82 toks/s]

@@ -1,0 +1,8 @@
+run 2026-10-12 02:16:52  model F:\models-hf\Qwen2.5-14B-Instruct  two cards, tensor split, bfloat16, attention FLASH_ATTN, prefix caching off, max_num_batched_tokens 2048
+engine up in 780.9 s (Qwen2.5-14B-Instruct, bfloat16, max_model_len 32768, two cards, tensor split, chunk 2048, util 0.88)
+depth     0: prompt_n    21, prefill    454.4 tok/s (0.05 s), decode   25.2 tok/s over 128 tokens, wall 5.09 s
+depth  4096: prompt_n  4080, prefill   2267.0 tok/s (1.80 s), decode   24.5 tok/s over 128 tokens, wall 6.98 s
+depth  8192: prompt_n  8176, prefill   2191.4 tok/s (3.73 s), decode   23.8 tok/s over 128 tokens, wall 9.07 s
+depth 16384: prompt_n 16368, prefill   2042.9 tok/s (8.01 s), decode   22.9 tok/s over 128 tokens, wall 13.57 s
+depth 32000: prompt_n 31983, prefill   1811.5 tok/s (17.66 s), decode   20.9 tok/s over 128 tokens, wall 23.74 s
+last answer starts: The function should handle sections, key-value pairs, and comments. Here is a sample INI file:  ``` # This is a comment 

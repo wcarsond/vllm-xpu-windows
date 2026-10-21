@@ -1,0 +1,64 @@
+run 2026-10-13 19:53:19  http://127.0.0.1:11434
+granite-4.2-30b tool request (80.0 s incl. any load): tool_calls [('get_weather', '{"city": "Toronto"}')]; text ''
+granite-4.2-30b plain request: 72 tokens in 1.75 s (41.2 tok/s incl. prefill): 'The sky appears blue because sunlight, which contains all colors of the visible spectrum, is scatter'
+qwen3.5-27b tool request (133.9 s incl. any load): tool_calls [('get_weather', '{"city": "Toronto"}')]; text ''
+qwen3.5-27b plain request: 81 tokens in 2.97 s (27.3 tok/s incl. prefill): 'Sunlight appears white but is actually composed of all the colors of the rainbow, each traveling at '
+run 2026-10-13 21:20:18  http://127.0.0.1:11434
+qwen3-next-80b tool request (81.2 s incl. any load): tool_calls [('get_weather', '{"city": "Toronto"}')]; text ''
+qwen3-next-80b plain request: 97 tokens in 9.41 s (10.3 tok/s incl. prefill): 'The sky appears blue because sunlight, which contains all colors of the spectrum, interacts with Ear'
+run 2026-10-13 21:23:12  http://127.0.0.1:11434
+qwen3-next-80b tool request (50.8 s incl. any load): tool_calls [('get_weather', '{"city": "Toronto"}')]; text ''
+qwen3-next-80b plain request: 97 tokens in 1.87 s (51.9 tok/s incl. prefill): 'The sky appears blue because sunlight, which contains all colors of the spectrum, interacts with Ear'
+run 2026-10-13 21:29:51  http://127.0.0.1:11434
+qwen-coder-30b tool request (27.6 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+qwen-coder-30b plain request: 102 tokens in 4.74 s (21.5 tok/s incl. prefill): "The sky appears blue due to a phenomenon called Rayleigh scattering - when sunlight enters Earth's a"
+qwen36-35b-a3b tool request (30.9 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+qwen36-35b-a3b plain request: 256 tokens in 4.14 s (61.8 tok/s incl. prefill): ''
+qwen36-35b-a3b-nothink tool request (24.6 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+qwen36-35b-a3b-nothink plain request: 53 tokens in 1.09 s (48.5 tok/s incl. prefill): "Sunlight reaches Earth's atmosphere and is scattered in all directions by all the gases and particle"
+granite4-32b-a9b tool request (30.6 s incl. any load): tool_calls [('get_weather', '{"city": "Toronto"}')]; text ''
+granite4-32b-a9b plain request: 65 tokens in 2.55 s (25.4 tok/s incl. prefill): 'The sky appears blue due to a phenomenon known as Rayleigh scattering. This occurs when sunlight ent'
+granite42-30b tool request (24.1 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+granite42-30b plain request: 188 tokens in 11.21 s (16.8 tok/s incl. prefill): "The sky appears blue because molecules in Earth's atmosphere scatter sunlight more effectively at sh"
+qwen2.5-coder-14b tool request (16.6 s incl. any load): tool_calls NONE; text '<tools>\n{"name": "get_weather", "arguments": {"city": "Toronto"}}\n</tools>'
+qwen2.5-coder-14b plain request: 59 tokens in 2.93 s (20.1 tok/s incl. prefill): 'The sky appears blue due to a phenomenon called Rayleigh scattering. This occurs when sunlight enter'
+qwen2.5-coder-7b-q8 tool request (13.4 s incl. any load): tool_calls NONE; text '<tools>\n  {"name": "get_weather", "arguments": {"city": "Toronto"}}\n</tools>'
+qwen2.5-coder-7b-q8 plain request: 93 tokens in 2.85 s (32.7 tok/s incl. prefill): 'The sky appears blue because of a phenomenon called Rayleigh scattering, where shorter wavelengths o'
+omnicoder-9b tool request (23.5 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+omnicoder-9b plain request: 256 tokens in 4.96 s (51.6 tok/s incl. prefill): ''
+qwen3.5-9b tool request: FAILED in 4.5 s - HTTP 503: {"error": {"message": "model 'qwen3.5-9b' failed to start; see vllm-qwen3.5-9b.console.log", "type": "server_error"}}
+gemma4-e4b tool request (34.1 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+gemma4-e4b plain request: 256 tokens in 6.08 s (42.1 tok/s incl. prefill): "Sunlight is composed of all colors, but the Earth's atmosphere is filled with tiny gas molecules tha"
+qwen3-vl-8b tool request: FAILED in 4.6 s - HTTP 503: {"error": {"message": "model 'qwen3-vl-8b' failed to start; see vllm-qwen3-vl-8b.console.log", "type": "server_error"}}
+mistral-small-3.2-24b tool request (19.3 s incl. any load): tool_calls [('get_weather', '{"city": "Toronto"}')]; text ''
+mistral-small-3.2-24b plain request: 82 tokens in 5.73 s (14.3 tok/s incl. prefill): 'The sky appears blue due to a phenomenon called Rayleigh scattering, where shorter wavelengths of li'
+run 2026-10-13 22:04:37  http://127.0.0.1:11434
+gemma4-e4b vision request (33.6 s): reads the label: False; ''
+gemma4-e4b tool request (2.9 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+gemma4-e4b plain request: 256 tokens in 3.52 s (72.8 tok/s incl. prefill): "Sunlight is composed of all colors, but the Earth's atmosphere is filled with tiny gas molecules tha"
+run 2026-10-13 22:05:27  http://127.0.0.1:11434
+gemma4-e4b vision request (3.2 s): reads the label: True; answer 'A brown package is on the conveyor, and its label says LOT 4417.'; reasoning 700 chars
+gemma4-e4b tool request (2.3 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+gemma4-e4b plain request: 256 tokens in 3.49 s (73.3 tok/s incl. prefill): "Sunlight is composed of all colors, but the Earth's atmosphere is filled with tiny gas molecules tha"
+run 2026-10-13 22:16:11  http://127.0.0.1:11434
+qwen3-vl-8b vision request (13.7 s): reads the label: True; answer 'On the conveyor is a brown box labeled "LOT 4417".'
+qwen3-vl-8b tool request (0.6 s incl. any load): tool_calls [('get_weather', '{"city": "Toronto"}')]; text ''
+qwen3-vl-8b plain request: 93 tokens in 2.49 s (37.3 tok/s incl. prefill): 'The sky appears blue because molecules and small particles in the Earth’s atmosphere scatter sunligh'
+qwen3.5-9b vision request (28.0 s): reads the label: True; answer 'A brown box sits on the conveyor belt, and its label reads "LOT 4417".'; reasoning 910 chars
+qwen3.5-9b tool request (2.5 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+qwen3.5-9b plain request: 256 tokens in 7.31 s (35.0 tok/s incl. prefill): ''
+run 2026-10-13 22:19:22  http://127.0.0.1:11434
+granite-4.2-30b-q8 tool request (33.5 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+granite-4.2-30b-q8 plain request: 204 tokens in 19.32 s (10.6 tok/s incl. prefill): "The sky appears blue because molecules and small particles in Earth's atmosphere scatter sunlight, w"
+run 2026-10-13 22:56:16  http://127.0.0.1:11434
+qwen3.6-27b tool request (44.1 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+qwen3.6-27b plain request: 256 tokens in 14.74 s (17.4 tok/s incl. prefill): ''
+run 2026-10-13 23:02:21  http://127.0.0.1:11434
+qwen3.6-35b-a3b tool request (35.8 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+qwen3.6-35b-a3b plain request: 256 tokens in 3.85 s (66.5 tok/s incl. prefill): ''
+qwen3-coder-30b-q4 tool request (24.2 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+qwen3-coder-30b-q4 plain request: 91 tokens in 4.68 s (19.5 tok/s incl. prefill): "The sky appears blue due to the way Earth's atmosphere scatters sunlight - shorter blue wavelengths "
+run 2026-10-13 23:29:16  http://127.0.0.1:11434
+qwen3-coder-next tool request (40.3 s incl. any load): tool_calls [('get_weather', '{"city":"Toronto"}')]; text ''
+qwen3-coder-next plain request: 111 tokens in 2.48 s (44.7 tok/s incl. prefill): 'The sky appears blue due to Rayleigh scattering, where sunlight interacts with molecules and small p'
+run 2026-10-16 11:11:00  http://127.0.0.1:11434

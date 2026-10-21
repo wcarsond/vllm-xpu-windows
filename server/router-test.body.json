@@ -1,0 +1,1 @@
+{"max_tokens":20,"messages":[{"content":"Reply with exactly: switch ok","role":"user"}],"temperature":0,"model":"qwen3.5-27b","stream":true}

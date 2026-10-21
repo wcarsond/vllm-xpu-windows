@@ -1,7 +1,7 @@
-run 2026-10-11 13:27:01  model C:\Users\claude\models-hf\Qwen2.5-14B-Instruct  prompt 'Write a Python function that parses an INI file into a nested dict, with comments explaining each step.'
+run 2026-10-13 14:40:37  model C:\Users\claude\models-hf\Qwen2.5-0.5B-Instruct  prompt 'Write a Python function that parses an INI file into a nested dict, with comments explaining each step.'
 torch 2.14.1+xpu, card: Intel(R) Arc(TM) Pro B60 Graphics
-engine up in 44.3 s (Qwen2.5-14B-Instruct, bfloat16, eager True, max_model_len 4096, attention FLASH_ATTN, cpu_offload_gb 10.0)
-run 1: 21 in, 256 out, 141.49 s -> 1.8 tok/s end to end (prompt+decode)
-run 2: 21 in, 256 out, 141.96 s -> 1.8 tok/s end to end (prompt+decode)
-run 3: 21 in, 256 out, 142.99 s -> 1.8 tok/s end to end (prompt+decode)
-median 1.8 tok/s; first 200 chars: 'The function should handle sections, key-value pairs, and comments. Include a check function to test the correctness of your solution with provided data points.\n\n```python\nimport configparser\n\ndef par'
+engine up in 21.4 s (Qwen2.5-0.5B-Instruct, bfloat16, eager False, max_model_len 4096, attention FLASH_ATTN, cpu_offload_gb 0.0)
+run 1: 21 in, 256 out, 0.80 s -> 319.7 tok/s end to end (prompt+decode)
+run 2: 21 in, 256 out, 0.80 s -> 319.5 tok/s end to end (prompt+decode)
+run 3: 21 in, 256 out, 0.80 s -> 319.5 tok/s end to end (prompt+decode)
+median 319.5 tok/s; first 200 chars: 'The function should handle nested dictionaries and lists, and should be able to parse a single INI file or a list of INI files. The function should return a nested dict with the parsed data. The funct'

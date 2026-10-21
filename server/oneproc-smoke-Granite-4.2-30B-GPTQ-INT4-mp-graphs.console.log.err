@@ -1,0 +1,43 @@
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm\vllm\__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+W1013 18:34:15.588000 21916 Lib\site-packages\torch\_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1013 18:34:15.591000 21916 Lib\site-packages\torch\_library\opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1013 18:34:15.592000 21916 Lib\site-packages\torch\_library\opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm\vllm\__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm\vllm\__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+W1013 18:34:23.918000 8448 Lib\site-packages\torch\_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1013 18:34:23.919000 8448 Lib\site-packages\torch\_library\opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1013 18:34:23.919000 8448 Lib\site-packages\torch\_library\opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+W1013 18:34:23.981000 25288 Lib\site-packages\torch\_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1013 18:34:23.981000 25288 Lib\site-packages\torch\_library\opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1013 18:34:23.982000 25288 Lib\site-packages\torch\_library\opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+Loading safetensors checkpoint shards:   0% Completed | 0/6 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  17% Completed | 1/6 [00:00<00:03,  1.38it/s]
+Loading safetensors checkpoint shards:  33% Completed | 2/6 [00:01<00:03,  1.32it/s]
+Loading safetensors checkpoint shards:  50% Completed | 3/6 [00:02<00:02,  1.28it/s]
+Loading safetensors checkpoint shards:  67% Completed | 4/6 [00:03<00:01,  1.19it/s]
+Loading safetensors checkpoint shards:  83% Completed | 5/6 [00:04<00:00,  1.22it/s]
+Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:04<00:00,  1.62it/s]
+Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:04<00:00,  1.41it/s]
+
+C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Lib\site-packages\torch\distributed\c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Lib\site-packages\torch\distributed\c10d_logger.py:83: FutureWarning: `torch.distributed.all_gather_into_tensor` is deprecated. Please use `torch.distributed.all_gather_single` instead.
+  return func(*args, **kwargs)
+Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  50%|█████     | 1/2 [00:00<00:00,  2.11it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00,  3.78it/s]
+Capturing CUDA graphs (FULL):   0%|          | 0/4 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  50%|█████     | 2/4 [00:00<00:00, 16.89it/s]Capturing CUDA graphs (FULL): 100%|██████████| 4/4 [00:00<00:00, 18.22it/s]Capturing CUDA graphs (FULL): 100%|██████████| 4/4 [00:00<00:00, 18.01it/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<00:00, 889.75it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.67it/s, est. speed input: 77.07 toks/s, output: 29.36 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.67it/s, est. speed input: 77.07 toks/s, output: 29.36 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  3.67it/s, est. speed input: 77.07 toks/s, output: 29.36 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:03<00:00,  3.52s/it, est. speed input: 5.97 toks/s, output: 36.36 toks/s]Processed prompts: 100%|██████████| 1/1 [00:03<00:00,  3.52s/it, est. speed input: 5.97 toks/s, output: 36.36 toks/s]Processed prompts: 100%|██████████| 1/1 [00:03<00:00,  3.52s/it, est. speed input: 5.97 toks/s, output: 36.36 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<00:00, 989.92it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it, est. speed input: 5.23 toks/s, output: 36.15 toks/s]Processed prompts: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it, est. speed input: 5.23 toks/s, output: 36.15 toks/s]Processed prompts: 100%|██████████| 1/1 [00:02<00:00,  2.10s/it, est. speed input: 5.23 toks/s, output: 36.15 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<00:00, 930.62it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00, 15.15it/s, est. speed input: 318.07 toks/s, output: 15.15 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00, 15.15it/s, est. speed input: 318.07 toks/s, output: 15.15 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<00:00, 1003.18it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:07<00:00,  7.05s/it, est. speed input: 2.98 toks/s, output: 36.30 toks/s]Processed prompts: 100%|██████████| 1/1 [00:07<00:00,  7.05s/it, est. speed input: 2.98 toks/s, output: 36.30 toks/s]Processed prompts: 100%|██████████| 1/1 [00:07<00:00,  7.05s/it, est. speed input: 2.98 toks/s, output: 36.30 toks/s]

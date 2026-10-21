@@ -1,0 +1,24 @@
+run 2026-10-13 18:54:05  service settings from models.input.ini, port 11445
+qwen3.5-27b granite-4.2-30b (oneproc, full, max_len 65536, util 0.90): ready in 87 s; first token 0.13 s; decode 29.0 tok/s over 256 tokens
+run 2026-10-13 19:04:31  service settings from models.input.ini, port 11445
+qwen3.5-27b new (oneproc, full, max_len 65536, util 0.90): ready in 85 s; first token 0.12 s; decode 29.0 tok/s over 256 tokens
+qwen3.5-27b old (mp, eager, max_len 65536, util 0.90): ready in 109 s; first token 0.10 s; decode 23.8 tok/s over 256 tokens
+qwen3.5-27b: answer text identical across configs: True
+run 2026-10-13 19:19:17  service settings from models.input.ini, port 11445
+granite-4.2-30b new: FAILED - HTTP 400: {"error":{"message":"As of transformers v4.44, default chat template is no longer allowed, so you must provide a chat template if the tokenizer does not define one.","type":"BadRequestError","param":null,"code":400}}
+run 2026-10-13 19:20:30  service settings from models.input.ini, port 11445
+granite-4.2-30b new [no chat template: /v1/completions] (oneproc, full, max_len 32768, util 0.90): ready in 37 s; first token 0.11 s; decode 44.5 tok/s over 256 tokens
+granite-4.2-30b old [no chat template: /v1/completions] (mp, eager, max_len 32768, util 0.90): ready in 40 s; first token 0.05 s; decode 34.1 tok/s over 256 tokens
+granite-4.2-30b: answer text identical across configs: True
+qwen2.5-coder-7b new (oneproc, full, max_len 32768, util 0.90): ready in 535 s; first token 0.06 s; decode 56.6 tok/s over 256 tokens
+qwen2.5-coder-7b old (mp, eager, max_len 32768, util 0.90): ready in 37 s; first token 0.04 s; decode 46.5 tok/s over 256 tokens
+qwen2.5-coder-7b: answer text identical across configs: True
+qwen3.5-4b new (oneproc, full, max_len 65536, util 0.90): ready in 69 s; first token 0.08 s; decode 86.8 tok/s over 256 tokens
+qwen3.5-4b old (mp, eager, max_len 65536, util 0.90): ready in 86 s; first token 0.03 s; decode 50.3 tok/s over 256 tokens
+qwen3.5-4b: answer text identical across configs: True
+qwen2.5-72b new (oneproc, full, max_len 2048, util 0.97): ready in 81 s; first token 0.11 s; decode 20.0 tok/s over 256 tokens
+qwen2.5-72b old (mp, eager, max_len 2048, util 0.97): ready in 65 s; first token 0.12 s; decode 17.2 tok/s over 256 tokens
+qwen2.5-72b: answer text identical across configs: True
+qwen2.5-32b new (oneproc, full, max_len 32768, util 0.95): ready in 686 s; first token 0.09 s; decode 41.7 tok/s over 256 tokens
+qwen2.5-32b old (mp, eager, max_len 32768, util 0.95): ready in 127 s; first token 0.06 s; decode 33.3 tok/s over 256 tokens
+qwen2.5-32b: answer text identical across configs: True

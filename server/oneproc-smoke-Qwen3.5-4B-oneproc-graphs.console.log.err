@@ -1,0 +1,24 @@
+C:\Users\claude\scripts\vllm-xpu-windows\src\vllm\vllm\__init__.py:7: RuntimeWarning: Failed to read commit hash:
+No module named 'vllm._version'
+  from .version import __version__, __version_tuple__  # isort:skip
+W1013 17:47:43.361000 3012 Lib\site-packages\torch\_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1013 17:47:43.362000 3012 Lib\site-packages\torch\_library\opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1013 17:47:43.364000 3012 Lib\site-packages\torch\_library\opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:02<00:02,  2.34s/it]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:04<00:00,  2.20s/it]
+Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:04<00:00,  2.22s/it]
+
+Capturing CUDA graphs (FULL):   0%|          | 0/2 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  50%|█████     | 1/2 [00:00<00:00,  1.32it/s]Capturing CUDA graphs (FULL): 100%|██████████| 2/2 [00:00<00:00,  2.35it/s]
+Capturing CUDA graphs (FULL):   0%|          | 0/4 [00:00<?, ?it/s]Capturing CUDA graphs (FULL):  50%|█████     | 2/4 [00:00<00:00, 12.09it/s]Capturing CUDA graphs (FULL): 100%|██████████| 4/4 [00:00<00:00, 11.58it/s]Capturing CUDA graphs (FULL): 100%|██████████| 4/4 [00:00<00:00, 11.61it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  6.22it/s, est. speed input: 130.54 toks/s, output: 49.73 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  6.22it/s, est. speed input: 130.54 toks/s, output: 49.73 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00,  6.16it/s, est. speed input: 130.54 toks/s, output: 49.73 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it, est. speed input: 13.81 toks/s, output: 84.16 toks/s]Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it, est. speed input: 13.81 toks/s, output: 84.16 toks/s]Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.53s/it, est. speed input: 13.81 toks/s, output: 84.16 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<00:00, 998.41it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it, est. speed input: 7.22 toks/s, output: 84.05 toks/s]Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it, est. speed input: 7.22 toks/s, output: 84.05 toks/s]Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.52s/it, est. speed input: 7.22 toks/s, output: 84.05 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00, 14.37it/s, est. speed input: 301.77 toks/s, output: 14.37 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00, 14.16it/s, est. speed input: 301.77 toks/s, output: 14.37 toks/s]
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<?, ?it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:02<00:00,  3.00s/it, est. speed input: 7.01 toks/s, output: 85.42 toks/s]Processed prompts: 100%|██████████| 1/1 [00:03<00:00,  3.00s/it, est. speed input: 7.01 toks/s, output: 85.42 toks/s]Processed prompts: 100%|██████████| 1/1 [00:03<00:00,  3.00s/it, est. speed input: 7.01 toks/s, output: 85.42 toks/s]

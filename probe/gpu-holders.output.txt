@@ -1,41 +1,52 @@
-﻿run 2026-10-11 08:11:26
-RAM free 20.6 of 31.3 GB
+﻿run 2026-10-15 18:57:27
+RAM free 44.4 of 63.3 GB
 -- adapters (MB)
-display/iGPU luid_0x00000000_0x00014364_phys_0  dedicated used       0  committed     833
-idle adapter luid_0x00000000_0x000147e3_phys_0  dedicated used       0  committed       3
-B60          luid_0x00000000_0x0001491c_phys_0  dedicated used       0  committed     323
-B60          luid_0x00000000_0x00014d83_phys_0  dedicated used       0  committed     323
-idle adapter luid_0x00000000_0x00015345_phys_0  dedicated used       0  committed       0
+display/iGPU luid_0x00000000_0x000153b9_phys_0  dedicated used       0  committed   1,877
+idle adapter luid_0x00000000_0x000157e0_phys_0  dedicated used       0  committed       2
+B60          luid_0x00000000_0x0001585c_phys_0  dedicated used       0  committed   3,129
+B60          luid_0x00000000_0x00015c81_phys_0  dedicated used       5  committed     455
+idle adapter luid_0x00000000_0x00016213_phys_0  dedicated used       0  committed       0
 -- processes holding more than 20 MB (MB)
-      41  explorer        pid 15224  shared usage     pid_15224_luid_0x00000000_0x00014364_phys_0
-      41  explorer        pid 15224  total committed  pid_15224_luid_0x00000000_0x00014364_phys_0
-      36  csrss           pid 1568   shared usage     pid_1568_luid_0x00000000_0x00014364_phys_0
-      60  csrss           pid 1568   total committed  pid_1568_luid_0x00000000_0x00014364_phys_0
-     530  dwm             pid 1696   shared usage     pid_1696_luid_0x00000000_0x00014364_phys_0
-     352  dwm             pid 1696   total committed  pid_1696_luid_0x00000000_0x00014364_phys_0
-      20  msedgewebview2  pid 17628  shared usage     pid_17628_luid_0x00000000_0x00014364_phys_0
-      21  msedgewebview2  pid 17628  total committed  pid_17628_luid_0x00000000_0x00014364_phys_0
-     103  Code            pid 19872  shared usage     pid_19872_luid_0x00000000_0x00014364_phys_0
-     104  Code            pid 19872  total committed  pid_19872_luid_0x00000000_0x00014364_phys_0
-      83  steamwebhelper  pid 22080  shared usage     pid_22080_luid_0x00000000_0x00014364_phys_0
-      93  steamwebhelper  pid 22080  total committed  pid_22080_luid_0x00000000_0x00014364_phys_0
-      36  XboxPcApp       pid 23600  shared usage     pid_23600_luid_0x00000000_0x00014364_phys_0
-      36  XboxPcApp       pid 23600  total committed  pid_23600_luid_0x00000000_0x00014364_phys_0
-      83  IntelGraphicsSoftware pid 24020  shared usage     pid_24020_luid_0x00000000_0x00014364_phys_0
-      83  IntelGraphicsSoftware pid 24020  total committed  pid_24020_luid_0x00000000_0x00014364_phys_0
-      64  IntelGraphicsSoftware pid 24020  total committed  pid_24020_luid_0x00000000_0x0001491c_phys_0
-      64  IntelGraphicsSoftware pid 24020  total committed  pid_24020_luid_0x00000000_0x00014d83_phys_0
-      64  IntelGraphicsSoftware.Overlay pid 25284  total committed  pid_25284_luid_0x00000000_0x0001491c_phys_0
-      64  IntelGraphicsSoftware.Overlay pid 25284  total committed  pid_25284_luid_0x00000000_0x00014d83_phys_0
-      64  IntelGraphicsSoftware.Service.Graphics pid 2868   total committed  pid_2868_luid_0x00000000_0x0001491c_phys_0
-      64  IntelGraphicsSoftware.Service.Graphics pid 2868   total committed  pid_2868_luid_0x00000000_0x00014d83_phys_0
-      64  IntelGFXFWupdateTool pid 5124   total committed  pid_5124_luid_0x00000000_0x0001491c_phys_0
-      64  IntelGFXFWupdateTool pid 5124   total committed  pid_5124_luid_0x00000000_0x00014d83_phys_0
-      64  PresentMonService pid 9012   total committed  pid_9012_luid_0x00000000_0x0001491c_phys_0
-      64  PresentMonService pid 9012   total committed  pid_9012_luid_0x00000000_0x00014d83_phys_0
-      22  StartMenuExperienceHost pid 9444   shared usage     pid_9444_luid_0x00000000_0x00014364_phys_0
-      22  StartMenuExperienceHost pid 9444   total committed  pid_9444_luid_0x00000000_0x00014364_phys_0
+      42  StartMenuExperienceHost pid 15328  shared usage     pid_15328_luid_0x00000000_0x000153b9_phys_0
+      47  StartMenuExperienceHost pid 15328  total committed  pid_15328_luid_0x00000000_0x000153b9_phys_0
+      89  python          pid 15364  shared usage     pid_15364_luid_0x00000000_0x0001585c_phys_0
+   2,934  python          pid 15364  total committed  pid_15364_luid_0x00000000_0x0001585c_phys_0
+     139  csrss           pid 1612   total committed  pid_1612_luid_0x00000000_0x000153b9_phys_0
+      49  msedgewebview2  pid 16876  shared usage     pid_16876_luid_0x00000000_0x000153b9_phys_0
+      58  msedgewebview2  pid 16876  total committed  pid_16876_luid_0x00000000_0x000153b9_phys_0
+      31  M365Copilot     pid 18692  shared usage     pid_18692_luid_0x00000000_0x000153b9_phys_0
+      31  M365Copilot     pid 18692  total committed  pid_18692_luid_0x00000000_0x000153b9_phys_0
+      64  IntelGraphicsSoftware.Overlay pid 19056  total committed  pid_19056_luid_0x00000000_0x0001585c_phys_0
+      78  IntelGraphicsSoftware.Overlay pid 19056  total committed  pid_19056_luid_0x00000000_0x00015c81_phys_0
+      21  msedgewebview2  pid 19464  shared usage     pid_19464_luid_0x00000000_0x000153b9_phys_0
+      89  msedgewebview2  pid 19464  total committed  pid_19464_luid_0x00000000_0x000153b9_phys_0
+      76  chrome          pid 21140  shared usage     pid_21140_luid_0x00000000_0x000153b9_phys_0
+     296  chrome          pid 21140  total committed  pid_21140_luid_0x00000000_0x000153b9_phys_0
+     145  chrome          pid 21140  total committed  pid_21140_luid_0x00000000_0x00015c81_phys_0
+      26  steamwebhelper  pid 22004  shared usage     pid_22004_luid_0x00000000_0x000153b9_phys_0
+      90  steamwebhelper  pid 22004  total committed  pid_22004_luid_0x00000000_0x000153b9_phys_0
+   2,044  dwm             pid 2252   shared usage     pid_2252_luid_0x00000000_0x000153b9_phys_0
+     874  dwm             pid 2252   total committed  pid_2252_luid_0x00000000_0x000153b9_phys_0
+      27  dwm             pid 2252   total committed  pid_2252_luid_0x00000000_0x00015c81_phys_0
+      31  ApplicationFrameHost pid 23620  shared usage     pid_23620_luid_0x00000000_0x000153b9_phys_0
+      42  ApplicationFrameHost pid 23620  total committed  pid_23620_luid_0x00000000_0x000153b9_phys_0
+      24  XboxPcApp       pid 23656  shared usage     pid_23656_luid_0x00000000_0x000153b9_phys_0
+      24  XboxPcApp       pid 23656  total committed  pid_23656_luid_0x00000000_0x000153b9_phys_0
+      86  IntelGraphicsSoftware pid 24656  shared usage     pid_24656_luid_0x00000000_0x000153b9_phys_0
+      89  IntelGraphicsSoftware pid 24656  total committed  pid_24656_luid_0x00000000_0x000153b9_phys_0
+      64  IntelGraphicsSoftware pid 24656  total committed  pid_24656_luid_0x00000000_0x0001585c_phys_0
+      70  IntelGraphicsSoftware pid 24656  total committed  pid_24656_luid_0x00000000_0x00015c81_phys_0
+      31  SystemSettings  pid 2504   total committed  pid_2504_luid_0x00000000_0x000153b9_phys_0
+      44  claude          pid 32164  total committed  pid_32164_luid_0x00000000_0x00015c81_phys_0
+     324  explorer        pid 7496   shared usage     pid_7496_luid_0x00000000_0x000153b9_phys_0
+     314  explorer        pid 7496   total committed  pid_7496_luid_0x00000000_0x000153b9_phys_0
+      21  explorer        pid 7496   total committed  pid_7496_luid_0x00000000_0x00015c81_phys_0
+      64  PresentMonService pid 9220   total committed  pid_9220_luid_0x00000000_0x0001585c_phys_0
+      64  PresentMonService pid 9220   total committed  pid_9220_luid_0x00000000_0x00015c81_phys_0
 -- python / llama / ollama processes
-pid 3032   parent 2428              started 10-11 08:10:18  ws   0.0 GB  (no command line visible: elevated or another session)
-pid 9420   parent 3032              started 10-11 08:10:22  ws   0.0 GB  (no command line visible: elevated or another session)
-pid 11180  parent 2948              started 10-11 08:10:27  ws   0.0 GB  (no command line visible: elevated or another session)
+pid 7472   parent 3476              started 10-14 02:33:26  ws   0.0 GB  (no command line visible: elevated or another session)
+pid 8548   parent 7472              started 10-14 02:33:30  ws   0.0 GB  (no command line visible: elevated or another session)
+pid 13172  parent 8024              started 10-14 02:33:32  ws   0.0 GB  (no command line visible: elevated or another session)
+pid 13188  parent 13172             started 10-14 02:33:32  ws   0.0 GB  (no command line visible: elevated or another session)
+pid 29168  parent 13992  wcars      started 10-15 18:45:43  ws   0.0 GB  "C:\Users\claude\scripts\vllm-xpu-windows\.venv312\Scripts\python.exe"  -u "C:\Users\claude\scripts\moe-tier\ramoe\ramoe-race.input.py" 
+pid 15364  parent 29168  wcars      started 10-15 18:45:43  ws   5.2 GB  "C:\Users\wcars\AppData\Local\Programs\Python\Python312\python.exe" -u "C:\Users\claude\scripts\moe-tier\ramoe\ramoe-race.input.py" 

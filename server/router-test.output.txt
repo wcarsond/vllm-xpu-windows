@@ -1,0 +1,5 @@
+﻿run 2026-10-12 00:23:54  http://localhost:11434  switch target qwen3.5-27b
+models: qwen3.5-27b, qwen3.5-27b-thinking, qwen3.5-4b*, granite-4.2-30b, qwen2.5-72b, qwen2.5-32b, qwen2.5-coder-7b   (* = loaded)
+plain request to qwen3.5-4b: 'router ok' in 0.1 s
+streaming request for qwen3.5-27b: 123.9 s wall, 25 heartbeats, 4 data chunks, text 'switch ok'
+status: loaded qwen3.5-27b, ready True, last switch 121.4 s
