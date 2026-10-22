@@ -134,7 +134,8 @@ class Engine:
         self.ready = False
         self.since = None
         self.last_switch_s = None
-        self.last_used = time.time()         # a request arrived, or a model became ready
+        self.last_used = time.time()         # a request arrived, a model became ready, or a token went out
+        self.inflight = 0                    # 2026-10-21: answers being streamed right now; the idle unloader waits for 0
         self.upstream_port = int(read_ini()[0].get("upstream_port", "11435"))
 
     def idle_watch(self):
@@ -145,9 +146,12 @@ class Engine:
                 limit = float(read_ini()[0].get("idle_unload_s", "0") or 0)
             except ValueError:
                 limit = 0
-            if limit > 0 and self.model_id and self.ready and time.time() - self.last_used > limit:
+            # 2026-10-21 (Carson: "yes let's fix that"): last_used was only touched when a request ARRIVED, so an answer
+            # longer than idle_unload_s had its model killed mid-sentence (Granite, 5,100 tokens in at 8.9 tok/s, 502).
+            # Now every forwarded chunk touches last_used and nothing is unloaded while an answer is in flight.
+            if limit > 0 and self.model_id and self.ready and self.inflight == 0 and time.time() - self.last_used > limit:
                 with self.lock:
-                    if self.model_id and time.time() - self.last_used > limit:
+                    if self.model_id and self.inflight == 0 and time.time() - self.last_used > limit:
                         log(f"idle {int(time.time() - self.last_used)} s > {int(limit)} s: unloading {self.model_id}")
                         self.stop()
 
@@ -305,7 +309,16 @@ class Handler(http.server.BaseHTTPRequestHandler):
                     self._json(503, msg)
                 return
 
-        # forward to vLLM
+        # forward to vLLM; while the answer is in flight the idle unloader must not touch the model (2026-10-21)
+        ENGINE.inflight += 1
+        ENGINE.last_used = time.time()
+        try:
+            self._forward(raw, headers_sent)
+        finally:
+            ENGINE.inflight -= 1
+            ENGINE.last_used = time.time()
+
+    def _forward(self, raw, headers_sent):
         try:
             conn = http.client.HTTPConnection("127.0.0.1", ENGINE.upstream_port, timeout=900)
             fwd = {k: v for k, v in self.headers.items()
@@ -335,6 +348,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 if not piece:
                     break
                 self._chunk(piece)
+                ENGINE.last_used = time.time()       # a token went out: idle counts from the LAST token, not the request
             self._chunk(b"")
             self.wfile.write(b"\r\n")
             self.wfile.flush()
