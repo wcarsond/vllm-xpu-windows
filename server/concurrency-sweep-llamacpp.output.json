@@ -1,0 +1,4863 @@
+[
+ {
+  "run_id": "2026-10-22 00:32:12",
+  "argv": [
+   "qwen2.5-coder-7b-q8+qwen3.6-35b-a3b+qwen3.6-27b+qwen3.5-27b",
+   "contexts=0,8192,32768,65536",
+   "requests=1,2,4,8,16",
+   "gen=128",
+   "budget=157",
+   "cellcap=400"
+  ],
+  "contexts": [
+   0,
+   8192,
+   32768,
+   65536
+  ],
+  "requests": [
+   1,
+   2,
+   4,
+   8,
+   16
+  ],
+  "gen": 128,
+  "port": 11446,
+  "cellcap": 400.0,
+  "blocks": [
+   {
+    "preset": "qwen2.5-coder-7b-q8",
+    "ini": "models.input.ini",
+    "model": "qwen2.5-coder-7b-q8",
+    "quant": "Q8_0",
+    "file_type": "Q8_0",
+    "gguf": "D:\\models-b60\\qwen2.5-coder-7b-q8.gguf",
+    "gguf_gb": 8.098525696,
+    "gguf_name": "Qwen2.5 Coder 7B Instruct",
+    "arch": "qwen2",
+    "version": "b0.5.0-dev (build 55, commit 4fcdeee)",
+    "version_line": "version: 0.5.0-dev (build 55, commit 4fcdeee)",
+    "built_with": "built with MSVC 19.29.30146.0 for x64",
+    "date": "2026-10-22",
+    "started": "2026-10-22 00:43",
+    "max_len": 32768,
+    "gen": 128,
+    "ncmoe": "0",
+    "mmproj": null,
+    "rows": [
+     {
+      "context": 0,
+      "prompt_tokens": 31,
+      "cells": {
+       "1": {
+        "n": 1,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 42.82,
+        "raw_tps": 41.68,
+        "wall_s": 3.071,
+        "tokens": 128,
+        "tokens_per_request": [
+         128
+        ],
+        "chunk_token_counts": [
+         128
+        ],
+        "finish": [
+         "length"
+        ],
+        "first_token_s": [
+         0.105
+        ],
+        "last_token_s": [
+         3.071
+        ],
+        "decode_window_s": 2.966,
+        "decode_window_tokens": 127,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8
+        ],
+        "server_prompt_n": [
+         23
+        ],
+        "server_predicted_per_second": [
+         42.81784580383426
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "2": {
+        "n": 2,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 81.64,
+        "raw_tps": 76.86,
+        "wall_s": 3.331,
+        "tokens": 256,
+        "tokens_per_request": [
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.231,
+         0.231
+        ],
+        "last_token_s": [
+         3.331,
+         3.33
+        ],
+        "decode_window_s": 3.099,
+        "decode_window_tokens": 253,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8,
+         8
+        ],
+        "server_prompt_n": [
+         23,
+         23
+        ],
+        "server_predicted_per_second": [
+         40.972077045571275,
+         40.97670393718368
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "4": {
+        "n": 4,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 159.71,
+        "raw_tps": 151.68,
+        "wall_s": 3.376,
+        "tokens": 512,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.212,
+         0.212,
+         0.213,
+         0.211
+        ],
+        "last_token_s": [
+         3.375,
+         3.375,
+         3.376,
+         3.375
+        ],
+        "decode_window_s": 3.162,
+        "decode_window_tokens": 505,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         8,
+         8
+        ],
+        "server_prompt_n": [
+         31,
+         31,
+         23,
+         23
+        ],
+        "server_predicted_per_second": [
+         40.1397622272195,
+         40.14524359469994,
+         40.15139922884022,
+         40.15826784426307
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "8": {
+        "n": 8,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 265.18,
+        "raw_tps": 251.67,
+        "wall_s": 4.069,
+        "tokens": 1024,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.261,
+         0.261,
+         0.262,
+         0.263,
+         0.26,
+         0.259,
+         0.259,
+         0.258
+        ],
+        "last_token_s": [
+         4.068,
+         4.068,
+         4.069,
+         4.069,
+         4.068,
+         4.068,
+         4.068,
+         4.067
+        ],
+        "decode_window_s": 3.805,
+        "decode_window_tokens": 1009,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         8,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         31,
+         31,
+         31,
+         31,
+         23,
+         24,
+         24,
+         24
+        ],
+        "server_predicted_per_second": [
+         33.33996632400881,
+         33.34296866364795,
+         33.34633052515219,
+         33.35007839894414,
+         33.354028588867216,
+         33.35797095282447,
+         33.362326157981386,
+         33.366331847349294
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "16": {
+        "n": 16,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 174.69,
+        "raw_tps": 160.91,
+        "wall_s": 12.728,
+        "tokens": 2048,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         1.175,
+         1.174,
+         1.176,
+         1.176,
+         1.177,
+         1.178,
+         1.178,
+         1.179,
+         1.174,
+         1.173,
+         1.171,
+         1.172,
+         1.172,
+         1.171,
+         1.17,
+         1.17
+        ],
+        "last_token_s": [
+         12.727,
+         12.726,
+         12.727,
+         12.727,
+         12.727,
+         12.727,
+         12.728,
+         12.728,
+         12.726,
+         12.726,
+         12.725,
+         12.725,
+         12.725,
+         12.725,
+         12.725,
+         12.725
+        ],
+        "decode_window_s": 11.546,
+        "decode_window_tokens": 2017,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         7,
+         8,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         31,
+         31,
+         31,
+         31,
+         31,
+         31,
+         31,
+         31,
+         24,
+         23,
+         24,
+         24,
+         24,
+         24,
+         24,
+         24
+        ],
+        "server_predicted_per_second": [
+         10.991159386437134,
+         10.9914875688872,
+         10.991798646866313,
+         10.992103082730983,
+         10.99242466142683,
+         10.99274721043892,
+         10.993071681492456,
+         10.993328607644726,
+         10.993781588185925,
+         10.994401166133711,
+         10.994726686677646,
+         10.995087446874033,
+         10.995418719830237,
+         10.995751916788997,
+         10.996092750570433,
+         10.996440270453553
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 135168,
+       "slot_tokens": 8448,
+       "n_ctx_slot": 8448,
+       "console": "concurrency-sweep-llamacpp-qwen2.5-coder-7b-q8-20261022-0043-np16-c135168.console.log"
+      },
+      "prefill_s": 0.114,
+      "prefill_tps": 271.8
+     },
+     {
+      "context": 8192,
+      "prompt_tokens": 8192,
+      "cells": {
+       "1": {
+        "n": 1,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 39.36,
+        "raw_tps": 19.78,
+        "wall_s": 6.471,
+        "tokens": 128,
+        "tokens_per_request": [
+         128
+        ],
+        "chunk_token_counts": [
+         128
+        ],
+        "finish": [
+         "length"
+        ],
+        "first_token_s": [
+         3.245
+        ],
+        "last_token_s": [
+         6.471
+        ],
+        "decode_window_s": 3.227,
+        "decode_window_tokens": 127,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8
+        ],
+        "server_prompt_n": [
+         8184
+        ],
+        "server_predicted_per_second": [
+         39.36050034324216
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "2": {
+        "n": 2,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 73.04,
+        "raw_tps": 24.61,
+        "wall_s": 10.401,
+        "tokens": 256,
+        "tokens_per_request": [
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         3.321,
+         6.944
+        ],
+        "last_token_s": [
+         10.298,
+         10.401
+        ],
+        "decode_window_s": 3.354,
+        "decode_window_tokens": 245,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         7,
+         8
+        ],
+        "server_prompt_n": [
+         8185,
+         8184
+        ],
+        "server_predicted_per_second": [
+         18.202115429789924,
+         36.734930001157004
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "4": {
+        "n": 4,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 128.92,
+        "raw_tps": 27.84,
+        "wall_s": 18.393,
+        "tokens": 512,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         3.47,
+         10.871,
+         14.517,
+         7.168
+        ],
+        "last_token_s": [
+         18.061,
+         18.29,
+         18.393,
+         18.179
+        ],
+        "decode_window_s": 3.545,
+        "decode_window_tokens": 457,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         7,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         8185,
+         8185,
+         8185,
+         8185
+        ],
+        "server_predicted_per_second": [
+         8.703654410916108,
+         11.533778167847531,
+         17.11776238766637,
+         32.762880842692255
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "8": {
+        "n": 8,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 67.07,
+        "raw_tps": 22.45,
+        "wall_s": 45.619,
+        "tokens": 1024,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         15.909,
+         8.325,
+         12.129,
+         24.968,
+         21.023,
+         29.092,
+         32.691,
+         4.635
+        ],
+        "last_token_s": [
+         45.134,
+         44.638,
+         44.992,
+         45.406,
+         45.289,
+         45.516,
+         45.619,
+         44.275
+        ],
+        "decode_window_s": 11.584,
+        "decode_window_tokens": 777,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185
+        ],
+        "server_predicted_per_second": [
+         3.2038092939329035,
+         3.497460430641477,
+         3.8645688326418646,
+         4.345591402654595,
+         5.2337018917194875,
+         6.213792427236491,
+         7.732277619695658,
+         9.82370548314376
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "16": {
+        "n": 16,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 102.85,
+        "raw_tps": 24.9,
+        "wall_s": 82.251,
+        "tokens": 2048,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         11.921,
+         8.213,
+         15.601,
+         28.05,
+         20.016,
+         4.511,
+         24.02,
+         32.162,
+         36.441,
+         66.04,
+         40.712,
+         44.999,
+         49.285,
+         57.892,
+         53.614,
+         62.212
+        ],
+        "last_token_s": [
+         77.391,
+         76.777,
+         78.003,
+         79.971,
+         78.764,
+         76.162,
+         79.371,
+         80.571,
+         80.936,
+         82.251,
+         81.299,
+         81.653,
+         81.795,
+         82.038,
+         81.92,
+         82.149
+        ],
+        "decode_window_s": 10.122,
+        "decode_window_tokens": 1041,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         8184,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185
+        ],
+        "server_predicted_per_second": [
+         1.7725056543279292,
+         1.8522745961210045,
+         1.939828446154494,
+         2.0351817543103268,
+         2.1617583885715086,
+         2.2944617961361295,
+         2.446018584733647,
+         2.623503546863179,
+         2.8542702219876075,
+         3.129092690008302,
+         3.4647953061681376,
+         3.9064774533039834,
+         4.486806016969384,
+         5.25983632880322,
+         6.370230578270472,
+         7.834006410191166
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 135168,
+       "slot_tokens": 8448,
+       "n_ctx_slot": 8448,
+       "console": "concurrency-sweep-llamacpp-qwen2.5-coder-7b-q8-20261022-0043-np16-c135168.console.log"
+      },
+      "prefill_s": 3.266,
+      "prefill_tps": 2508.0
+     }
+    ],
+    "problems": [
+     "GGUF moved: C:\\Users\\claude\\models-b60\\qwen2.5-coder-7b-q8.gguf -> D:\\models-b60\\qwen2.5-coder-7b-q8.gguf (qwen2.5-coder-7b-q8.gguf.moved-to-D.txt) (the router's own start of this preset would fail)"
+    ],
+    "servers": [
+     {
+      "np": 16,
+      "c": 135168,
+      "slot_tokens": 8448,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m D:\\models-b60\\qwen2.5-coder-7b-q8.gguf --host 127.0.0.1 --port 11446 --alias qwen2.5-coder-7b-q8 -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 135168 -np 16 --jinja -lm none",
+      "console": "concurrency-sweep-llamacpp-qwen2.5-coder-7b-q8-20261022-0043-np16-c135168.console.log",
+      "shared_mib_before": 1102,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1093
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 16940,
+      "ready_s": 55.4,
+      "n_ctx_slot": 8448,
+      "slots": 16,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1731
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 7263,
+        "shared": 1
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 7712,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 2,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 7712,
+       "luid_0x00000000_0x00013f5a_phys_0": 7263
+      },
+      "warmups": [
+       {
+        "depth": 0,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 0,
+         "prompt_n": 31,
+         "prompt_ms": 96.999,
+         "prompt_per_token_ms": 3.129,
+         "prompt_per_second": 319.59092361776925,
+         "predicted_n": 128,
+         "predicted_ms": 3131.979,
+         "predicted_per_token_ms": 24.661251968503937,
+         "predicted_per_second": 40.54944174274476
+        }
+       },
+       {
+        "depth": 8192,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 8,
+         "prompt_n": 8184,
+         "prompt_ms": 3110.159,
+         "prompt_per_token_ms": 0.38002920332355816,
+         "prompt_per_second": 2631.3767238266596,
+         "predicted_n": 128,
+         "predicted_ms": 3217.522,
+         "predicted_per_token_ms": 25.334818897637795,
+         "predicted_per_second": 39.471369581932926
+        }
+       }
+      ],
+      "gpu_warm-up at 0": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1721
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 7299,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 7749,
+        "shared": 11
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 0": 4,
+      "dedicated_mib_warm-up at 0": {
+       "luid_0x00000000_0x000142ed_phys_0": 7749,
+       "luid_0x00000000_0x00013f5a_phys_0": 7299
+      },
+      "gpu_warm-up at 8192": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1698
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 7338,
+        "shared": 14
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 7771,
+        "shared": 18
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 8192": 23,
+      "dedicated_mib_warm-up at 8192": {
+       "luid_0x00000000_0x000142ed_phys_0": 7771,
+       "luid_0x00000000_0x00013f5a_phys_0": 7338
+      }
+     }
+    ]
+   }
+  ],
+  "skipped": [
+   {
+    "preset": "qwen3.5-27b",
+    "why": "engine = vllm: no llama.cpp (GGUF) preset of this model in models.input.ini"
+   }
+  ],
+  "llama_server_version": [
+   "version: 0.5.0-dev (build 55, commit 4fcdeee)",
+   "built with MSVC 19.29.30146.0 for x64"
+  ]
+ },
+ {
+  "run_id": "2026-10-22 00:48:58",
+  "argv": [
+   "qwen2.5-coder-7b-q8+qwen3.6-35b-a3b+qwen3.6-27b+qwen3.5-27b",
+   "contexts=0,8192,32768,65536",
+   "requests=1,2,4,8,16",
+   "gen=128",
+   "budget=148",
+   "cellcap=400"
+  ],
+  "contexts": [
+   0,
+   8192,
+   32768,
+   65536
+  ],
+  "requests": [
+   1,
+   2,
+   4,
+   8,
+   16
+  ],
+  "gen": 128,
+  "port": 11446,
+  "cellcap": 400.0,
+  "blocks": [
+   {
+    "preset": "qwen2.5-coder-7b-q8",
+    "ini": "models.input.ini",
+    "model": "qwen2.5-coder-7b-q8",
+    "quant": "Q8_0",
+    "file_type": "Q8_0",
+    "gguf": "D:\\models-b60\\qwen2.5-coder-7b-q8.gguf",
+    "gguf_gb": 8.098525696,
+    "gguf_name": "Qwen2.5 Coder 7B Instruct",
+    "arch": "qwen2",
+    "version": "0.5.0-dev (build 55, commit 4fcdeee)",
+    "version_line": "version: 0.5.0-dev (build 55, commit 4fcdeee)",
+    "built_with": "built with MSVC 19.29.30146.0 for x64",
+    "date": "2026-10-22",
+    "started": "2026-10-22 00:49",
+    "max_len": 32768,
+    "gen": 128,
+    "ncmoe": "0",
+    "mmproj": null,
+    "rows": [
+     {
+      "context": 0,
+      "prompt_tokens": 31,
+      "cells": {
+       "1": {
+        "n": 1,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 42.85,
+        "raw_tps": 41.73,
+        "wall_s": 3.067,
+        "tokens": 128,
+        "tokens_per_request": [
+         128
+        ],
+        "chunk_token_counts": [
+         128
+        ],
+        "finish": [
+         "length"
+        ],
+        "first_token_s": [
+         0.103
+        ],
+        "last_token_s": [
+         3.067
+        ],
+        "decode_window_s": 2.964,
+        "decode_window_tokens": 127,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8
+        ],
+        "server_prompt_n": [
+         23
+        ],
+        "server_predicted_per_second": [
+         42.84717088902481
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "2": {
+        "n": 2,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 81.77,
+        "raw_tps": 79.35,
+        "wall_s": 3.226,
+        "tokens": 256,
+        "tokens_per_request": [
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.132,
+         0.132
+        ],
+        "last_token_s": [
+         3.226,
+         3.226
+        ],
+        "decode_window_s": 3.094,
+        "decode_window_tokens": 253,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8,
+         8
+        ],
+        "server_prompt_n": [
+         23,
+         23
+        ],
+        "server_predicted_per_second": [
+         41.03774438461479,
+         41.04096696396054
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "4": {
+        "n": 4,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 159.3,
+        "raw_tps": 151.37,
+        "wall_s": 3.382,
+        "tokens": 512,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.211,
+         0.212,
+         0.211,
+         0.21
+        ],
+        "last_token_s": [
+         3.382,
+         3.382,
+         3.382,
+         3.382
+        ],
+        "decode_window_s": 3.17,
+        "decode_window_tokens": 505,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         8,
+         8
+        ],
+        "server_prompt_n": [
+         31,
+         31,
+         23,
+         23
+        ],
+        "server_predicted_per_second": [
+         40.0445219409296,
+         40.047502013411815,
+         40.05084880993791,
+         40.05437302290669
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "8": {
+        "n": 8,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 263.16,
+        "raw_tps": 250.18,
+        "wall_s": 4.093,
+        "tokens": 1024,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.256,
+         0.257,
+         0.257,
+         0.257,
+         0.256,
+         0.255,
+         0.255,
+         0.254
+        ],
+        "last_token_s": [
+         4.092,
+         4.093,
+         4.093,
+         4.093,
+         4.092,
+         4.092,
+         4.092,
+         4.092
+        ],
+        "decode_window_s": 3.834,
+        "decode_window_tokens": 1009,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         8,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         31,
+         31,
+         31,
+         31,
+         23,
+         24,
+         24,
+         24
+        ],
+        "server_predicted_per_second": [
+         33.09674804905094,
+         33.098386909718286,
+         33.100250232679116,
+         33.10238986222368,
+         33.10417597450092,
+         33.10643693406241,
+         33.10888809404384,
+         33.11113243201528
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "16": {
+        "n": 16,
+        "prompt_tokens": 31,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 174.88,
+        "raw_tps": 171.66,
+        "wall_s": 11.93,
+        "tokens": 2048,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.391,
+         0.391,
+         0.392,
+         0.392,
+         0.393,
+         0.393,
+         0.393,
+         0.394,
+         0.39,
+         0.39,
+         0.389,
+         0.389,
+         0.388,
+         0.388,
+         0.387,
+         0.387
+        ],
+        "last_token_s": [
+         11.929,
+         11.929,
+         11.929,
+         11.93,
+         11.93,
+         11.93,
+         11.93,
+         11.93,
+         11.929,
+         11.929,
+         11.928,
+         11.928,
+         11.928,
+         11.928,
+         11.927,
+         11.928
+        ],
+        "decode_window_s": 11.533,
+        "decode_window_tokens": 2017,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         8,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         31,
+         31,
+         31,
+         31,
+         31,
+         31,
+         31,
+         31,
+         23,
+         24,
+         24,
+         24,
+         24,
+         24,
+         24,
+         24
+        ],
+        "server_predicted_per_second": [
+         11.00517355808613,
+         11.00495326880907,
+         11.00537764346788,
+         11.00560176463992,
+         11.005825894940465,
+         11.006029050716995,
+         11.006272275243472,
+         11.006513602750832,
+         11.00673872411618,
+         11.00695336111188,
+         11.007207120536284,
+         11.007470432157621,
+         11.007724215424458,
+         11.007982781087973,
+         11.008251854933778,
+         11.008515216541829
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 135168,
+       "slot_tokens": 8448,
+       "n_ctx_slot": 8448,
+       "console": "concurrency-sweep-llamacpp-qwen2.5-coder-7b-q8-20261022-0049-np16-c135168.console.log"
+      },
+      "prefill_s": 0.099,
+      "prefill_tps": 313.7
+     },
+     {
+      "context": 8192,
+      "prompt_tokens": 8192,
+      "cells": {
+       "1": {
+        "n": 1,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 39.47,
+        "raw_tps": 19.88,
+        "wall_s": 6.438,
+        "tokens": 128,
+        "tokens_per_request": [
+         128
+        ],
+        "chunk_token_counts": [
+         128
+        ],
+        "finish": [
+         "length"
+        ],
+        "first_token_s": [
+         3.22
+        ],
+        "last_token_s": [
+         6.438
+        ],
+        "decode_window_s": 3.218,
+        "decode_window_tokens": 127,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8
+        ],
+        "server_prompt_n": [
+         8184
+        ],
+        "server_predicted_per_second": [
+         39.468634090022675
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "2": {
+        "n": 2,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 73.1,
+        "raw_tps": 24.68,
+        "wall_s": 10.372,
+        "tokens": 256,
+        "tokens_per_request": [
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         3.297,
+         6.919
+        ],
+        "last_token_s": [
+         10.27,
+         10.372
+        ],
+        "decode_window_s": 3.351,
+        "decode_window_tokens": 245,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8,
+         8
+        ],
+        "server_prompt_n": [
+         8184,
+         8184
+        ],
+        "server_predicted_per_second": [
+         18.21340808001279,
+         36.77257264103223
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "4": {
+        "n": 4,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 129.27,
+        "raw_tps": 27.95,
+        "wall_s": 18.317,
+        "tokens": 512,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         3.406,
+         10.808,
+         7.105,
+         14.451
+        ],
+        "last_token_s": [
+         17.986,
+         18.214,
+         18.104,
+         18.317
+        ],
+        "decode_window_s": 3.535,
+        "decode_window_tokens": 457,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         7,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         8185,
+         8185,
+         8185,
+         8185
+        ],
+        "server_predicted_per_second": [
+         8.710514619947215,
+         11.546134717754281,
+         17.149758715048254,
+         32.85214851757914
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "8": {
+        "n": 8,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 67.17,
+        "raw_tps": 23.3,
+        "wall_s": 43.952,
+        "tokens": 1024,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         7.308,
+         11.11,
+         23.316,
+         14.893,
+         19.372,
+         27.435,
+         3.618,
+         31.033
+        ],
+        "last_token_s": [
+         42.964,
+         43.32,
+         43.737,
+         43.463,
+         43.619,
+         43.849,
+         42.6,
+         43.952
+        ],
+        "decode_window_s": 11.568,
+        "decode_window_tokens": 777,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185
+        ],
+        "server_predicted_per_second": [
+         3.2578571626644752,
+         3.5617669280685744,
+         3.9428872471782666,
+         4.44526924995847,
+         5.237870895390934,
+         6.218980082369657,
+         7.737796185473634,
+         9.830713564279243
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "16": {
+        "n": 16,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 102.89,
+        "raw_tps": 25.01,
+        "wall_s": 81.903,
+        "tokens": 2048,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         7.876,
+         11.581,
+         15.26,
+         27.707,
+         19.672,
+         36.1,
+         23.677,
+         4.175,
+         31.82,
+         65.699,
+         40.369,
+         44.656,
+         48.943,
+         53.274,
+         57.548,
+         61.871
+        ],
+        "last_token_s": [
+         76.432,
+         77.045,
+         77.657,
+         79.625,
+         78.417,
+         80.588,
+         79.024,
+         75.817,
+         80.223,
+         81.903,
+         80.952,
+         81.306,
+         81.448,
+         81.572,
+         81.689,
+         81.801
+        ],
+        "decode_window_s": 10.118,
+        "decode_window_tokens": 1041,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         8,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7,
+         7
+        ],
+        "server_prompt_n": [
+         8184,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185,
+         8185
+        ],
+        "server_predicted_per_second": [
+         1.7727068497992884,
+         1.852492336625747,
+         1.9399846353216883,
+         2.0353818276142173,
+         2.1618824378543913,
+         2.2946449094820403,
+         2.44617641439076,
+         2.623834178307796,
+         2.854706690913242,
+         3.1293925459742264,
+         3.4652111761082263,
+         3.9070890531425024,
+         4.4878588047531585,
+         5.260751858370949,
+         6.372554061963806,
+         7.837683185787404
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 135168,
+       "slot_tokens": 8448,
+       "n_ctx_slot": 8448,
+       "console": "concurrency-sweep-llamacpp-qwen2.5-coder-7b-q8-20261022-0049-np16-c135168.console.log"
+      },
+      "prefill_s": 3.242,
+      "prefill_tps": 2526.4
+     },
+     {
+      "context": 32768,
+      "prompt_tokens": 32640,
+      "cells": {
+       "1": {
+        "n": 1,
+        "prompt_tokens": 32640,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 32.57,
+        "raw_tps": 4.04,
+        "wall_s": 31.666,
+        "tokens": 128,
+        "tokens_per_request": [
+         128
+        ],
+        "chunk_token_counts": [
+         128
+        ],
+        "finish": [
+         "length"
+        ],
+        "first_token_s": [
+         27.766
+        ],
+        "last_token_s": [
+         31.665
+        ],
+        "decode_window_s": 3.899,
+        "decode_window_tokens": 127,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0
+        ],
+        "server_prompt_n": [
+         32640
+        ],
+        "server_predicted_per_second": [
+         32.5710510549943
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "2": {
+        "n": 2,
+        "prompt_tokens": 32640,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 56.09,
+        "raw_tps": 3.88,
+        "wall_s": 65.926,
+        "tokens": 256,
+        "tokens_per_request": [
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         61.494,
+         28.239
+        ],
+        "last_token_s": [
+         65.926,
+         65.434
+        ],
+        "decode_window_s": 3.94,
+        "decode_window_tokens": 221,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32640,
+         32640
+        ],
+        "server_predicted_per_second": [
+         3.4143780319240045,
+         28.65436183690253
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "4": {
+        "n": 4,
+        "prompt_tokens": 32640,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 82.12,
+        "raw_tps": 3.72,
+        "wall_s": 137.801,
+        "tokens": 512,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         98.615,
+         132.213,
+         64.932,
+         31.427
+        ],
+        "last_token_s": [
+         137.305,
+         137.801,
+         136.732,
+         136.024
+        ],
+        "decode_window_s": 3.811,
+        "decode_window_tokens": 313,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32640,
+         32640,
+         32640,
+         32640
+        ],
+        "server_predicted_per_second": [
+         1.2141882118309848,
+         1.7687893936034256,
+         3.282479540589333,
+         22.726512194384334
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "8": {
+        "n": 8,
+        "prompt_tokens": 32640,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 24.86,
+        "raw_tps": 3.12,
+        "wall_s": 327.933,
+        "tokens": 1024,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         274.836,
+         312.007,
+         98.403,
+         237.506,
+         200.119,
+         132.082,
+         165.802,
+         64.909
+        ],
+        "last_token_s": [
+         327.439,
+         327.933,
+         321.346,
+         326.424,
+         325.332,
+         322.813,
+         324.108,
+         316.552
+        ],
+        "decode_window_s": 4.545,
+        "decode_window_tokens": 113,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         7
+        ],
+        "server_prompt_n": [
+         32640,
+         32640,
+         32640,
+         32640,
+         32640,
+         32640,
+         32640,
+         32633
+        ],
+        "server_predicted_per_second": [
+         0.5046838195212194,
+         0.5696531681936011,
+         0.6658572603678419,
+         0.8022434719743128,
+         1.0142781694936929,
+         1.4282866548823643,
+         2.4143230417839288,
+         7.974561275116022
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "16": {
+        "n": 16,
+        "mark": "n/r",
+        "reason": "not run: 16 prefills of 32,640 tokens at 1,175 tok/s would take 444 s (cap 400 s)"
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 528384,
+       "slot_tokens": 32768,
+       "n_ctx_slot": 32768,
+       "console": "concurrency-sweep-llamacpp-qwen2.5-coder-7b-q8-20261022-0049-np16-c528384.console.log"
+      },
+      "prefill_s": 27.768,
+      "prefill_tps": 1175.4
+     }
+    ],
+    "problems": [
+     "GGUF moved: C:\\Users\\claude\\models-b60\\qwen2.5-coder-7b-q8.gguf -> D:\\models-b60\\qwen2.5-coder-7b-q8.gguf (qwen2.5-coder-7b-q8.gguf.moved-to-D.txt) (the router's own start of this preset would fail)"
+    ],
+    "servers": [
+     {
+      "np": 16,
+      "c": 135168,
+      "slot_tokens": 8448,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m D:\\models-b60\\qwen2.5-coder-7b-q8.gguf --host 127.0.0.1 --port 11446 --alias qwen2.5-coder-7b-q8 -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 135168 -np 16 --jinja -lm none",
+      "console": "concurrency-sweep-llamacpp-qwen2.5-coder-7b-q8-20261022-0049-np16-c135168.console.log",
+      "shared_mib_before": 1046,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1037
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 28268,
+      "ready_s": 4.6,
+      "n_ctx_slot": 8448,
+      "slots": 16,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1609
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 7263,
+        "shared": 1
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 7712,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 2,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 7712,
+       "luid_0x00000000_0x00013f5a_phys_0": 7263
+      },
+      "warmups": [
+       {
+        "depth": 0,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 0,
+         "prompt_n": 31,
+         "prompt_ms": 97.014,
+         "prompt_per_token_ms": 3.129483870967742,
+         "prompt_per_second": 319.5415094728596,
+         "predicted_n": 128,
+         "predicted_ms": 2980.94,
+         "predicted_per_token_ms": 23.47196850393701,
+         "predicted_per_second": 42.60401081538038
+        }
+       },
+       {
+        "depth": 8192,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 8,
+         "prompt_n": 8184,
+         "prompt_ms": 3118.7,
+         "prompt_per_token_ms": 0.3810728250244379,
+         "prompt_per_second": 2624.170327379998,
+         "predicted_n": 128,
+         "predicted_ms": 3222.18,
+         "predicted_per_token_ms": 25.371496062992126,
+         "predicted_per_second": 39.414309566815014
+        }
+       }
+      ],
+      "gpu_warm-up at 0": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1609
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 7299,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 7749,
+        "shared": 11
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 0": 4,
+      "dedicated_mib_warm-up at 0": {
+       "luid_0x00000000_0x000142ed_phys_0": 7749,
+       "luid_0x00000000_0x00013f5a_phys_0": 7299
+      },
+      "gpu_warm-up at 8192": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1697
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 7338,
+        "shared": 14
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 7771,
+        "shared": 18
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 8192": 23,
+      "dedicated_mib_warm-up at 8192": {
+       "luid_0x00000000_0x000142ed_phys_0": 7771,
+       "luid_0x00000000_0x00013f5a_phys_0": 7338
+      },
+      "stopped": "2026-10-22 00:52:32"
+     },
+     {
+      "np": 16,
+      "c": 528384,
+      "slot_tokens": 32768,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m D:\\models-b60\\qwen2.5-coder-7b-q8.gguf --host 127.0.0.1 --port 11446 --alias qwen2.5-coder-7b-q8 -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 528384 -np 16 --jinja -lm none",
+      "console": "concurrency-sweep-llamacpp-qwen2.5-coder-7b-q8-20261022-0049-np16-c528384.console.log",
+      "shared_mib_before": 1055,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1046
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 18572,
+      "ready_s": 5.6,
+      "n_ctx_slot": 32768,
+      "slots": 16,
+      "capped": "slot capped by llama.cpp from 33024 to 32768 (training context)",
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1773
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 17363,
+        "shared": 1
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 19350,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 2,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 19350,
+       "luid_0x00000000_0x00013f5a_phys_0": 17363
+      },
+      "warmups": [
+       {
+        "depth": 32640,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 0,
+         "prompt_n": 32640,
+         "prompt_ms": 27516.086,
+         "prompt_per_token_ms": 0.8430173406862745,
+         "prompt_per_second": 1186.21521970821,
+         "predicted_n": 128,
+         "predicted_ms": 3905.845,
+         "predicted_per_token_ms": 30.754685039370077,
+         "predicted_per_second": 32.51537119368536
+        }
+       }
+      ],
+      "gpu_warm-up at 32640": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1783
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 17492,
+        "shared": 13
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 19415,
+        "shared": 18
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 32640": 22,
+      "dedicated_mib_warm-up at 32640": {
+       "luid_0x00000000_0x000142ed_phys_0": 19415,
+       "luid_0x00000000_0x00013f5a_phys_0": 17492
+      },
+      "stopped": "2026-10-22 01:03:11"
+     }
+    ],
+    "finished": "2026-10-22 01:03"
+   },
+   {
+    "preset": "qwen3.6-35b-a3b",
+    "ini": "models.input.ini",
+    "model": "Qwen3.6-35B-A3B-UD-Q4_K_XL",
+    "quant": "UD-Q4_K_XL",
+    "file_type": "Q4_K_M",
+    "gguf": "C:\\Users\\claude\\models-b60\\qwen3.6-35b-a3b\\Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf",
+    "gguf_gb": 22.36045616,
+    "gguf_name": "Qwen3.6-35B-A3B",
+    "arch": "qwen35moe",
+    "version": "0.5.0-dev (build 55, commit 4fcdeee)",
+    "version_line": "version: 0.5.0-dev (build 55, commit 4fcdeee)",
+    "built_with": "built with MSVC 19.29.30146.0 for x64",
+    "date": "2026-10-22",
+    "started": "2026-10-22 01:03",
+    "max_len": 131072,
+    "gen": 128,
+    "ncmoe": "0",
+    "mmproj": null,
+    "rows": [
+     {
+      "context": 0,
+      "prompt_tokens": 32,
+      "cells": {
+       "1": {
+        "n": 1,
+        "prompt_tokens": 32,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 72.1,
+        "raw_tps": 62.8,
+        "wall_s": 2.038,
+        "tokens": 128,
+        "tokens_per_request": [
+         128
+        ],
+        "chunk_token_counts": [
+         128
+        ],
+        "finish": [
+         "length"
+        ],
+        "first_token_s": [
+         0.277
+        ],
+        "last_token_s": [
+         2.038
+        ],
+        "decode_window_s": 1.762,
+        "decode_window_tokens": 127,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0
+        ],
+        "server_prompt_n": [
+         32
+        ],
+        "server_predicted_per_second": [
+         72.09281467378285
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "2": {
+        "n": 2,
+        "prompt_tokens": 32,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 113.41,
+        "raw_tps": 60.56,
+        "wall_s": 4.227,
+        "tokens": 256,
+        "tokens_per_request": [
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         1.996,
+         1.995
+        ],
+        "last_token_s": [
+         4.227,
+         4.227
+        ],
+        "decode_window_s": 2.231,
+        "decode_window_tokens": 253,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32,
+         32
+        ],
+        "server_predicted_per_second": [
+         56.906423435767884,
+         56.92180333651409
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "4": {
+        "n": 4,
+        "prompt_tokens": 32,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 159.51,
+        "raw_tps": 139.4,
+        "wall_s": 3.673,
+        "tokens": 512,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.505,
+         0.506,
+         0.503,
+         0.504
+        ],
+        "last_token_s": [
+         3.673,
+         3.673,
+         3.672,
+         3.672
+        ],
+        "decode_window_s": 3.166,
+        "decode_window_tokens": 505,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32,
+         32,
+         32,
+         32
+        ],
+        "server_predicted_per_second": [
+         40.0812608112889,
+         40.08752337386697,
+         40.09461065291706,
+         40.10246020699185
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "8": {
+        "n": 8,
+        "prompt_tokens": 32,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 198.64,
+        "raw_tps": 179.19,
+        "wall_s": 5.715,
+        "tokens": 1024,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         0.626,
+         0.63,
+         0.631,
+         0.632,
+         0.628,
+         0.633,
+         0.629,
+         0.627
+        ],
+        "last_token_s": [
+         5.712,
+         5.714,
+         5.714,
+         5.714,
+         5.713,
+         5.715,
+         5.713,
+         5.713
+        ],
+        "decode_window_s": 5.08,
+        "decode_window_tokens": 1009,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32
+        ],
+        "server_predicted_per_second": [
+         24.970134146638785,
+         24.97291323780702,
+         24.97611044868697,
+         24.979136520422017,
+         24.98191761593036,
+         24.98493034909653,
+         24.987943809000814,
+         24.9910219261781
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "16": {
+        "n": 16,
+        "prompt_tokens": 32,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 139.08,
+        "raw_tps": 130.86,
+        "wall_s": 15.651,
+        "tokens": 2048,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         1.137,
+         1.139,
+         1.143,
+         1.136,
+         1.138,
+         1.14,
+         1.142,
+         1.141,
+         1.135,
+         1.135,
+         1.134,
+         1.133,
+         1.132,
+         1.131,
+         1.129,
+         1.13
+        ],
+        "last_token_s": [
+         15.649,
+         15.649,
+         15.651,
+         15.648,
+         15.649,
+         15.65,
+         15.65,
+         15.65,
+         15.648,
+         15.648,
+         15.647,
+         15.647,
+         15.646,
+         15.646,
+         15.646,
+         15.646
+        ],
+        "decode_window_s": 14.503,
+        "decode_window_tokens": 2017,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32,
+         32
+        ],
+        "server_predicted_per_second": [
+         8.748691829465814,
+         8.748992574171995,
+         8.749322271985427,
+         8.749643555367365,
+         8.749985962128822,
+         8.750389891880321,
+         8.750710047771985,
+         8.751046508022368,
+         8.751438474631165,
+         8.751800321129052,
+         8.752113342486528,
+         8.75246197451545,
+         8.752838986771359,
+         8.75321784140134,
+         8.75354906443515,
+         8.753899621031968
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 135168,
+       "slot_tokens": 8448,
+       "n_ctx_slot": 8448,
+       "console": "concurrency-sweep-llamacpp-qwen3.6-35b-a3b-20261022-0103-np16-c135168.console.log"
+      },
+      "prefill_s": 0.289,
+      "prefill_tps": 110.6
+     },
+     {
+      "context": 8192,
+      "prompt_tokens": 8192,
+      "cells": {
+       "1": {
+        "n": 1,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 68.72,
+        "raw_tps": 23.57,
+        "wall_s": 5.43,
+        "tokens": 128,
+        "tokens_per_request": [
+         128
+        ],
+        "chunk_token_counts": [
+         128
+        ],
+        "finish": [
+         "length"
+        ],
+        "first_token_s": [
+         3.581
+        ],
+        "last_token_s": [
+         5.429
+        ],
+        "decode_window_s": 1.848,
+        "decode_window_tokens": 127,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0
+        ],
+        "server_prompt_n": [
+         8192
+        ],
+        "server_predicted_per_second": [
+         68.7162505816533
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "2": {
+        "n": 2,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 101.0,
+        "raw_tps": 23.96,
+        "wall_s": 10.685,
+        "tokens": 256,
+        "tokens_per_request": [
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         5.317,
+         8.196
+        ],
+        "last_token_s": [
+         10.621,
+         10.685
+        ],
+        "decode_window_s": 2.426,
+        "decode_window_tokens": 245,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         8192,
+         8192
+        ],
+        "server_predicted_per_second": [
+         23.94082581899303,
+         51.030638071829436
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "4": {
+        "n": 4,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 138.35,
+        "raw_tps": 25.62,
+        "wall_s": 19.988,
+        "tokens": 512,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         5.238,
+         9.671,
+         13.746,
+         16.439
+        ],
+        "last_token_s": [
+         19.742,
+         19.843,
+         19.926,
+         19.988
+        ],
+        "decode_window_s": 3.303,
+        "decode_window_tokens": 457,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         8192,
+         8192,
+         8192,
+         8192
+        ],
+        "server_predicted_per_second": [
+         8.75587255337997,
+         12.48526222933893,
+         20.550550876125,
+         35.785433919519406
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "8": {
+        "n": 8,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 122.29,
+        "raw_tps": 24.7,
+        "wall_s": 41.452,
+        "tokens": 1024,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         9.447,
+         13.582,
+         17.848,
+         26.654,
+         22.407,
+         31.382,
+         34.186,
+         5.402
+        ],
+        "last_token_s": [
+         40.782,
+         40.942,
+         41.083,
+         41.306,
+         41.203,
+         41.389,
+         41.452,
+         40.606
+        ],
+        "decode_window_s": 6.419,
+        "decode_window_tokens": 785,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192
+        ],
+        "server_predicted_per_second": [
+         3.607587432437983,
+         4.052945898086856,
+         4.641766040664209,
+         5.4658771529907195,
+         6.757115175773049,
+         8.668217162728714,
+         12.69053539869965,
+         17.4802363217839
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "16": {
+        "n": 16,
+        "prompt_tokens": 8192,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 58.78,
+        "raw_tps": 20.62,
+        "wall_s": 99.34,
+        "tokens": 2048,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         74.039,
+         10.159,
+         14.233,
+         22.633,
+         18.445,
+         26.821,
+         31.059,
+         35.584,
+         40.206,
+         6.089,
+         45.109,
+         50.106,
+         55.148,
+         60.195,
+         65.267,
+         70.34
+        ],
+        "last_token_s": [
+         99.34,
+         93.096,
+         94.145,
+         96.163,
+         95.167,
+         97.147,
+         97.737,
+         98.304,
+         98.502,
+         92.022,
+         98.681,
+         98.838,
+         98.977,
+         99.094,
+         99.195,
+         99.278
+        ],
+        "decode_window_s": 17.982,
+        "decode_window_tokens": 1057,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192,
+         8192
+        ],
+        "server_predicted_per_second": [
+         1.477897392819099,
+         1.5312749894733886,
+         1.589241649924152,
+         1.6553216740990173,
+         1.7271749545814186,
+         1.805904100576857,
+         1.9046869742192216,
+         2.0248613755189444,
+         2.1785324496267977,
+         2.3706818706397303,
+         2.6060780470715974,
+         2.8975956390227373,
+         3.2648197624116104,
+         3.743217518281565,
+         4.388704139035253,
+         5.019680705620074
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 135168,
+       "slot_tokens": 8448,
+       "n_ctx_slot": 8448,
+       "console": "concurrency-sweep-llamacpp-qwen3.6-35b-a3b-20261022-0103-np16-c135168.console.log"
+      },
+      "prefill_s": 3.634,
+      "prefill_tps": 2254.0
+     },
+     {
+      "context": 32768,
+      "prompt_tokens": 32768,
+      "cells": {
+       "1": {
+        "n": 1,
+        "prompt_tokens": 32768,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 59.56,
+        "raw_tps": 4.72,
+        "wall_s": 27.13,
+        "tokens": 128,
+        "tokens_per_request": [
+         128
+        ],
+        "chunk_token_counts": [
+         128
+        ],
+        "finish": [
+         "length"
+        ],
+        "first_token_s": [
+         24.997
+        ],
+        "last_token_s": [
+         27.13
+        ],
+        "decode_window_s": 2.132,
+        "decode_window_tokens": 127,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0
+        ],
+        "server_prompt_n": [
+         32768
+        ],
+        "server_predicted_per_second": [
+         59.55565851441927
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "2": {
+        "n": 2,
+        "prompt_tokens": 32768,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 86.84,
+        "raw_tps": 4.34,
+        "wall_s": 58.94,
+        "tokens": 256,
+        "tokens_per_request": [
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         56.12,
+         27.171
+        ],
+        "last_token_s": [
+         58.939,
+         58.665
+        ],
+        "decode_window_s": 2.545,
+        "decode_window_tokens": 221,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32768,
+         32768
+        ],
+        "server_predicted_per_second": [
+         4.032532567622079,
+         45.05078145369294
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "4": {
+        "n": 4,
+        "prompt_tokens": 32768,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 112.68,
+        "raw_tps": 4.21,
+        "wall_s": 121.671,
+        "tokens": 512,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         57.657,
+         117.766,
+         26.837,
+         88.5
+        ],
+        "last_token_s": [
+         121.027,
+         121.671,
+         120.544,
+         121.398
+        ],
+        "decode_window_s": 2.778,
+        "decode_window_tokens": 313,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32768,
+         32768,
+         32768,
+         32768
+        ],
+        "server_predicted_per_second": [
+         1.3552963481924076,
+         2.004102666423881,
+         3.8604398117005134,
+         32.52348989851135
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "8": {
+        "n": 8,
+        "prompt_tokens": 32768,
+        "mark": "",
+        "reason": "",
+        "decode_tps": 96.65,
+        "raw_tps": 4.1,
+        "wall_s": 249.569,
+        "tokens": 1024,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         213.114,
+         182.266,
+         120.02,
+         151.112,
+         58.148,
+         88.984,
+         27.332,
+         242.757
+        ],
+        "last_token_s": [
+         249.296,
+         248.654,
+         247.058,
+         247.911,
+         245.071,
+         246.122,
+         243.927,
+         249.569
+        ],
+        "decode_window_s": 1.169,
+        "decode_window_tokens": 113,
+        "decode_window": "all N decoding",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768
+        ],
+        "server_predicted_per_second": [
+         0.5863503799762841,
+         0.679424329650265,
+         0.8082101268436156,
+         0.9997033321324299,
+         1.3119908984608712,
+         1.9130046811375174,
+         3.510024173011358,
+         18.64502082516696
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       },
+       "16": {
+        "n": 16,
+        "prompt_tokens": 32768,
+        "mark": "*",
+        "reason": "requests never all decoded together",
+        "decode_tps": 114.3,
+        "raw_tps": 3.05,
+        "wall_s": 670.548,
+        "tokens": 2048,
+        "tokens_per_request": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "chunk_token_counts": [
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128,
+         128
+        ],
+        "finish": [
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length",
+         "length"
+        ],
+        "first_token_s": [
+         621.18,
+         572.914,
+         477.152,
+         333.177,
+         284.026,
+         524.644,
+         381.622,
+         429.2,
+         47.334,
+         78.16,
+         109.003,
+         140.041,
+         171.118,
+         202.269,
+         665.578,
+         236.219
+        ],
+        "last_token_s": [
+         670.276,
+         669.905,
+         668.857,
+         666.506,
+         664.131,
+         669.423,
+         667.391,
+         668.171,
+         328.816,
+         377.285,
+         424.886,
+         472.858,
+         520.371,
+         568.654,
+         670.547,
+         616.943
+        ],
+        "decode_window_s": 4.97,
+        "decode_window_tokens": 568,
+        "decode_window": "last first token to end",
+        "prompt_cache_reused_tokens": [
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0,
+         0
+        ],
+        "server_prompt_n": [
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768,
+         32768
+        ],
+        "server_predicted_per_second": [
+         0.45118376729763077,
+         0.42457226918058383,
+         0.4020479690396472,
+         0.3815912038311901,
+         0.36363391476888324,
+         0.3466304825929323,
+         0.3335750693200513,
+         0.33411864105172145,
+         0.38100442384236527,
+         0.4444164885865885,
+         0.5314453026179485,
+         0.6624781874492464,
+         0.8772007014345464,
+         1.309399476716542,
+         2.5867872731451214,
+         25.556153207327416
+        ],
+        "count_source": [
+         "text chunks"
+        ]
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 528384,
+       "slot_tokens": 33024,
+       "n_ctx_slot": 33024,
+       "console": "concurrency-sweep-llamacpp-qwen3.6-35b-a3b-20261022-0103-np16-c528384.console.log"
+      },
+      "prefill_s": 24.983,
+      "prefill_tps": 1311.6
+     },
+     {
+      "context": 65536,
+      "prompt_tokens": 65536,
+      "cells": {
+       "1": {
+        "n": 1,
+        "mark": "\u2014",
+        "reason": "warm-up failed: [WinError 10054] An existing connection was forcibly closed by the remote host"
+       },
+       "2": {
+        "n": 2,
+        "mark": "\u2014",
+        "reason": "warm-up failed: [WinError 10054] An existing connection was forcibly closed by the remote host"
+       },
+       "4": {
+        "n": 4,
+        "mark": "\u2014",
+        "reason": "warm-up failed: [WinError 10054] An existing connection was forcibly closed by the remote host"
+       },
+       "8": {
+        "n": 8,
+        "mark": "\u2014",
+        "reason": "warm-up failed: [WinError 10054] An existing connection was forcibly closed by the remote host"
+       },
+       "16": {
+        "n": 16,
+        "mark": "\u2014",
+        "reason": "warm-up failed: [WinError 10054] An existing connection was forcibly closed by the remote host"
+       }
+      },
+      "tried": [],
+      "server": {
+       "np": 16,
+       "c": 1052672,
+       "slot_tokens": 65792,
+       "n_ctx_slot": 65792,
+       "console": "concurrency-sweep-llamacpp-qwen3.6-35b-a3b-20261022-0103-np16-c1052672.console.log"
+      },
+      "error": "[WinError 10054] An existing connection was forcibly closed by the remote host"
+     }
+    ],
+    "problems": [],
+    "servers": [
+     {
+      "np": 16,
+      "c": 135168,
+      "slot_tokens": 8448,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-35b-a3b\\Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-35b-a3b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 135168 -np 16 --jinja -lm none",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-35b-a3b-20261022-0103-np16-c135168.console.log",
+      "shared_mib_before": 954,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 945
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 21212,
+      "ready_s": 15.2,
+      "n_ctx_slot": 8448,
+      "slots": 16,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1545
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 12152,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 12709,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 12709,
+       "luid_0x00000000_0x00013f5a_phys_0": 12152
+      },
+      "warmups": [
+       {
+        "depth": 0,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 0,
+         "prompt_n": 32,
+         "prompt_ms": 419.104,
+         "prompt_per_token_ms": 13.097,
+         "prompt_per_second": 76.35336336565626,
+         "predicted_n": 128,
+         "predicted_ms": 1840.021,
+         "predicted_per_token_ms": 14.488354330708662,
+         "predicted_per_second": 69.02095139131563
+        }
+       },
+       {
+        "depth": 8192,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 0,
+         "prompt_n": 8192,
+         "prompt_ms": 3518.565,
+         "prompt_per_token_ms": 0.4295123291015625,
+         "prompt_per_second": 2328.221874542605,
+         "predicted_n": 128,
+         "predicted_ms": 1842.35,
+         "predicted_per_token_ms": 14.506692913385827,
+         "predicted_per_second": 68.93369880858685
+        }
+       }
+      ],
+      "gpu_warm-up at 0": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1545
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 12192,
+        "shared": 5
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 12751,
+        "shared": 13
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 0": 9,
+      "dedicated_mib_warm-up at 0": {
+       "luid_0x00000000_0x000142ed_phys_0": 12751,
+       "luid_0x00000000_0x00013f5a_phys_0": 12192
+      },
+      "gpu_warm-up at 8192": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1554
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 12234,
+        "shared": 27
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 12768,
+        "shared": 16
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 8192": 34,
+      "dedicated_mib_warm-up at 8192": {
+       "luid_0x00000000_0x000142ed_phys_0": 12768,
+       "luid_0x00000000_0x00013f5a_phys_0": 12234
+      },
+      "stopped": "2026-10-22 01:07:20"
+     },
+     {
+      "np": 16,
+      "c": 528384,
+      "slot_tokens": 33024,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-35b-a3b\\Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-35b-a3b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 528384 -np 16 --jinja -lm none",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-35b-a3b-20261022-0103-np16-c528384.console.log",
+      "shared_mib_before": 890,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 881
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 30424,
+      "ready_s": 11.2,
+      "n_ctx_slot": 33024,
+      "slots": 16,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1577
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 16127,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 16653,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 16653,
+       "luid_0x00000000_0x00013f5a_phys_0": 16127
+      },
+      "warmups": [
+       {
+        "depth": 32768,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 0,
+         "prompt_n": 32768,
+         "prompt_ms": 25084.022,
+         "prompt_per_token_ms": 0.7655036010742188,
+         "prompt_per_second": 1306.3295830309828,
+         "predicted_n": 128,
+         "predicted_ms": 2134.556,
+         "predicted_per_token_ms": 16.807527559055117,
+         "predicted_per_second": 59.497150695507635
+        }
+       }
+      ],
+      "gpu_warm-up at 32768": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1586
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 16298,
+        "shared": 41
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 16715,
+        "shared": 17
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 32768": 49,
+      "dedicated_mib_warm-up at 32768": {
+       "luid_0x00000000_0x000142ed_phys_0": 16715,
+       "luid_0x00000000_0x00013f5a_phys_0": 16298
+      },
+      "stopped": "2026-10-22 01:27:23"
+     },
+     {
+      "np": 16,
+      "c": 1052672,
+      "slot_tokens": 65792,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-35b-a3b\\Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-35b-a3b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 1052672 -np 16 --jinja -lm none",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-35b-a3b-20261022-0103-np16-c1052672.console.log",
+      "shared_mib_before": 899,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 890
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 15624,
+      "ready_s": 12.2,
+      "n_ctx_slot": 65792,
+      "slots": 16,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1715
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 21354,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 21911,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 21911,
+       "luid_0x00000000_0x00013f5a_phys_0": 21354
+      },
+      "warmups": [
+       {
+        "depth": 65536,
+        "tokens": 128,
+        "chunk_tokens": 128,
+        "count_source": "text chunks",
+        "timings": {
+         "cache_n": 0,
+         "prompt_n": 65536,
+         "prompt_ms": 80651.197,
+         "prompt_per_token_ms": 1.2306396026611328,
+         "prompt_per_second": 812.5855838196672,
+         "predicted_n": 128,
+         "predicted_ms": 2507.638,
+         "predicted_per_token_ms": 19.745181102362203,
+         "predicted_per_second": 50.64526857544829
+        }
+       }
+      ],
+      "gpu_warm-up at 65536": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1711
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 21662,
+        "shared": 78
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 21978,
+        "shared": 17
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_warm-up at 65536": 86,
+      "dedicated_mib_warm-up at 65536": {
+       "luid_0x00000000_0x000142ed_phys_0": 21978,
+       "luid_0x00000000_0x00013f5a_phys_0": 21662
+      },
+      "stopped": "2026-10-22 01:29:13"
+     }
+    ],
+    "finished": "2026-10-22 01:29"
+   },
+   {
+    "preset": "qwen3.6-27b",
+    "ini": "models.input.ini",
+    "model": "Qwen3.6-27B-UD-Q4_K_XL",
+    "quant": "UD-Q4_K_XL",
+    "file_type": "Q4_K_M",
+    "gguf": "C:\\Users\\claude\\models-b60\\qwen3.6-27b\\Qwen3.6-27B-UD-Q4_K_XL.gguf",
+    "gguf_gb": 17.612564704,
+    "gguf_name": "Qwen3.6-27B",
+    "arch": "qwen35",
+    "version": "0.5.0-dev (build 55, commit 4fcdeee)",
+    "version_line": "version: 0.5.0-dev (build 55, commit 4fcdeee)",
+    "built_with": "built with MSVC 19.29.30146.0 for x64",
+    "date": "2026-10-22",
+    "started": "2026-10-22 01:29",
+    "max_len": 65536,
+    "gen": 128,
+    "ncmoe": "0",
+    "mmproj": "qwen3.6-27b\\mmproj-F16.gguf",
+    "rows": [
+     {
+      "context": 0,
+      "prompt_tokens": 0,
+      "cells": {
+       "1": {
+        "n": 1,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 256 tokens: warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}; warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_"
+       },
+       "2": {
+        "n": 2,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 256 tokens: warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}; warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_"
+       },
+       "4": {
+        "n": 4,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 256 tokens: warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}; warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_"
+       },
+       "8": {
+        "n": 8,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 256 tokens: warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}; warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_"
+       },
+       "16": {
+        "n": 16,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 256 tokens: warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}; warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_"
+       }
+      },
+      "tried": [
+       {
+        "np": 16,
+        "c": 135168,
+        "why": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}"
+       },
+       {
+        "np": 16,
+        "c": 4096,
+        "why": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}"
+       },
+       {
+        "np": 8,
+        "c": 2048,
+        "why": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}"
+       },
+       {
+        "np": 4,
+        "c": 1024,
+        "why": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}"
+       },
+       {
+        "np": 2,
+        "c": 512,
+        "why": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}"
+       },
+       {
+        "np": 1,
+        "c": 256,
+        "why": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}"
+       }
+      ],
+      "error": "no --parallel came up for this context"
+     },
+     {
+      "context": 8192,
+      "prompt_tokens": 8192,
+      "cells": {
+       "1": {
+        "n": 1,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 8,448 tokens: -c 135,168 >= 256, which did not fit; -c 67,584 >= 256, which did not fit; -c 33,792 >= 256, which did not fit; -c 16,896 >= 256, which did not fit; -c 8,448 >= 256, which did not fit"
+       },
+       "2": {
+        "n": 2,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 8,448 tokens: -c 135,168 >= 256, which did not fit; -c 67,584 >= 256, which did not fit; -c 33,792 >= 256, which did not fit; -c 16,896 >= 256, which did not fit; -c 8,448 >= 256, which did not fit"
+       },
+       "4": {
+        "n": 4,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 8,448 tokens: -c 135,168 >= 256, which did not fit; -c 67,584 >= 256, which did not fit; -c 33,792 >= 256, which did not fit; -c 16,896 >= 256, which did not fit; -c 8,448 >= 256, which did not fit"
+       },
+       "8": {
+        "n": 8,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 8,448 tokens: -c 135,168 >= 256, which did not fit; -c 67,584 >= 256, which did not fit; -c 33,792 >= 256, which did not fit; -c 16,896 >= 256, which did not fit; -c 8,448 >= 256, which did not fit"
+       },
+       "16": {
+        "n": 16,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 8,448 tokens: -c 135,168 >= 256, which did not fit; -c 67,584 >= 256, which did not fit; -c 33,792 >= 256, which did not fit; -c 16,896 >= 256, which did not fit; -c 8,448 >= 256, which did not fit"
+       }
+      },
+      "tried": [
+       {
+        "np": 16,
+        "c": 135168,
+        "why": "-c 135,168 >= 256, which did not fit"
+       },
+       {
+        "np": 8,
+        "c": 67584,
+        "why": "-c 67,584 >= 256, which did not fit"
+       },
+       {
+        "np": 4,
+        "c": 33792,
+        "why": "-c 33,792 >= 256, which did not fit"
+       },
+       {
+        "np": 2,
+        "c": 16896,
+        "why": "-c 16,896 >= 256, which did not fit"
+       },
+       {
+        "np": 1,
+        "c": 8448,
+        "why": "-c 8,448 >= 256, which did not fit"
+       }
+      ],
+      "error": "no --parallel came up for this context"
+     },
+     {
+      "context": 32768,
+      "prompt_tokens": 32768,
+      "cells": {
+       "1": {
+        "n": 1,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 33,024 tokens: -c 528,384 >= 256, which did not fit; -c 264,192 >= 256, which did not fit; -c 132,096 >= 256, which did not fit; -c 66,048 >= 256, which did not fit; -c 33,024 >= 256, which did not fit"
+       },
+       "2": {
+        "n": 2,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 33,024 tokens: -c 528,384 >= 256, which did not fit; -c 264,192 >= 256, which did not fit; -c 132,096 >= 256, which did not fit; -c 66,048 >= 256, which did not fit; -c 33,024 >= 256, which did not fit"
+       },
+       "4": {
+        "n": 4,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 33,024 tokens: -c 528,384 >= 256, which did not fit; -c 264,192 >= 256, which did not fit; -c 132,096 >= 256, which did not fit; -c 66,048 >= 256, which did not fit; -c 33,024 >= 256, which did not fit"
+       },
+       "8": {
+        "n": 8,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 33,024 tokens: -c 528,384 >= 256, which did not fit; -c 264,192 >= 256, which did not fit; -c 132,096 >= 256, which did not fit; -c 66,048 >= 256, which did not fit; -c 33,024 >= 256, which did not fit"
+       },
+       "16": {
+        "n": 16,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 33,024 tokens: -c 528,384 >= 256, which did not fit; -c 264,192 >= 256, which did not fit; -c 132,096 >= 256, which did not fit; -c 66,048 >= 256, which did not fit; -c 33,024 >= 256, which did not fit"
+       }
+      },
+      "tried": [
+       {
+        "np": 16,
+        "c": 528384,
+        "why": "-c 528,384 >= 256, which did not fit"
+       },
+       {
+        "np": 8,
+        "c": 264192,
+        "why": "-c 264,192 >= 256, which did not fit"
+       },
+       {
+        "np": 4,
+        "c": 132096,
+        "why": "-c 132,096 >= 256, which did not fit"
+       },
+       {
+        "np": 2,
+        "c": 66048,
+        "why": "-c 66,048 >= 256, which did not fit"
+       },
+       {
+        "np": 1,
+        "c": 33024,
+        "why": "-c 33,024 >= 256, which did not fit"
+       }
+      ],
+      "error": "no --parallel came up for this context"
+     },
+     {
+      "context": 65536,
+      "prompt_tokens": 65408,
+      "cells": {
+       "1": {
+        "n": 1,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 65,792 tokens: -c 1,052,672 >= 256, which did not fit; -c 526,336 >= 256, which did not fit; -c 263,168 >= 256, which did not fit; -c 131,584 >= 256, which did not fit; -c 65,792 >= 256, which did not fit"
+       },
+       "2": {
+        "n": 2,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 65,792 tokens: -c 1,052,672 >= 256, which did not fit; -c 526,336 >= 256, which did not fit; -c 263,168 >= 256, which did not fit; -c 131,584 >= 256, which did not fit; -c 65,792 >= 256, which did not fit"
+       },
+       "4": {
+        "n": 4,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 65,792 tokens: -c 1,052,672 >= 256, which did not fit; -c 526,336 >= 256, which did not fit; -c 263,168 >= 256, which did not fit; -c 131,584 >= 256, which did not fit; -c 65,792 >= 256, which did not fit"
+       },
+       "8": {
+        "n": 8,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 65,792 tokens: -c 1,052,672 >= 256, which did not fit; -c 526,336 >= 256, which did not fit; -c 263,168 >= 256, which did not fit; -c 131,584 >= 256, which did not fit; -c 65,792 >= 256, which did not fit"
+       },
+       "16": {
+        "n": 16,
+        "mark": "\u2014",
+        "reason": "no llama-server came up with even 1 slot of 65,792 tokens: -c 1,052,672 >= 256, which did not fit; -c 526,336 >= 256, which did not fit; -c 263,168 >= 256, which did not fit; -c 131,584 >= 256, which did not fit; -c 65,792 >= 256, which did not fit"
+       }
+      },
+      "tried": [
+       {
+        "np": 16,
+        "c": 1052672,
+        "why": "-c 1,052,672 >= 256, which did not fit"
+       },
+       {
+        "np": 8,
+        "c": 526336,
+        "why": "-c 526,336 >= 256, which did not fit"
+       },
+       {
+        "np": 4,
+        "c": 263168,
+        "why": "-c 263,168 >= 256, which did not fit"
+       },
+       {
+        "np": 2,
+        "c": 131584,
+        "why": "-c 131,584 >= 256, which did not fit"
+       },
+       {
+        "np": 1,
+        "c": 65792,
+        "why": "-c 65,792 >= 256, which did not fit"
+       }
+      ],
+      "error": "no --parallel came up for this context"
+     }
+    ],
+    "problems": [],
+    "servers": [
+     {
+      "np": 16,
+      "c": 135168,
+      "slot_tokens": 8448,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-27b\\Qwen3.6-27B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-27b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 135168 -np 16 --jinja -lm none --mmproj C:\\Users\\claude\\models-b60\\qwen3.6-27b\\mmproj-F16.gguf",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-27b-20261022-0129-np16-c135168.console.log",
+      "shared_mib_before": 895,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 886
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 27860,
+      "ready_s": 14.2,
+      "n_ctx_slot": 8448,
+      "slots": 16,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1665
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 14009,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 14658,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 14658,
+       "luid_0x00000000_0x00013f5a_phys_0": 14009
+      },
+      "failed": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}",
+      "stopped": "2026-10-22 01:29:38"
+     },
+     {
+      "np": 16,
+      "c": 4096,
+      "slot_tokens": 256,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-27b\\Qwen3.6-27B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-27b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 4096 -np 16 --jinja -lm none --mmproj C:\\Users\\claude\\models-b60\\qwen3.6-27b\\mmproj-F16.gguf",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-27b-20261022-0129-np16-c4096.console.log",
+      "shared_mib_before": 895,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 886
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 30976,
+      "ready_s": 9.2,
+      "n_ctx_slot": 256,
+      "slots": 16,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1642
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 9904,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 10553,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 10553,
+       "luid_0x00000000_0x00013f5a_phys_0": 9904
+      },
+      "failed": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}",
+      "stopped": "2026-10-22 01:29:56"
+     },
+     {
+      "np": 8,
+      "c": 2048,
+      "slot_tokens": 256,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-27b\\Qwen3.6-27B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-27b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 2048 -np 8 --jinja -lm none --mmproj C:\\Users\\claude\\models-b60\\qwen3.6-27b\\mmproj-F16.gguf",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-27b-20261022-0129-np8-c2048.console.log",
+      "shared_mib_before": 882,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 873
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 11392,
+      "ready_s": 9.6,
+      "n_ctx_slot": 256,
+      "slots": 8,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1606
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 9217,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 9816,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 9816,
+       "luid_0x00000000_0x00013f5a_phys_0": 9217
+      },
+      "failed": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}",
+      "stopped": "2026-10-22 01:30:15"
+     },
+     {
+      "np": 4,
+      "c": 1024,
+      "slot_tokens": 256,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-27b\\Qwen3.6-27B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-27b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 1024 -np 4 --jinja -lm none --mmproj C:\\Users\\claude\\models-b60\\qwen3.6-27b\\mmproj-F16.gguf",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-27b-20261022-0129-np4-c1024.console.log",
+      "shared_mib_before": 883,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 874
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 31524,
+      "ready_s": 9.7,
+      "n_ctx_slot": 256,
+      "slots": 4,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1598
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 8898,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 9472,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 9472,
+       "luid_0x00000000_0x00013f5a_phys_0": 8898
+      },
+      "failed": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}",
+      "stopped": "2026-10-22 01:30:33"
+     },
+     {
+      "np": 2,
+      "c": 512,
+      "slot_tokens": 256,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-27b\\Qwen3.6-27B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-27b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 512 -np 2 --jinja -lm none --mmproj C:\\Users\\claude\\models-b60\\qwen3.6-27b\\mmproj-F16.gguf",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-27b-20261022-0129-np2-c512.console.log",
+      "shared_mib_before": 883,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 874
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 25712,
+      "ready_s": 10.2,
+      "n_ctx_slot": 256,
+      "slots": 2,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1594
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 8738,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 9300,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 9300,
+       "luid_0x00000000_0x00013f5a_phys_0": 8738
+      },
+      "failed": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}",
+      "stopped": "2026-10-22 01:30:52"
+     },
+     {
+      "np": 1,
+      "c": 256,
+      "slot_tokens": 256,
+      "command": "C:\\Users\\claude\\llama.cpp-b60\\vk-allreduce-fa\\llama.cpp\\build\\bin\\Release\\llama-server.exe -m C:\\Users\\claude\\models-b60\\qwen3.6-27b\\Qwen3.6-27B-UD-Q4_K_XL.gguf --host 127.0.0.1 --port 11446 --alias qwen3.6-27b -dev Vulkan1,Vulkan2 -sm layer -ngl 99 -ncmoe 0 -fa on -c 256 -np 1 --jinja -lm none --mmproj C:\\Users\\claude\\models-b60\\qwen3.6-27b\\mmproj-F16.gguf",
+      "console": "concurrency-sweep-llamacpp-qwen3.6-27b-20261022-0129-np1-c256.console.log",
+      "shared_mib_before": 892,
+      "gpu_before": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 883
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 4,
+        "shared": 9
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "pid": 14600,
+      "ready_s": 10.2,
+      "n_ctx_slot": 256,
+      "slots": 1,
+      "gpu_load": {
+       "luid_0x00000000_0x00013b1b_phys_0": {
+        "dedicated": 0,
+        "shared": 1591
+       },
+       "luid_0x00000000_0x00013f29_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       },
+       "luid_0x00000000_0x00013f5a_phys_0": {
+        "dedicated": 8571,
+        "shared": 2
+       },
+       "luid_0x00000000_0x000142ed_phys_0": {
+        "dedicated": 9127,
+        "shared": 10
+       },
+       "luid_0x00000000_0x0001467d_phys_0": {
+        "dedicated": 0,
+        "shared": 0
+       }
+      },
+      "shared_rise_mib_load": 3,
+      "dedicated_mib_load": {
+       "luid_0x00000000_0x000142ed_phys_0": 9127,
+       "luid_0x00000000_0x00013f5a_phys_0": 8571
+      },
+      "failed": "warm-up failed: HTTP 400: {\"error\":{\"code\":400,\"message\":\"[json.exception.type_error.302] type must be string, but is array\",\"type\":\"invalid_request_error\"}}",
+      "stopped": "2026-10-22 01:31:11"
+     }
+    ],
+    "finished": "2026-10-22 01:31"
+   }
+  ],
+  "skipped": [
+   {
+    "preset": "qwen3.5-27b",
+    "why": "engine = vllm: no llama.cpp (GGUF) preset of this model in models.input.ini"
+   }
+  ],
+  "llama_server_version": [
+   "version: 0.5.0-dev (build 55, commit 4fcdeee)",
+   "built with MSVC 19.29.30146.0 for x64"
+  ]
+ }
+]

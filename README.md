@@ -98,6 +98,25 @@ on PCIe Gen5 x8 each, Windows 11, Intel driver 32.0.101.9033.
 
 Aggregate decode tok/s: all requests' generated tokens while all were decoding together, divided by that time, prefill excluded; 128 tokens generated per request, temperature 0, prefix cache hits measured 0. Prefill is one request. A dash means N x (context + 128) is more than the KV cache vLLM reported, so the cell was not run. The star at 8K x 16 on the 27Bs: two preemptions, the requests never all decoded together. The dip at 8 requests on both 27Bs is real: on two Windows cards vLLM captures decode graphs for batch 1, 2 and 4 only, so 8 and 16 run without graphs; the 7B shows no dip. vLLM 0.1.dev1+g276fbcff2.d20261010.xpu, 2026-10-21/22; raw numbers in `server/`concurrency-sweep.output.json.
 
+*Qwen2.5-Coder-7B Q8_0 on llama.cpp*, --parallel 16, -c 135,168 (8,448 tokens per slot); the single-stream race in the table above ran one slot
+
+| context | 1 | 2 | 4 | 8 | 16 | prefill tok/s, 1 req |
+|---|---:|---:|---:|---:|---:|---:|
+| 0 | 42.9 | 81.8 | 159.3 | 263.2 | 174.9 | 314 |
+| 8K | 39.5 | 73.1 | 129.3 | 67.2 | 102.9 | 2,526 |
+| 32K | 32.6 | 56.1 | 82.1 | 24.9 | — | 1,175 |
+
+*Qwen3.6-35B-A3B UD-Q4_K_XL on llama.cpp*, the fastest big model on these cards; 64K did not come up on two cards
+
+| context | 1 | 2 | 4 | 8 | 16 | prefill tok/s, 1 req |
+|---|---:|---:|---:|---:|---:|---:|
+| 0 | 72.1 | 113.4 | 159.5 | 198.6 | 139.1 | 111 |
+| 8K | 68.7 | 101.0 | 138.3 | 122.3 | 58.8 | 2,254 |
+| 32K | 59.6 | 86.8 | 112.7 | 96.7 | 114.3* | 1,312 |
+| 64K | — | — | — | — | — |  |
+
+llama.cpp, same two cards, same measure: aggregate decode tok/s while all requests were decoding together, prefill excluded, 128 tokens per request. llama-server prefills prompts one slot at a time, so its raw throughput with prefill included is far below vLLM's at 8K and 32K (the 7B at 8K x 16: 25 tok/s raw against vLLM's 92). A dash means that many slots of that context did not come up on the two cards. The dips at 8 and 16 streams are real and repeatable on this build. llama-server 0.5.0-dev (build 55, vk-allreduce-fa), 2026-10-22; raw numbers in `server/`concurrency-sweep-llamacpp.output.json.
+
 ## 2026-10-13 (evening): both cards in one process - ahead of Linux on decode too
 
 On Windows a kernel cannot touch another process's memory and IPC handles are refused for both card and host memory,

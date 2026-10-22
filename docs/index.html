@@ -157,6 +157,28 @@
         <tr><td>32K</td><td class="n">49.2</td><td class="n">87.4</td><td class="n">143.6</td><td class="n win">205.1</td><td class="n">—</td><td class="n">5,417</td></tr>
       </tbody>
     </table></div>
+    <h3 style="font-size:17px;margin:14px 0 6px;color:var(--head)">Qwen2.5-Coder-7B Q8_0 on llama.cpp</h3>
+    <p class="sub">--parallel 16, -c 135,168 (8,448 tokens per slot); the single-stream race in the table above ran one slot</p>
+    <div class="box"><table>
+      <thead><tr><th>Context</th><th class="n">1</th><th class="n">2</th><th class="n">4</th><th class="n">8</th><th class="n">16</th><th class="n">Prefill, 1 req</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td class="n">42.9</td><td class="n">81.8</td><td class="n">159.3</td><td class="n win">263.2</td><td class="n">174.9</td><td class="n">314</td></tr>
+        <tr><td>8K</td><td class="n">39.5</td><td class="n">73.1</td><td class="n win">129.3</td><td class="n">67.2</td><td class="n">102.9</td><td class="n">2,526</td></tr>
+        <tr><td>32K</td><td class="n">32.6</td><td class="n">56.1</td><td class="n win">82.1</td><td class="n">24.9</td><td class="n">—</td><td class="n">1,175</td></tr>
+      </tbody>
+    </table></div>
+    <h3 style="font-size:17px;margin:14px 0 6px;color:var(--head)">Qwen3.6-35B-A3B UD-Q4_K_XL on llama.cpp</h3>
+    <p class="sub">the fastest big model on these cards; 64K did not come up on two cards</p>
+    <div class="box"><table>
+      <thead><tr><th>Context</th><th class="n">1</th><th class="n">2</th><th class="n">4</th><th class="n">8</th><th class="n">16</th><th class="n">Prefill, 1 req</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td class="n">72.1</td><td class="n">113.4</td><td class="n">159.5</td><td class="n win">198.6</td><td class="n">139.1</td><td class="n">111</td></tr>
+        <tr><td>8K</td><td class="n">68.7</td><td class="n">101.0</td><td class="n win">138.3</td><td class="n">122.3</td><td class="n">58.8</td><td class="n">2,254</td></tr>
+        <tr><td>32K</td><td class="n">59.6</td><td class="n">86.8</td><td class="n">112.7</td><td class="n">96.7</td><td class="n win">114.3*</td><td class="n">1,312</td></tr>
+        <tr><td>64K</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n"></td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">llama.cpp, same two cards, same measure: aggregate decode tok/s while all requests were decoding together, prefill excluded, 128 tokens per request. llama-server prefills prompts one slot at a time, so its raw throughput with prefill included is far below vLLM's at 8K and 32K (the 7B at 8K x 16: 25 tok/s raw against vLLM's 92). A dash means that many slots of that context did not come up on the two cards. The dips at 8 and 16 streams are real and repeatable on this build. llama-server 0.5.0-dev (build 55, vk-allreduce-fa), 2026-10-22; raw numbers in server/concurrency-sweep-llamacpp.output.json.</p>
     <p class="note">Aggregate decode tok/s: all requests' generated tokens while all were decoding together, divided by that time, prefill excluded; 128 tokens generated per request, temperature 0, prefix cache hits measured 0. Prefill is one request. A dash means N x (context + 128) is more than the KV cache vLLM reported, so the cell was not run. The star at 8K x 16 on the 27Bs: two preemptions, the requests never all decoded together. The dip at 8 requests on both 27Bs is real: on two Windows cards vLLM captures decode graphs for batch 1, 2 and 4 only, so 8 and 16 run without graphs; the 7B shows no dip. vLLM 0.1.dev1+g276fbcff2.d20261010.xpu, 2026-10-21/22; raw numbers in server/concurrency-sweep.output.json.</p>
   </section>
   <section>
