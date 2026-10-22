@@ -1,0 +1,148 @@
+<title>Two B60s on Windows</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* layout: one reading column, each table in its own scroll box, numbers in a mono face so columns line up */
+  :root {
+    --bg: #0b0f14; --panel: #121820; --row: #0e131a; --line: #1f2a36;
+    --fg: #e4ebf2; --dim: #8a97a6; --head: #ffffff; --win: #7fd8a4; --link: #8ab8ff;
+    --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) {
+    --bg: #f6f7f9; --panel: #ffffff; --row: #f0f2f5; --line: #d8dde4; --fg: #1a2230; --dim: #5b6775; --head: #0b0f14; --win: #1d7a4a; --link: #1a56c4; color-scheme: light } }
+  :root[data-theme="light"] {
+    --bg: #f6f7f9; --panel: #ffffff; --row: #f0f2f5; --line: #d8dde4; --fg: #1a2230; --dim: #5b6775; --head: #0b0f14; --win: #1d7a4a; --link: #1a56c4; color-scheme: light }
+  body { background: var(--bg); color: var(--fg); font: 16px/1.5 var(--sans); padding-block: 32px 64px;
+         padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  main { max-width: 980px; margin: 0 auto; display: grid; gap: 40px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; color: var(--head); text-wrap: balance; }
+  h2 { font-size: 21px; margin: 0 0 4px; color: var(--head); text-wrap: balance; }
+  p { margin: 0; max-width: 70ch; }
+  .rig { color: var(--dim); font-size: 15px; }
+  .sub { color: var(--dim); font-size: 14px; margin-bottom: 14px; }
+  .box { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; }
+  th, td { text-align: left; padding: 12px 16px; border-top: 1px solid var(--line); white-space: nowrap; }
+  th { color: var(--head); font-weight: 600; border-top: 0; background: var(--panel); }
+  tbody tr:nth-child(odd) td { background: var(--row); }
+  td.n, th.n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  td.win { color: var(--win); font-weight: 500; }
+  .note { color: var(--dim); font-size: 14px; margin-top: 10px; max-width: 80ch; }
+  ol { margin: 0; padding-left: 22px; display: grid; gap: 10px; max-width: 80ch; }
+  code { font-family: var(--mono); font-size: 0.92em; }
+  a { color: var(--link); }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+  .links { display: grid; gap: 6px; }
+  @media (max-width: 480px) { h1 { font-size: 24px; } th, td { padding: 10px 12px; font-size: 14px; } }
+</style>
+<main>
+  <header>
+    <h1>vLLM and llama.cpp on two Arc Pro B60s, native Windows</h1>
+    <p class="rig">Measured 10 to 13 October 2026 on one machine: 2x Intel Arc Pro B60 24 GB, PCIe Gen5 x8 each, Core Ultra 5 250K, 32 GB RAM, Windows 11, Intel driver 32.0.101.9033. "Linux" means the same board booted into Ubuntu with Intel's llm-scaler vLLM 0.26.0-b2 and stock oneCCL (all_reduce size threshold raised). Decode is tok/s while generating 128 to 256 tokens, greedy. Prefill is tok/s over the prompt. Depth is the number of tokens already in context. Green marks the faster side.</p>
+  </header>
+
+  <section>
+    <h2>Two-card all_reduce</h2>
+    <p class="sub">Windows port, first version and now, against Intel's oneCCL on Linux, same board</p>
+    <div class="box"><table>
+      <thead><tr><th>Size</th><th class="n">Windows, first port</th><th class="n">Windows, now</th><th class="n">Linux, oneCCL</th></tr></thead>
+      <tbody>
+        <tr><td>14.7 MB (prefill chunk)</td><td class="n">4,204 us</td><td class="n win">1,289 us</td><td class="n">~2,720 us</td></tr>
+        <tr><td>3.7 MB</td><td class="n">887 us</td><td class="n win">319 us</td><td class="n">681 us</td></tr>
+        <tr><td>7B decode size</td><td class="n">28 us</td><td class="n win">7 us</td><td class="n">13 us</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">The 7 us number is both tensor-parallel ranks in one process, so both cards' kernels read and write the same pinned host buffer. The 28 us was two worker processes relayed by a CPU thread.</p>
+  </section>
+
+  <section>
+    <h2>Qwen2.5-Coder-7B bf16, two cards</h2>
+    <p class="sub">vLLM, tensor parallel, greedy tokens identical between executors. tok/s by context depth</p>
+    <div class="box"><table>
+      <thead><tr><th>Context</th><th class="n">Decode, Windows</th><th class="n">Decode, Linux</th><th class="n">Prefill, Windows</th><th class="n">Prefill, Linux</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td class="n win">56.6</td><td class="n">51.5</td><td class="n"></td><td class="n"></td></tr>
+        <tr><td>4K</td><td class="n win">54.9</td><td class="n">50.2</td><td class="n win">7,589</td><td class="n">6,019</td></tr>
+        <tr><td>16K</td><td class="n win">52.3</td><td class="n">50.2</td><td class="n win">6,561</td><td class="n">5,472</td></tr>
+        <tr><td>32K</td><td class="n win">49.4</td><td class="n">44.7</td><td class="n win">5,456</td><td class="n">4,729</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Decode step 17.8 ms, within about 4% of the cards' memory-bandwidth bound. Prefill at 4K depth by chunk size 512 / 1024 / 2048 / 4096: 6,931 / 7,497 / 7,598 / 7,761 tok/s.</p>
+  </section>
+
+  <section>
+    <h2>Bigger models, two cards, decode</h2>
+    <p class="sub">vLLM on Windows. Two worker processes against both ranks in one process. tok/s</p>
+    <div class="box"><table>
+      <thead><tr><th>Model</th><th class="n">Two processes</th><th class="n">One process</th></tr></thead>
+      <tbody>
+        <tr><td>Qwen3.5-27B GPTQ-Int4</td><td class="n">24.6</td><td class="n win">29.0</td></tr>
+        <tr><td>Granite 4.2 30B GPTQ-Int4</td><td class="n">36.5</td><td class="n win">44.6</td></tr>
+        <tr><td>Qwen2.5-72B-Instruct AWQ</td><td class="n">17.5</td><td class="n win">20.1</td></tr>
+        <tr><td>Qwen3.5-4B</td><td class="n">64.8</td><td class="n win">87.1</td></tr>
+        <tr><td>gpt-oss-20b (MoE, ~3.6B active)</td><td class="n win">97.7</td><td class="n">70.3</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">gpt-oss-20b is the one model where two processes win: its card work is only about 6.5 ms per token, so the serialized host work and the 400 KB logits gather show. One card alone: Qwen2.5-32B AWQ 23.2 (4K context max) against 33.2 on two; Qwen2.5-14B bf16 1.8 (spilled to host RAM) against 25.1.</p>
+  </section>
+
+  <section>
+    <h2>vLLM against llama.cpp, same two cards</h2>
+    <p class="sub">Decode tok/s short and at 32K context, then seconds to the first token on a 32K-token prompt</p>
+    <div class="box"><table>
+      <thead><tr><th>Model</th><th class="n">llama.cpp, stock Vulkan</th><th class="n">llama.cpp, exchange + FA fix</th><th class="n">vLLM, Windows port</th></tr></thead>
+      <tbody>
+        <tr><td>Qwen2.5-Coder-7B (Q8_0 / bf16)</td><td class="n">43.4 / 33.1, 60.5 s</td><td class="n win">66.0 / 48.6, 30.2 s</td><td class="n">46.4 / 40.1, <span class="win">8.8 s</span></td></tr>
+        <tr><td>Qwen2.5-14B (Q4_K_M / bf16)</td><td class="n">37.9 / 22.4, 154.0 s</td><td class="n win">50.2 / 31.5, 67.2 s</td><td class="n">25.2 / 20.9, <span class="win">17.7 s</span></td></tr>
+        <tr><td>Granite 4.2 30B (Q4_K_M / GPTQ-Int4)</td><td class="n">19.8 / 13.6, 176.1 s</td><td class="n">29.3 / 20.3, 80.2 s</td><td class="n win">31.9 / 25.3, 27.8 s</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Weights only match across engines on Granite. On the other two, vLLM reads 16-bit weights against llama.cpp's 8-bit or 4-bit, which hands llama.cpp the decode. vLLM reaches the first token three to four times sooner on long prompts.</p>
+  </section>
+
+  <section>
+    <h2>llama.cpp flash attention on Xe, one card</h2>
+    <p class="sub">Qwen3-Coder-30B-A3B Q3_K_XL. pp512 tok/s at the existing context. Generation unchanged both ways: 98 / 70 / 57 / 40</p>
+    <div class="box"><table>
+      <thead><tr><th>Build</th><th class="n">0</th><th class="n">8K</th><th class="n">16K</th><th class="n">32K</th></tr></thead>
+      <tbody>
+        <tr><td>stock llama.cpp b11191, Vulkan</td><td class="n">1,707</td><td class="n">319</td><td class="n">173</td><td class="n">89</td></tr>
+        <tr><td>tile fixed to 8x16x16 on Xe</td><td class="n win">1,847</td><td class="n win">586</td><td class="n win">341</td><td class="n win">187</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">The fast prompt-processing kernel hard-codes the 16x16x16 cooperative-matrix tile, which is what Nvidia offers. Xe offers 8x16x16, the backend found no match and silently ran the scalar fallback. The tile height is now a per-device specialization constant. test-backend-ops FLASH_ATTN_EXT: 5,297 of 5,297 against the CPU reference. KV slicing on top adds 13% at 16K and 16% at 32K; through the live server on a 15.8K-token prompt, 660 against 609 tok/s.</p>
+  </section>
+
+  <section>
+    <h2>What was broken on Windows</h2>
+    <p class="sub">Seven bugs, each found by measurement. The full investigation, wrong turns included, is PORT-NOTES.md in the repo</p>
+    <ol>
+      <li><code>long</code> is 32 bits in SYCL device code under MSVC. Every cutlass-sycl flash-attention kernel killed the GPU context: the Xe copy atoms declared address builtins taking <code>long</code>, so every tensor base address reached the card with its top half cut off. Four headers changed to <code>int64_t</code>: from every kernel killing the card to 58 TFlop/s.</li>
+      <li>No card-to-card peer access on WDDM: Intel's <code>query_peer_access_wddm.cpp</code> returns false unconditionally. Host memory is the channel, through a GPU-timeline all_reduce modelled on NCCL's LL protocol: each 8-byte unit carries 4 bytes of data and a 4-byte sequence tag, so a stale cache line fails its tag and is read again. 11 us against 258 us for the host-synchronous version it replaced.</li>
+      <li>Windows renames are not atomic, so Triton's kernel cache races between ranks and one kills the other with <code>PermissionError</code>. One cache directory per rank. This hits any tensor-parallel setup on Windows, not only Intel.</li>
+      <li>Unkillable zombie workers after every clean run: DLL unload handlers destroy a static SYCL device and the OpenCL runtime spins forever releasing its context. Workers now end with <code>TerminateProcess</code>.</li>
+      <li>A GPU graph captured a host-memory collective, which recorded instead of ran. Graph capture is off for Windows with more than one card.</li>
+      <li>Two tensor-parallel workers loading one checkpoint killed each other with 0xC0000005 at a different shard every run: tensor split fed the same page-cache pages to two adapters. One host memcpy per tensor before any card sees it. Four clean 72B loads in a row after, none before, and a cold start 40 s faster.</li>
+      <li>Two processes each masked to its own card with <code>ZE_AFFINITY_MASK</code> fault on any concurrent host-to-device copy. Pick the card above the driver with <code>ONEAPI_DEVICE_SELECTOR=level_zero:N</code>.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Arc Pro B65 and B70</h2>
+    <p>The B65 has the same 20 Xe cores as the B60, with 32 GB at 608 GB/s against the B60's 456 GB/s. Decode is bandwidth-bound, so read the decode numbers above as a floor for a two-B65 rig; prefill should land about where it is. That is an inference, not a measurement. The flash-attention fix should take the same path on both cards (same 8x16x16 tile); a shape listing or a bench from any other Intel GPU is the evidence still missing.</p>
+  </section>
+
+  <section>
+    <h2>Code</h2>
+    <div class="links">
+      <a href="https://github.com/wcarsond/vllm-xpu-windows">vllm-xpu-windows</a>
+      <span class="note">the port, patches, probes, BACKEND-RACE.md and PORT-NOTES.md</span>
+      <a href="https://github.com/wcarsond/b60-flash-attention">b60-flash-attention</a>
+      <span class="note">the tile fix, the two-card Vulkan exchange, and bench-b60.ps1 to print your own depth curve next to these</span>
+      <a href="https://github.com/wcarsond/vllm">vllm, branch windows-xpu</a>
+      <span class="note">the vLLM fork with the one-process executor and the Windows exchange</span>
+    </div>
+  </section>
+</main>
