@@ -68,6 +68,36 @@ depth on two cards holds 1.5-1.7x one card out to 32K context.
 Everything here was measured on one machine: a Core Ultra 5 250K, 32 GB of RAM, two Arc Pro B60s
 on PCIe Gen5 x8 each, Windows 11, Intel driver 32.0.101.9033.
 
+**Under load: concurrent requests by context** (vLLM on two B60s, aggregate decode tok/s for all streams together, prefill excluded; 128 tokens per request)
+
+*Qwen3.6-27B GPTQ-Int4*, pulled 2026-10-21 (raydelossantos, same recipe as Qwen's own 3.5 GPTQ), 30.3 GB
+
+| context | 1 | 2 | 4 | 8 | 16 | prefill tok/s, 1 req |
+|---|---:|---:|---:|---:|---:|---:|
+| 0 | 29.1 | 55.9 | 104.1 | 79.0 | 160.1 | 238 |
+| 8K | 28.3 | 53.6 | 96.8 | 81.0 | 73.8* | 1,906 |
+| 32K | 26.8 | 48.1 | 82.1 | — | — | 1,712 |
+| 64K | 24.6 | 43.3 | — | — | — | 1,502 |
+
+*Qwen3.5-27B GPTQ-Int4*, the router's preset
+
+| context | 1 | 2 | 4 | 8 | 16 | prefill tok/s, 1 req |
+|---|---:|---:|---:|---:|---:|---:|
+| 0 | 29.1 | 55.9 | 104.1 | 76.6 | 145.5 | 232 |
+| 8K | 28.3 | 53.4 | 97.3 | 78.8 | 72.6* | 1,924 |
+| 32K | 26.7 | 48.1 | 81.5 | — | — | 1,717 |
+| 64K | 24.6 | 43.3 | — | — | — | 1,506 |
+
+*Qwen2.5-Coder-7B bf16*
+
+| context | 1 | 2 | 4 | 8 | 16 | prefill tok/s, 1 req |
+|---|---:|---:|---:|---:|---:|---:|
+| 0 | 56.6 | 111.8 | 215.3 | 412.1 | 466.4 | 499 |
+| 8K | 53.9 | 103.2 | 188.4 | 330.0 | 458.6 | 7,210 |
+| 32K | 49.2 | 87.4 | 143.6 | 205.1 | — | 5,417 |
+
+Aggregate decode tok/s: all requests' generated tokens while all were decoding together, divided by that time, prefill excluded; 128 tokens generated per request, temperature 0, prefix cache hits measured 0. Prefill is one request. A dash means N x (context + 128) is more than the KV cache vLLM reported, so the cell was not run. The star at 8K x 16 on the 27Bs: two preemptions, the requests never all decoded together. The dip at 8 requests on both 27Bs is real: on two Windows cards vLLM captures decode graphs for batch 1, 2 and 4 only, so 8 and 16 run without graphs; the 7B shows no dip. vLLM 0.1.dev1+g276fbcff2.d20261010.xpu, 2026-10-21/22; raw numbers in `server/`concurrency-sweep.output.json.
+
 ## 2026-10-13 (evening): both cards in one process - ahead of Linux on decode too
 
 On Windows a kernel cannot touch another process's memory and IPC handles are refused for both card and host memory,

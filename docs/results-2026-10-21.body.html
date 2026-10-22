@@ -116,6 +116,42 @@
   </section>
 
   <section>
+    <h2>Under load: concurrent requests by context</h2>
+    <p class="sub">vLLM on two B60s, decode tok/s for all streams together. Columns are concurrent requests</p>
+    <h3 style="font-size:17px;margin:14px 0 6px;color:var(--head)">Qwen3.6-27B GPTQ-Int4</h3>
+    <p class="sub">pulled 2026-10-21 (raydelossantos, same recipe as Qwen's own 3.5 GPTQ), 30.3 GB</p>
+    <div class="box"><table>
+      <thead><tr><th>Context</th><th class="n">1</th><th class="n">2</th><th class="n">4</th><th class="n">8</th><th class="n">16</th><th class="n">Prefill, 1 req</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td class="n">29.1</td><td class="n">55.9</td><td class="n">104.1</td><td class="n">79.0</td><td class="n win">160.1</td><td class="n">238</td></tr>
+        <tr><td>8K</td><td class="n">28.3</td><td class="n">53.6</td><td class="n win">96.8</td><td class="n">81.0</td><td class="n">73.8*</td><td class="n">1,906</td></tr>
+        <tr><td>32K</td><td class="n">26.8</td><td class="n">48.1</td><td class="n win">82.1</td><td class="n">—</td><td class="n">—</td><td class="n">1,712</td></tr>
+        <tr><td>64K</td><td class="n">24.6</td><td class="n win">43.3</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">1,502</td></tr>
+      </tbody>
+    </table></div>
+    <h3 style="font-size:17px;margin:14px 0 6px;color:var(--head)">Qwen3.5-27B GPTQ-Int4</h3>
+    <p class="sub">the router's preset</p>
+    <div class="box"><table>
+      <thead><tr><th>Context</th><th class="n">1</th><th class="n">2</th><th class="n">4</th><th class="n">8</th><th class="n">16</th><th class="n">Prefill, 1 req</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td class="n">29.1</td><td class="n">55.9</td><td class="n">104.1</td><td class="n">76.6</td><td class="n win">145.5</td><td class="n">232</td></tr>
+        <tr><td>8K</td><td class="n">28.3</td><td class="n">53.4</td><td class="n win">97.3</td><td class="n">78.8</td><td class="n">72.6*</td><td class="n">1,924</td></tr>
+        <tr><td>32K</td><td class="n">26.7</td><td class="n">48.1</td><td class="n win">81.5</td><td class="n">—</td><td class="n">—</td><td class="n">1,717</td></tr>
+        <tr><td>64K</td><td class="n">24.6</td><td class="n win">43.3</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">1,506</td></tr>
+      </tbody>
+    </table></div>
+    <h3 style="font-size:17px;margin:14px 0 6px;color:var(--head)">Qwen2.5-Coder-7B bf16</h3>
+    <div class="box"><table>
+      <thead><tr><th>Context</th><th class="n">1</th><th class="n">2</th><th class="n">4</th><th class="n">8</th><th class="n">16</th><th class="n">Prefill, 1 req</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td class="n">56.6</td><td class="n">111.8</td><td class="n">215.3</td><td class="n">412.1</td><td class="n win">466.4</td><td class="n">499</td></tr>
+        <tr><td>8K</td><td class="n">53.9</td><td class="n">103.2</td><td class="n">188.4</td><td class="n">330.0</td><td class="n win">458.6</td><td class="n">7,210</td></tr>
+        <tr><td>32K</td><td class="n">49.2</td><td class="n">87.4</td><td class="n">143.6</td><td class="n win">205.1</td><td class="n">—</td><td class="n">5,417</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Aggregate decode tok/s: all requests' generated tokens while all were decoding together, divided by that time, prefill excluded; 128 tokens generated per request, temperature 0, prefix cache hits measured 0. Prefill is one request. A dash means N x (context + 128) is more than the KV cache vLLM reported, so the cell was not run. The star at 8K x 16 on the 27Bs: two preemptions, the requests never all decoded together. The dip at 8 requests on both 27Bs is real: on two Windows cards vLLM captures decode graphs for batch 1, 2 and 4 only, so 8 and 16 run without graphs; the 7B shows no dip. vLLM 0.1.dev1+g276fbcff2.d20261010.xpu, 2026-10-21/22; raw numbers in server/concurrency-sweep.output.json.</p>
+  </section>
+  <section>
     <h2>What was broken on Windows</h2>
     <p class="sub">Seven bugs, each found by measurement. The full investigation, wrong turns included, is PORT-NOTES.md in the repo</p>
     <ol>
