@@ -3,6 +3,7 @@ page can show vLLM against llama.cpp under load, not only single stream.
 
 Usage:  .venv312\Scripts\python.exe server\concurrency-sweep-llamacpp.input.py <preset>[+<preset>] [contexts=0,8192,32768,65536] [requests=1,2,4,8,16] [gen=128]
         also: budget=<minutes for the whole run, gate waits included, default 180> cellcap=<seconds, default 400>
+              mmproj=0 (start WITHOUT the preset's vision projector: a text-only benchmark, said in the block)
         Appends to server\concurrency-sweep-llamacpp.output.md (tables) and server\concurrency-sweep-llamacpp.output.json
         (every cell's raw numbers); each llama-server's own output goes to
         server\concurrency-sweep-llamacpp-<preset>-<stamp>-np<N>-c<C>.console.log.
@@ -38,6 +39,11 @@ the next row's server when that fits (one load fewer). A GGUF that model-store.p
 followed. Rows above the preset's max_len are left out and the row at max_len is trimmed to max_len - gen, as in the
 vLLM sweep, so the two tables line up row for row.
 
+mmproj=0 (2026-10-22 01:50): with --mmproj loaded, this build (0.5.0-dev build 55) answers every /v1/completions whose
+prompt is a token-id array with HTTP 400 "[json.exception.type_error.302] type must be string, but is array" (the
+multimodal path reads prompt as a string), so qwen3.6-27b's whole block came out "—". Sending text instead would
+re-tokenize and lose the exact counts, so the preset is run without its mmproj; the block's text says so.
+
 Gates before any card work (polled every 60 s until 20 min before the budget ends; then the run heading says so and it
 stops): (1) no vllm.exe process exists and nothing listens on 11445 (the vLLM sweep is done), (2) no python process with
 train.py / chantrain.py / predict.py in its command line, (3) http://127.0.0.1:11434/router/status reports
@@ -53,6 +59,7 @@ PORT = 11446
 BASE = f"http://127.0.0.1:{PORT}"
 VLLM_SWEEP_PORT = 11445
 SPILL_MIB = 1536
+NO_MMPROJ = False               # mmproj=0 on the command line
 T0_RUN = time.time()
 
 # the vLLM sweep, imported whole (it imports the router in turn); only its pure functions are used, never its
@@ -436,7 +443,10 @@ def write_block(b, requests):
              f"-ncmoe {b['ncmoe']}, -fa on{', with its mmproj' if b.get('mmproj') else ''}) on :{PORT} with only -c and "
              f"--parallel changed, per row: {per_row or 'none came up'}. Build: `{b['version_line']}`"
              f"{' (' + b['built_with'] + ')' if b.get('built_with') else ''}. {b['gen']} tokens generated per request "
-             f"(greedy, ignore_eos).", "",
+             f"(greedy, ignore_eos)." +
+             (f" TEXT-ONLY: started without the preset's mmproj (`{b['mmproj_dropped']}`): with it loaded this build "
+              f"rejects /v1/completions token-id prompts (HTTP 400 type_error.302, \"type must be string, but is "
+              f"array\"), which made the {b['date']} 01:29 block all —." if b.get("mmproj_dropped") else ""), "",
              "Aggregate decode tok/s (all requests' tokens while all were decoding together, divided by that time; "
              "prefill excluded):", "", table("decode_tps"), "",
              "Raw aggregate tok/s (all generated tokens / wall time from first send to last completion, prefill included):",
@@ -480,6 +490,7 @@ def sweep(preset, cfg, contexts, requests, gen, run, deadline, cellcap, version)
         return
     cfg = dict(cfg)
     cfg["gguf"] = str(gguf)
+    mmproj_dropped = cfg.pop("mmproj", None) if NO_MMPROJ else None
     max_len = int(cfg["max_len"])
     try:
         meta = gguf_meta(gguf)
@@ -493,7 +504,7 @@ def sweep(preset, cfg, contexts, requests, gen, run, deadline, cellcap, version)
          "arch": meta.get("general.architecture"), "version": re.sub(r"^version:\s*(\d+)\s", r"b\1 ", version[0]).replace("version: ", ""),
          "version_line": version[0], "built_with": version[1], "date": datetime.date.today().isoformat(),
          "started": datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), "max_len": max_len, "gen": gen,
-         "ncmoe": cfg.get("ncmoe", "0"), "mmproj": cfg.get("mmproj"), "rows": [], "problems": [], "servers": []}
+         "ncmoe": cfg.get("ncmoe", "0"), "mmproj": cfg.get("mmproj"), "mmproj_dropped": mmproj_dropped, "rows": [], "problems": [], "servers": []}
     if note:
         b["problems"].append(note + " (the router's own start of this preset would fail)")
     run["blocks"].append(b)
@@ -634,11 +645,14 @@ def main():
     contexts = [int(x) for x in kv.get("contexts", "0,8192,32768,65536").replace("+", ",").split(",")]
     requests = [int(x) for x in kv.get("requests", "1,2,4,8,16").replace("+", ",").split(",")]
     gen = int(kv.get("gen", "128"))
+    global NO_MMPROJ
+    NO_MMPROJ = kv.get("mmproj", "1").lower() in ("0", "no", "off", "false")
     deadline = T0_RUN + float(kv.get("budget", "180")) * 60
     cellcap = float(kv.get("cellcap", "400"))
     _, models = router.read_ini()
     run = {"run_id": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "argv": sys.argv[1:], "contexts": contexts,
-           "requests": requests, "gen": gen, "port": PORT, "cellcap": cellcap, "blocks": [], "skipped": []}
+           "requests": requests, "gen": gen, "port": PORT, "cellcap": cellcap, "no_mmproj": NO_MMPROJ, "blocks": [],
+           "skipped": []}
     todo = []
     for p in ids:
         if p not in models:

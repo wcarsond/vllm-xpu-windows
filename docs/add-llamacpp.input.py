@@ -13,6 +13,9 @@ BLOCKS = [
     ('Qwen3.6-35B-A3B UD-Q4_K_XL on llama.cpp', 'the fastest big model on these cards; 64K did not come up on two cards',
      [('0', ['72.1', '113.4', '159.5', '198.6', '139.1'], '111'), ('8K', ['68.7', '101.0', '138.3', '122.3', '58.8'], '2,254'),
       ('32K', ['59.6', '86.8', '112.7', '96.7', '114.3*'], '1,312'), ('64K', ['—', '—', '—', '—', '—'], '')]),
+    ('Qwen3.6-27B UD-Q4_K_XL on llama.cpp', 'text-only (the vision projector makes this build refuse token-id prompts); 32K ran 8 slots, 64K 4 slots; n/r = skipped for time (prefill alone over 400 s)',
+     [('0', ['18.0', '26.1', '41.8', '58.8', '45.6'], '60'), ('8K', ['17.5', '24.9', '39.0', '23.8', '31.9'], '823'),
+      ('32K', ['16.1', '22.2', '23.0', 'n/r', '—'], '535'), ('64K', ['14.6', '13.9', 'n/r', '—', '—'], '350')]),
 ]
 NOTE = ('llama.cpp, same two cards, same measure: aggregate decode tok/s while all requests were decoding together, prefill excluded, '
         '128 tokens per request. llama-server prefills prompts one slot at a time, so its raw throughput with prefill included is far '
@@ -25,8 +28,9 @@ def table_html(rows):
     out = ['    <div class="box"><table>',
            '      <thead><tr>' + ''.join('<th%s>%s</th>' % (' class="n"' if i else '', h) for i, h in enumerate(HEADS)) + '</tr></thead>', '      <tbody>']
     for ctx, cells, pre in rows:
-        vals = [float(c.rstrip('*')) for c in cells if c != '—']; best = max(vals) if vals else None
-        tds = ''.join('<td class="n%s">%s</td>' % (' win' if c != '—' and float(c.rstrip('*')) == best else '', c) for c in cells)
+        num = lambda c: c not in ('—', 'n/r')
+        vals = [float(c.rstrip('*')) for c in cells if num(c)]; best = max(vals) if vals else None
+        tds = ''.join('<td class="n%s">%s</td>' % (' win' if num(c) and float(c.rstrip('*')) == best else '', c) for c in cells)
         out.append('        <tr><td>%s</td>%s<td class="n">%s</td></tr>' % (ctx, tds, pre))
     out += ['      </tbody>', '    </table></div>']; return '\n'.join(out)
 

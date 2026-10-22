@@ -179,6 +179,17 @@
       </tbody>
     </table></div>
     <p class="note">llama.cpp, same two cards, same measure: aggregate decode tok/s while all requests were decoding together, prefill excluded, 128 tokens per request. llama-server prefills prompts one slot at a time, so its raw throughput with prefill included is far below vLLM's at 8K and 32K (the 7B at 8K x 16: 25 tok/s raw against vLLM's 92). A dash means that many slots of that context did not come up on the two cards. The dips at 8 and 16 streams are real and repeatable on this build. llama-server 0.5.0-dev (build 55, vk-allreduce-fa), 2026-10-22; raw numbers in server/concurrency-sweep-llamacpp.output.json.</p>
+    <h3 style="font-size:17px;margin:14px 0 6px;color:var(--head)">Qwen3.6-27B UD-Q4_K_XL on llama.cpp</h3>
+    <p class="sub">text-only (the vision projector makes this build refuse token-id prompts); 32K ran 8 slots, 64K 4 slots; n/r = skipped for time (prefill alone over 400 s)</p>
+    <div class="box"><table>
+      <thead><tr><th>Context</th><th class="n">1</th><th class="n">2</th><th class="n">4</th><th class="n">8</th><th class="n">16</th><th class="n">Prefill, 1 req</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td class="n">18.0</td><td class="n">26.1</td><td class="n">41.8</td><td class="n win">58.8</td><td class="n">45.6</td><td class="n">60</td></tr>
+        <tr><td>8K</td><td class="n">17.5</td><td class="n">24.9</td><td class="n win">39.0</td><td class="n">23.8</td><td class="n">31.9</td><td class="n">823</td></tr>
+        <tr><td>32K</td><td class="n">16.1</td><td class="n">22.2</td><td class="n win">23.0</td><td class="n">n/r</td><td class="n">—</td><td class="n">535</td></tr>
+        <tr><td>64K</td><td class="n win">14.6</td><td class="n">13.9</td><td class="n">n/r</td><td class="n">—</td><td class="n">—</td><td class="n">350</td></tr>
+      </tbody>
+    </table></div>
     <p class="note">Aggregate decode tok/s: all requests' generated tokens while all were decoding together, divided by that time, prefill excluded; 128 tokens generated per request, temperature 0, prefix cache hits measured 0. Prefill is one request. A dash means N x (context + 128) is more than the KV cache vLLM reported, so the cell was not run. The star at 8K x 16 on the 27Bs: two preemptions, the requests never all decoded together. The dip at 8 requests on both 27Bs is real: on two Windows cards vLLM captures decode graphs for batch 1, 2 and 4 only, so 8 and 16 run without graphs; the 7B shows no dip. vLLM 0.1.dev1+g276fbcff2.d20261010.xpu, 2026-10-21/22; raw numbers in server/concurrency-sweep.output.json.</p>
   </section>
   <section>
